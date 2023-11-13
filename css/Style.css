@@ -1,0 +1,132 @@
+﻿/* Color Palettes:  #32cace || #007679 || #002f61 || #262626 || #0a0a14 || #ffffff*/
+@import url("Responsive.css");
+
+:root {
+    --viewport-width: 100vw;
+    --viewport-height: 100vh;
+    --header-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --sub-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --default-font: 'Franklin Gothic';
+    --default-font-color: #0a0a14;
+    --default-background-color: #32cace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.page {
+    display: flex;
+    flex-direction: column;
+    color: var(--default-font-color);
+    background-color: var(--default-background-color);
+}
+
+section.home-content {
+    width: var(--viewport-width);
+    height: var(--viewport-height);
+    display: flex;
+    flex-direction: column;
+}
+
+    section.home-content header.header-content {
+        padding: 0px 10px 0px 10px;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    section.home-content main.main-content {
+        padding: 10px;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ff00ff;
+    }
+
+div.logo-content {
+    display: flex;
+    align-items: center;
+}
+
+img.logo-layout {
+    width: 70px;
+    height: 70px;
+}
+
+h1.logo-text-layout {
+    font-family: var(--header-font);
+}
+
+h5.logo-subtext-layout {
+    font-family: var(--sub-font);
+}
+
+div.login-signup-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: var(--default-font);
+}
+
+p.p-login-button-layout {
+    font-size: 18px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+    p.p-login-button-layout:hover {
+        color: #ffffff;
+    }
+
+main.main-section-content {
+    padding: 10px;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(8, 93, 95, .80);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+p.details-layout {
+    color: #ffffff;
+    font-family: var(--default-font);
+    font-size: 18px;
+    text-align: justify;
+}
+
+div.launch-button-content {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.launch-button-layout {
+    color: #ffffff;
+    padding: 10px 30px;
+    background-color: #262626;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.50);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+    .launch-button-layout:hover {
+        margin-right: 10px;
+        box-shadow: 0px 6px 12px rgba(0, 255, 255, 0.50);
+    }
+
+
+img.illustration-layout {
+    width: 350px;
+    height: 350px;
+}
