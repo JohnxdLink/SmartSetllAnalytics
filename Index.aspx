@@ -8,12 +8,19 @@
     <title>SmartSell | Home</title>
 
     <link href="css/Style.css" rel="stylesheet" />
+    <%--<link rel="stylesheet" href=""/>--%>
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <%-- Whole Container --%>
         <div class="page">
+
+            <%-- Home Content --%>
             <div class="home-page-content">
                 <header class="header-content">
+
+                    <%-- Naviation Bar --%>
                     <section class="navbar-section">
                         <div>
                             <p class="navbar-layout">Home</p>
@@ -29,9 +36,10 @@
                         </div>
                     </section>
 
+                    <%-- Navigation Bard Right Section --%>
                     <section class="navbar-section">
                         <div>
-                            <p class="navbar-layout">Sign-in</p>
+                            <p class="navbar-layout" onclick="showModalContent('modal-id')">Sign-in</p>
                         </div>
                         <div>
                             <p>|</p>
@@ -42,6 +50,7 @@
                     </section>
                 </header>
 
+                <%-- Main Content --%>
                 <main class="main-content">
                     <section class="main-left-content">
                         <div class="logo-content">
@@ -68,6 +77,47 @@
                         <img class="illustration-layout floating-animation-v2" src="resources/images/illustrations/At the office-amico.png" alt="Alternate Text" />
                     </section>
                 </main>
+            </div>
+        </div>
+        <!-- End of Div Page Content -->
+
+        <%-- Modal Container --%>
+        <div id="modal-id" class="modal-content">
+            <div class="modal-container w3-animate-zoom">
+                <div class="close-content">
+                    <p class="close-layout" onclick="closeModalContent('modal-id')">x</p>
+                </div>
+
+                <div class="login-content">
+                    <h1 class="login-layout">SIGN IN</h1>
+                </div>
+
+                <div class="login-form-content">
+                    <div class="username-content user-pass-content">
+                        <div>
+                            <i class="fa fa-user login-icon-layout"></i>
+                        </div>
+                        <div>
+                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Username" />
+                        </div>
+                    </div>
+                    <div class="password-content user-pass-content">
+                         <div>
+                            <i class="fa fa-lock login-icon-layout"></i>
+                        </div>
+                        <div>
+                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Password" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forgot-content">
+                    <asp:Button CssClass="forgot-pass-layout" Text="Forgot Password" runat="server" />
+                </div>
+
+                <div class="signin-content">
+                    <asp:Button CssClass="signin-button-layout" Text="Sign-in" runat="server" />
+                </div>
             </div>
         </div>
     </form>
