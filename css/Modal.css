@@ -118,25 +118,26 @@ div.signin-content {
 .signin-button-layout {
     padding: 7px 0px;
     width: 250px;
-    color: #262626;
+    color: #ffffff;
     font-size: 24px;
-    background-color: #171717;
+    background-color: #00b9b9;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     transition-duration: 0.5s;
+    box-shadow: 3px 3px 0px 1px rgb(0, 0, 0);
     cursor: pointer;
 }
 
     .signin-button-layout:hover {
-        color: #ffffff;
         transform: scale(1.1);
-        box-shadow: 3px 3px 0px 1px rgb(0,255,255);
+        background-color: #0fffff;
+        box-shadow: 3px 3px 0px 1px rgb(255, 255, 255);
     }
 
 
 div.register-content {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 img.signup-illustration-layout {
@@ -163,11 +164,10 @@ div.signup-form-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ffffff;
 }
 
 div.sign-up-form-layout {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 20px 0px;
     padding: 5px 10px;
     display: flex;
     align-items: center;
@@ -175,7 +175,7 @@ div.sign-up-form-layout {
     background-color: #2E2E2E;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    box-shadow: 3px 3px 0px 1px rgb(0,255,255);
+    box-shadow: 0px 1px 0px 1px rgb(0,255,255);
     gap: 10px;
 }
 
@@ -191,4 +191,40 @@ img.signup-icons-layout {
     background-color: #3C3C3C;
     border: none;
     border-radius: 5px;
+}
+
+div.signup-form-button-layout {
+    margin: 15px 0px 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-button-layout {
+    padding: 7px 0px;
+    width: 250px;
+    color: #ffffff;
+    font-size: 24px;
+    background-color: #00b9b9;
+    border: none;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    box-shadow: 3px 3px 0px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+    .signup-button-layout:hover {
+        transform: scale(1.1);
+        background-color: #0fffff;
+        box-shadow: 3px 3px 0px 1px rgb(255, 255, 255);
+    }
+
+div.terms-agreement-content {
+    margin: 15px 0px 0px 0px;
+    width: 330px;
+}
+
+p.terms-agreement-layout {
+    color: #b9b9b9;
+    text-align: center;
 }

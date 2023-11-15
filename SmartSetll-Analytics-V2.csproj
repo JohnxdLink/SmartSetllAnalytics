@@ -70,10 +70,15 @@
     <Content Include="css\Animation.css" />
     <Content Include="css\Modal.css" />
     <Content Include="css\Responsive.css" />
+    <Content Include="css\Scrollbar.css" />
     <Content Include="css\Style.css" />
     <Content Include="Index.aspx" />
     <Content Include="js\Script.js" />
-    <Content Include="resources\images\icons\c-sharp.png" />
+    <Content Include="resources\images\icons\email.png" />
+    <Content Include="resources\images\icons\lock.png" />
+    <Content Include="resources\images\icons\office.png" />
+    <Content Include="resources\images\icons\profile.png" />
+    <Content Include="resources\images\icons\user.png" />
     <Content Include="resources\images\illustrations\At the office-amico.png" />
     <Content Include="resources\images\illustrations\Shared-workspace-amico.png" />
     <Content Include="resources\images\illustrations\Sign up-amico.png" />

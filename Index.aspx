@@ -35,6 +35,9 @@
                         <div>
                             <p class="navbar-layout">Feedback</p>
                         </div>
+                        <div>
+                            <p class="navbar-layout">Terms And Policy</p>
+                        </div>
                     </section>
 
                     <%-- Navigation Bard Right Section --%>
@@ -92,13 +95,13 @@
                 </div>
 
                 <div class="login-content">
-                    <h1 class="login-layout">SIGN IN</h1>
+                    <h1 class="login-layout">LOGIN HERE</h1>
                 </div>
 
                 <div class="login-form-content">
                     <div class="username-content user-pass-content">
                         <div>
-                            <i class="fa fa-user login-icon-layout"></i>
+                            <img class="signup-icons-layout" src="resources/images/icons/user.png" alt="Alternate Text" />
                         </div>
                         <div>
                             <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Username" Type="text" />
@@ -106,7 +109,7 @@
                     </div>
                     <div class="password-content user-pass-content">
                         <div>
-                            <i class="fa fa-lock login-icon-layout"></i>
+                            <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
                         </div>
                         <div>
                             <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Password" Type="password" />
@@ -140,7 +143,7 @@
                     </section>
                     <section class="signup-section">
                         <div class="sign-up-content">
-                            <h1 class="login-layout">SIGN UP</h1>
+                            <h1 class="login-layout">CREATE ACCOUNT</h1>
                         </div>
 
                         <%-- Signup Form Container --%>
@@ -149,7 +152,7 @@
                             <%-- Company --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/office.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Comapny Name" Type="text" />
@@ -159,7 +162,7 @@
                             <%-- First Name --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="First Name" Type="text" />
@@ -169,7 +172,7 @@
                             <%-- Middle Name --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Middle Name" Type="text" />
@@ -179,7 +182,7 @@
                             <%-- Middle Name --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Last Name" Type="text" />
@@ -189,7 +192,7 @@
                             <%-- Username --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/user.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Username" Type="text" />
@@ -199,7 +202,7 @@
                             <%-- Password --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Password" Type="password" />
@@ -209,12 +212,24 @@
                             <%-- Email --%>
                             <div class="sign-up-form-layout">
                                 <div>
-                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                    <img class="signup-icons-layout" src="resources/images/icons/email.png" alt="Alternate Text" />
                                 </div>
                                 <div>
                                     <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Email" Type="text" />
                                 </div>
                             </div>
+
+                            <%-- By Signing up; you agree to SmartSell Analytics Rules. Terms of Services and Privacy Policy. --%>
+
+                            <%-- Signup Button --%>
+                            <div class="signup-form-button-layout">
+                                <asp:Button CssClass="signup-button-layout" Text="Sign-up" runat="server" />
+                            </div>
+
+                            <div class="terms-agreement-content">
+                                <p class="terms-agreement-layout">By Signing up; you agree to SmartSell Analytics Rules. Terms of Services and Privacy Policy.</p>
+                            </div>
+
                         </div>
                     </section>
                 </div>
