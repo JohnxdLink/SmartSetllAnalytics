@@ -8,6 +8,7 @@
     <title>SmartSell | Home</title>
 
     <link href="css/Style.css" rel="stylesheet" />
+    <link href="resources/images/logos/SmartSell-Analytics-Logo.png" rel="icon" />
     <%--<link rel="stylesheet" href=""/>--%>
 </head>
 <body>
@@ -39,13 +40,13 @@
                     <%-- Navigation Bard Right Section --%>
                     <section class="navbar-section">
                         <div>
-                            <p class="navbar-layout" onclick="showModalContent('modal-id')">Sign-in</p>
+                            <p class="navbar-layout" onclick="showModalContent('signin-modal-id')">Sign-in</p>
                         </div>
                         <div>
                             <p>|</p>
                         </div>
                         <div>
-                            <p class="navbar-layout">Sign-up</p>
+                            <p class="navbar-layout" onclick="showModalContent('signup-modal-id')">Sign-up</p>
                         </div>
                     </section>
                 </header>
@@ -82,10 +83,12 @@
         <!-- End of Div Page Content -->
 
         <%-- Modal Container --%>
-        <div id="modal-id" class="modal-content">
-            <div class="modal-container w3-animate-zoom">
+        <div id="signin-modal-id" class="modal-content w3-animate-opacity">
+
+            <%-- Signin Modal Content --%>
+            <div class="signin-modal-container w3-animate-zoom">
                 <div class="close-content">
-                    <p class="close-layout" onclick="closeModalContent('modal-id')">x</p>
+                    <p class="close-layout" onclick="closeModalContent('signin-modal-id')">x</p>
                 </div>
 
                 <div class="login-content">
@@ -98,15 +101,15 @@
                             <i class="fa fa-user login-icon-layout"></i>
                         </div>
                         <div>
-                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Username" />
+                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Username" Type="text" />
                         </div>
                     </div>
                     <div class="password-content user-pass-content">
-                         <div>
+                        <div>
                             <i class="fa fa-lock login-icon-layout"></i>
                         </div>
                         <div>
-                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Password" />
+                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Password" Type="password" />
                         </div>
                     </div>
                 </div>
@@ -117,6 +120,103 @@
 
                 <div class="signin-content">
                     <asp:Button CssClass="signin-button-layout" Text="Sign-in" runat="server" />
+                </div>
+            </div>
+        </div>
+        <%-- End of Div Signin Modal Content --%>
+
+        <%-- Signup Modal Container --%>
+        <div id="signup-modal-id" class="modal-content w3-animate-opacity" style="display: flex;">
+
+            <%-- Signup Modal Content --%>
+            <div class="signup-modal-container w3-animate-zoom">
+                <div class="close-content">
+                    <p class="close-layout" onclick="closeModalContent('signup-modal-id')">x</p>
+                </div>
+
+                <div class="register-content">
+                    <section class="illustration-section floating-animation-v2">
+                        <img class="signup-illustration-layout" src="resources/images/illustrations/Sign up-amico.png" alt="Alternate Text" />
+                    </section>
+                    <section class="signup-section">
+                        <div class="sign-up-content">
+                            <h1 class="login-layout">SIGN UP</h1>
+                        </div>
+
+                        <%-- Signup Form Container --%>
+                        <div class="signup-form-content">
+                            
+                            <%-- Company --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Comapny Name" Type="text" />
+                                </div>
+                            </div>
+
+                            <%-- First Name --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="First Name" Type="text" />
+                                </div>
+                            </div>
+
+                            <%-- Middle Name --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Middle Name" Type="text" />
+                                </div>
+                            </div>
+
+                            <%-- Middle Name --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Last Name" Type="text" />
+                                </div>
+                            </div>
+
+                            <%-- Username --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Username" Type="text" />
+                                </div>
+                            </div>
+
+                            <%-- Password --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Password" Type="password" />
+                                </div>
+                            </div>
+
+                            <%-- Email --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/c-sharp.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Email" Type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

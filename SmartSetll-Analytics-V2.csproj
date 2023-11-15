@@ -73,8 +73,10 @@
     <Content Include="css\Style.css" />
     <Content Include="Index.aspx" />
     <Content Include="js\Script.js" />
+    <Content Include="resources\images\icons\c-sharp.png" />
     <Content Include="resources\images\illustrations\At the office-amico.png" />
     <Content Include="resources\images\illustrations\Shared-workspace-amico.png" />
+    <Content Include="resources\images\illustrations\Sign up-amico.png" />
     <Content Include="resources\images\logos\SmartSell-Analytics-Logo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -89,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

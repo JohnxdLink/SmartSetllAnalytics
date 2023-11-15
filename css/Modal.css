@@ -8,12 +8,26 @@
     align-items: center;
     justify-content: center;
     color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.70);
     font-family: var(--default-font);
 }
 
-div.modal-container {
+
+div.signin-modal-container {
     padding: 10px;
     width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #262626;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 6px 7px 0px 1px rgb(0,0,0);
+}
+
+div.signup-modal-container {
+    padding: 10px;
+    width: 800px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -118,3 +132,63 @@ div.signin-content {
         transform: scale(1.1);
         box-shadow: 3px 3px 0px 1px rgb(0,255,255);
     }
+
+
+div.register-content {
+    display: flex;
+    flex-direction: row; 
+}
+
+img.signup-illustration-layout {
+    width: 350px;
+    height: 350px;
+}
+
+section.signup-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.sign-up-content {
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+div.signup-form-content {
+    height: 320px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ffffff;
+}
+
+div.sign-up-form-layout {
+    margin: 0px 0px 15px 0px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2E2E2E;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px 1px rgb(0,255,255);
+    gap: 10px;
+}
+
+img.signup-icons-layout {
+    width: 30px;
+    height: 30px;
+}
+
+.signup-txb-layout {
+    padding: 5px;
+    width: 300px;
+    color: #ffffff;
+    background-color: #3C3C3C;
+    border: none;
+    border-radius: 5px;
+}
