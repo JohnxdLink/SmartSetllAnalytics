@@ -24,11 +24,10 @@ div.smartsell-page {
 
 header.header-content {
     padding: 10px 15px;
-    height: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid #ff0000;
+    height: 15vh;
 }
 
 div.logo-content {
@@ -46,7 +45,7 @@ img.logo-layout {
 div.logo-text-navbar-content {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 h3.header-text-layout {
@@ -63,10 +62,11 @@ nav.navigation-bar-content {
 }
 
 .navbar-layout {
-    padding: 5px 15px;
+    padding: 5px 0px;
     text-decoration: none;
     text-align: center;
     color: #ffffff;
+    font-size: 14px;
     background-color: #3C3C3C;
     border-radius: 5px;
     transition-duration: 0.5s;
@@ -75,9 +75,90 @@ nav.navigation-bar-content {
 
     .navbar-layout:hover {
         background-color: #00ffff;
-        box-shadow: 4px 4px 0px 1px rgba(,0,0,0.74);
+        box-shadow: 4px 4px 0px 1px rgba(0,0,0,0.74);
     }
 
 main.main-content {
-    height: 85vh;
+    padding: 0px 35px;
+    height: 82vh;
+    display: flex;
+    gap: 10px;
 }
+
+section.section-contents {
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.section-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2C2C2C;
+    box-shadow: 4px 4px 0px 1px rgba(52,52,52,0.70);
+    border-radius: 10px;
+}
+
+div.capital-days-price-content {   
+    height: 150px;
+}
+
+div.population-percent-target-daily-content {
+    height: 250px;
+}
+
+div.sales-monthly-content {
+    height: 120px;
+}
+
+div.monthly-salary-expenses-content {
+    height: 200px;
+}
+
+div.common-content {
+    height: 50px;
+}
+
+div.input-contents {
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+img.input-icons-layout {
+    width: 30px;
+    height: 30px;
+}
+
+.txb-input-layout {
+    padding: 5px;
+    width: 200px;
+    color: #00ffff;
+    background-color: #262626;
+    box-shadow: 1px 1px 0px 0px rgba(0,255,255,0.70);
+    border: none;
+    border-radius: 5px;
+}
+
+div.help-content {
+    justify-content: flex-end;
+}
+
+p.help-layout {
+    padding: 3px 15px;
+    font-size: 12px;
+    background-color: #006262;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+    p.help-layout:hover {
+        color: #141414;
+        background-color: #00ffff;
+        box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.70);
+    }
