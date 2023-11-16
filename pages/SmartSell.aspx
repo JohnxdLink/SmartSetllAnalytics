@@ -26,45 +26,58 @@
 
                         <nav class="navigation-bar-content">
                             <div>
-                                <asp:LinkButton CssClass="navbar-layout" Text="Home" runat="server" Width="70" />
+                                <a class="navbar-layout" href="../Index.aspx">Home</a>
                             </div>
 
                             <div>
-                                <asp:LinkButton CssClass="navbar-layout" Text="About" runat="server" Width="70" />
+                                <a class="navbar-layout" href="../Index.aspx">Help</a>
                             </div>
 
                             <div>
-                                <asp:LinkButton CssClass="navbar-layout" Text="Login" runat="server" Width="70" />
+                                <a class="navbar-layout" href="../Index.aspx">Rate</a>
+                            </div>
+
+                            <div>
+                                <a class="navbar-layout" href="../Index.aspx">Login</a>
                             </div>
                         </nav>
                     </div>
                 </div>
             </header>
 
+            <%-- Main Content --%>
             <main class="main-content">
+
+                <%-- Section Content --%>
                 <section class="section-contents">
-                    <div class="section-container capital-days-price-content">
+
+                    <%-- Capital Days Price Content --%>
+                    <div class="section-container capital-days-price-content specific-margin-layout">
+
+                        <%-- Capital --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/capital.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Capital" />
                             </div>
                         </div>
 
+                        <%-- Number of Days --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/days.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Number of Days" />
                             </div>
                         </div>
 
+                        <%-- Average Price --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/average-price.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Average Price" />
@@ -72,41 +85,43 @@
                         </div>
                     </div>
 
+                    <%-- Target Market Daily Target Monthly Sales Content --%>
                     <div class="section-container population-percent-target-daily-content">
-                        <div class="input-contents help-content">
-                            <p class="help-layout">Help</p>
-                        </div>
 
+                        <%-- Population --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/population.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Population" />
                             </div>
                         </div>
 
+                        <%-- Percent Population --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/percent-population.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Percent Population" />
                             </div>
                         </div>
 
+                        <%-- Target Market --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/target-market.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Target Market" />
                             </div>
                         </div>
 
+                        <%-- Daily Target --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/daily-target.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Daily Target" />
@@ -115,20 +130,26 @@
                     </div>
                 </section>
 
+                <%-- Section Content --%>
                 <section class="section-contents">
-                    <div class="section-container sales-monthly-content">
+
+                    <%-- Sales Per Day Monthly Sales Monthly Salary Content --%>
+                    <div class="section-container sales-monthly-content specific-margin-layout">
+
+                        <%-- Sales Per Day --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/sales-per-day.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Sales Per Day" />
                             </div>
                         </div>
 
+                        <%-- Monthly Sales --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/monthly-sales.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Monthly Sales" />
@@ -136,28 +157,33 @@
                         </div>
                     </div>
 
+                    <%-- Salary Per Day Monthly Salary Monthly Expenses --%>
                     <div class="section-container monthly-salary-expenses-content">
+
+                        <%-- Salary Per Day --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/salary-per-day.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Salary Per Day" />
                             </div>
                         </div>
 
+                        <%-- Monthly Salary --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/monthly-salary.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Monthly Salary" />
                             </div>
                         </div>
 
+                        <%-- Monthly Expenses --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/monthly-expenses.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Monthly Expenses" />
@@ -166,11 +192,14 @@
                     </div>
                 </section>
 
+                <%-- Section Content --%>
                 <section class="section-contents">
                     <div class="section-container common-content">
+                        
+                        <%-- Total Expenses --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/total-expenses.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Total Expenses" />
@@ -178,10 +207,12 @@
                         </div>
                     </div>
 
-                    <div class="section-container common-content">
+                    <div class="section-container common-content specific-margin-layout">
+
+                        <%-- Net Profit --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/net-profit.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Net Profit" />
@@ -190,9 +221,11 @@
                     </div>
 
                     <div class="section-container common-content">
+
+                        <%-- Return of Investment --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/return-of-investment.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Return of Investment (ROI)" />
@@ -201,13 +234,25 @@
                     </div>
 
                     <div class="section-container common-content">
+                        
+                        <%-- ROI Return Prediction --%>
                         <div class="input-contents">
                             <div>
-                                <img class="input-icons-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                <img class="input-icons-layout" src="../resources/images/icons/roi-prediction.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="ROI Return Prediction" />
                             </div>
+                        </div>
+                    </div>
+
+                    <%-- Clear And Save Button --%>
+                    <div class="clear-n-save-content">
+                        <div>
+                            <asp:Button CssClass="clr-save-layout clear-layout" Text="Clear" runat="server" />
+                        </div>
+                        <div>
+                            <asp:Button CssClass="clr-save-layout save-layout" Text="Save" runat="server" />
                         </div>
                     </div>
                 </section>

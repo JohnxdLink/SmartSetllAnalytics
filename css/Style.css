@@ -95,6 +95,7 @@ div.launch-button-content {
 }
 
 .launch-button-layout {
+    text-decoration: none;
     color: #ffffff;
     font-size: 18px;
     padding: 10px 30px;

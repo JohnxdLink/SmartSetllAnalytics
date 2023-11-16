@@ -69,8 +69,9 @@
                             <p>The inception of SmartSell Analytics finds its roots in the ever-growing significance of data analytics and financial modeling within contemporary business practices. In an era characterized by rapid technological advancements and an exponential surge in accessible data, businesses must evolve to maintain their competitiveness.</p>
                         </div>
 
+                        <%-- Launch SmartSell Analytics --%>
                         <div class="launch-button-content">
-                            <asp:Button CssClass="launch-button-layout" Text="Launch" runat="server" />
+                            <a class="launch-button-layout" href="pages/SmartSell.aspx">Launch</a>
                         </div>
                     </section>
 
