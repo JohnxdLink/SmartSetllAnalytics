@@ -71,9 +71,11 @@
     <Content Include="css\Modal.css" />
     <Content Include="css\Responsive.css" />
     <Content Include="css\Scrollbar.css" />
+    <Content Include="css\SmartSell-Style.css" />
     <Content Include="css\Style.css" />
     <Content Include="Index.aspx" />
     <Content Include="js\Script.js" />
+    <Content Include="pages\SmartSell.aspx" />
     <Content Include="resources\images\icons\email.png" />
     <Content Include="resources\images\icons\lock.png" />
     <Content Include="resources\images\icons\office.png" />
@@ -93,6 +95,13 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\SmartSell.aspx.cs">
+      <DependentUpon>SmartSell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\SmartSell.aspx.designer.cs">
+      <DependentUpon>SmartSell.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,9 +114,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

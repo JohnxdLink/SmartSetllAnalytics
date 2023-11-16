@@ -12,7 +12,7 @@
     <%--<link rel="stylesheet" href=""/>--%>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="indexFormId" runat="server">
 
         <%-- Whole Container --%>
         <div class="page">
@@ -28,9 +28,6 @@
                         </div>
                         <div>
                             <p class="navbar-layout">About</p>
-                        </div>
-                        <div>
-                            <p class="navbar-layout">Contact</p>
                         </div>
                         <div>
                             <p class="navbar-layout">Feedback</p>
@@ -129,7 +126,7 @@
         <%-- End of Div Signin Modal Content --%>
 
         <%-- Signup Modal Container --%>
-        <div id="signup-modal-id" class="modal-content w3-animate-opacity" style="display: flex;">
+        <div id="signup-modal-id" class="modal-content w3-animate-opacity">
 
             <%-- Signup Modal Content --%>
             <div class="signup-modal-container w3-animate-zoom">
@@ -148,7 +145,7 @@
 
                         <%-- Signup Form Container --%>
                         <div class="signup-form-content">
-                            
+
                             <%-- Company --%>
                             <div class="sign-up-form-layout">
                                 <div>
@@ -229,7 +226,6 @@
                             <div class="terms-agreement-content">
                                 <p class="terms-agreement-layout">By Signing up; you agree to SmartSell Analytics Rules. Terms of Services and Privacy Policy.</p>
                             </div>
-
                         </div>
                     </section>
                 </div>

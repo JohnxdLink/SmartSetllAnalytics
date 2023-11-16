@@ -1,0 +1,83 @@
+﻿:root {
+    --viewport-width: 100vw;
+    --viewport-height: 100vh;
+    --header-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --sub-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --default-font: 'Franklin Gothic';
+    --default-font-color: #ffffff;
+    --default-background-color: #32cace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.smartsell-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: var(--default-font-color);
+    font-family: var(--default-font);
+    background-color: #262626;
+}
+
+header.header-content {
+    padding: 10px 15px;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #ff0000;
+}
+
+div.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+img.logo-layout {
+    width: 90px;
+    height: 90px;
+}
+
+div.logo-text-navbar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h3.header-text-layout {
+    font-family: var(--header-font);
+}
+
+h5.sub-header-text-layout {
+    font-family: var(--sub-font);
+}
+
+nav.navigation-bar-content {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-layout {
+    padding: 5px 15px;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    background-color: #3C3C3C;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+    .navbar-layout:hover {
+        background-color: #00ffff;
+        box-shadow: 4px 4px 0px 1px rgba(,0,0,0.74);
+    }
+
+main.main-content {
+    height: 85vh;
+}
