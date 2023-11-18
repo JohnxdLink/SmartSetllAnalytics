@@ -1,4 +1,6 @@
-﻿:root {
+﻿@import url('Animation.css');
+
+:root {
     --viewport-width: 100vw;
     --viewport-height: 100vh;
     --header-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +21,7 @@ div.smartsell-page {
     flex-direction: column;
     color: var(--default-font-color);
     font-family: var(--default-font);
-    background-color: #262626;
+    background-color: #282828;
 }
 
 header.header-content {
@@ -79,35 +81,35 @@ a.navbar-layout {
     }
 
 main.main-content {
-    padding: 0px 35px;
+    overflow: hidden;
     height: 82vh;
     display: flex;
     justify-content: space-evenly;
 }
 
 section.section-contents {
-    margin: 0px 0px 0px 0px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 div.section-container {
+    width: 270px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #2C2C2C;
-    box-shadow: 4px 4px 0px 1px rgba(52,52,52,0.70);
+    box-shadow: -1px 1px 0px 1px rgba(0,255,255,0.70);
     border-radius: 10px;
 }
 
 div.capital-days-price-content {
-    height: 150px;
+    height: 180px;
 }
 
 div.population-percent-target-daily-content {
-    height: 250px;
+    height: 230px;
 }
 
 div.sales-monthly-content {
@@ -134,13 +136,14 @@ div.input-contents {
 }
 
 img.input-icons-layout {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .txb-input-layout {
     padding: 5px;
     width: 200px;
+    font-size: 16px;
     color: #00ffff;
     background-color: #262626;
     box-shadow: 1px 1px 0px 0px rgba(0,255,255,0.70);
@@ -148,23 +151,8 @@ img.input-icons-layout {
     border-radius: 5px;
 }
 
-div.help-content {
-    justify-content: flex-end;
-}
-
-p.help-layout {
-    padding: 3px 15px;
-    font-size: 12px;
-    background-color: #006262;
-    border-radius: 5px;
-    transition-duration: 0.5s;
-    cursor: pointer;
-}
-
-    p.help-layout:hover {
-        color: #141414;
-        background-color: #00ffff;
-        box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.70);
+    .txb-input-layout::placeholder {
+        color: #006262;
     }
 
 div.clear-n-save-content {
@@ -199,3 +187,70 @@ div.clear-n-save-content {
 .save-layout:hover {
     background-color: rgba(0,255,0, 0.60);
 }
+
+div.side-form-content {
+    padding: 10px;
+    width: 260px;
+    height: 450px;
+}
+
+div.help-form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+div.login-form-layout {
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+h2.section-contents-header {
+    text-align: center;
+}
+
+h3.close-button-layout {
+    text-align: right;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+    h3.close-button-layout:hover {
+        color: #00ffff;
+    }
+
+div.login-form-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+img.login-icon-layout {
+    width: 30px;
+    height: 30px;
+}
+
+div.login-button-layout {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.signin-button-layout {
+    padding: 7px 0px;
+    width: 150px;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #00b9b9;
+    border: none;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    box-shadow: 3px 3px 0px 1px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+    .signin-button-layout:hover {
+        margin-right: 15px;
+        background-color: #0fffff;
+        box-shadow: 3px 3px 0px 1px rgb(255, 255, 255);
+    }

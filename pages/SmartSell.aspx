@@ -30,7 +30,7 @@
                             </div>
 
                             <div>
-                                <a class="navbar-layout" href="../Index.aspx">Help</a>
+                                <a class="navbar-layout" href="#" onclick="showSideContent('help-form-id')">Help</a>
                             </div>
 
                             <div>
@@ -38,7 +38,7 @@
                             </div>
 
                             <div>
-                                <a class="navbar-layout" href="../Index.aspx">Login</a>
+                                <a class="navbar-layout" href="#" onclick="showSideContent('login-form-id')">Login</a>
                             </div>
                         </nav>
                     </div>
@@ -195,7 +195,7 @@
                 <%-- Section Content --%>
                 <section class="section-contents">
                     <div class="section-container common-content">
-                        
+
                         <%-- Total Expenses --%>
                         <div class="input-contents">
                             <div>
@@ -234,7 +234,7 @@
                     </div>
 
                     <div class="section-container common-content">
-                        
+
                         <%-- ROI Return Prediction --%>
                         <div class="input-contents">
                             <div>
@@ -256,8 +256,56 @@
                         </div>
                     </div>
                 </section>
+
+                <%-- Side Form Content --%>
+                <section class="section-contents">
+                    <div id="help-form-id" class="section-container side-form-content w3-animate-right" style="display: none;">
+                        <div>
+                            <h3 class="close-button-layout" onclick="closeSideContent('help-form-id')">X</h3>
+                        </div>
+                        <div class="help-form-content">
+                            <h2 class="section-contents-header">HELP</h2>
+                        </div>
+                    </div>
+
+                    <div id="login-form-id" class="section-container side-form-content login-form-layout w3-animate-bottom" style="display: none;">
+                        <div>
+                            <h3 class="close-button-layout" onclick="closeSideContent('login-form-id')">X</h3>
+                        </div>
+
+                        <div>
+                            <h2 class="section-contents-header">LOGIN HERE</h2>
+                        </div>
+                        <div class="login-form-content">
+                            <div>
+                                <img class="login-icon-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                            </div>
+                            <div>
+                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Username" />
+                            </div>
+                        </div>
+
+                        <div class="login-form-content">
+                            <div>
+                                <img class="login-icon-layout" src="../resources/images/icons/lock.png" alt="Alternate Text" />
+                            </div>
+                            <div>
+                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Password" />
+                            </div>
+                        </div>
+
+                        <div class="login-form-content">
+                            <div class="login-button-layout">
+                                <asp:Button CssClass="signin-button-layout" Text="Login" runat="server" />
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
             </main>
         </div>
     </form>
+
+    <script src="../js/Script.js"></script>
 </body>
 </html>
