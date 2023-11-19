@@ -16,10 +16,10 @@ namespace SmartSetll_Analytics_V2.pages
 
     public partial class SmartSell : System.Web.UI.Page
     {
-        // ! Txb_Capital || Txb_Num_Days || Txb_Average_Price
-        // ! Txb_Population || Txb_Percent_Population || Txb_Target_Market
-        // ! Txb_Daily_Target || Txb_Sales_Per_Day || Txb_Monthly_Sales || Txb_Salary_Per_Day || Txb_Monthly_Salary
-        // ! Txb_Total_Expenses || Txb_Net_Profit || Txb_Return_Investment || Txb_Roi_Prediction
+        // ! Txb_Capital || Txb_Num_Days || Txb_Average_Price || Txb_Population || Txb_Percent_Population || Txb_Target_Market
+        // ! Txb_Daily_Target || Txb_Sales_Per_Day || Txb_Monthly_Sales
+        // ! Txb_Salary_Per_Day || Txb_Monthly_Salary // Txb_Monthly_Expenses // Txb_Total_Expenses
+        // ! Txb_Net_Profit || Txb_Return_Investment || Txb_Roi_Prediction
 
         protected void Page_Load(object sender, EventArgs e)
         {
