@@ -116,7 +116,7 @@
                                 </div>
 
                                 <div>
-                                    <asp:Button CssClass="calcu-layout" Text="Calculate" runat="server" />
+                                    <asp:Button ID="Btn_One_Calculate" CssClass="calcu-layout" Text="Calculate" runat="server" OnClick="Btn_One_Calculate_Click" />
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                                 </div>
 
                                 <div>
-                                    <asp:Button CssClass="calcu-layout" Text="Calculate" runat="server" />
+                                    <asp:Button ID="Btn_Two_Calculate" CssClass="calcu-layout" Text="Calculate" runat="server" OnClick="Btn_Two_Calculate_Click" />
                                 </div>
                             </div>
                         </div>
@@ -210,14 +210,29 @@
                                 <asp:TextBox ID="Txb_Monthly_Salary" CssClass="txb-input-layout" runat="server" Placeholder="Monthly Salary" ReadOnly="True" />
                             </div>
                         </div>
+                    </div>
 
-                        <%-- Monthly Expenses --%>
+                    <div class="section-container">
+                         <%-- Monthly Expenses --%>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-expenses.png" alt="Alternate Text" />
                             </div>
                             <div>
                                 <asp:TextBox ID="Txb_Monthly_Expenses" CssClass="txb-input-layout" runat="server" Placeholder="Monthly Expenses" />
+                            </div>
+                        </div>
+
+                        <%-- Calculate Button --%>
+                        <div class="input-contents calculate-button-content">
+                            <div class="calcu-content">
+                                <div>
+                                    <img class="calcu-icons-layout" src="../resources/images/icons/calculator.png" alt="Alternate Text" />
+                                </div>
+
+                                <div>
+                                    <asp:Button ID="Btn_Three_Calculate" CssClass="calcu-layout" Text="Calculate" runat="server" OnClick="Btn_Three_Calculate_Click" />
+                                </div>
                             </div>
                         </div>
                     </div>

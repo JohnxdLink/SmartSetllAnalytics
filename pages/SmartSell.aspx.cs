@@ -25,5 +25,23 @@ namespace SmartSetll_Analytics_V2.pages
         {
 
         }
+
+        // ? Button Calculate Target MAarket, Daily Target, Sales Per Day, Monthly Sales
+        protected void Btn_One_Calculate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // ? Button Calculate Salary Per Day to MOnthly Salary
+        protected void Btn_Two_Calculate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // ? Button Calcuate Total Expenses, Net Profit, Return of Investment & ROi Prediction
+        protected void Btn_Three_Calculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

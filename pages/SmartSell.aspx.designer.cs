@@ -69,6 +69,15 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.WebControls.TextBox Txb_Percent_Population;
 
         /// <summary>
+        /// Btn_One_Calculate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_One_Calculate;
+
+        /// <summary>
         /// Txb_Target_Market control.
         /// </summary>
         /// <remarks>
@@ -114,6 +123,15 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.WebControls.TextBox Txb_Salary_Per_Day;
 
         /// <summary>
+        /// Btn_Two_Calculate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Two_Calculate;
+
+        /// <summary>
         /// Txb_Monthly_Salary control.
         /// </summary>
         /// <remarks>
@@ -130,6 +148,15 @@ namespace SmartSetll_Analytics_V2.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txb_Monthly_Expenses;
+
+        /// <summary>
+        /// Btn_Three_Calculate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Three_Calculate;
 
         /// <summary>
         /// Txb_Total_Expenses control.
