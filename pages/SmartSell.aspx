@@ -60,7 +60,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/capital.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Capital" />
+                                <asp:TextBox ID="Txb_Capital" CssClass="txb-input-layout" runat="server" Placeholder="Capital" />
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/days.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Number of Days" />
+                                <asp:TextBox ID="Txb_Num_Days" CssClass="txb-input-layout" runat="server" Placeholder="Number of Days" />
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/average-price.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Average Price" />
+                                <asp:TextBox ID="Txb_Average_Price" CssClass="txb-input-layout" runat="server" Placeholder="Average Price" />
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/population.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Population" />
+                                <asp:TextBox ID="Txb_Population" CssClass="txb-input-layout" runat="server" Placeholder="Population" />
                             </div>
                         </div>
 
@@ -104,7 +104,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/percent-population.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Percent Population" />
+                                <asp:TextBox ID="Txb_Percent_Population" CssClass="txb-input-layout" runat="server" Placeholder="Percent Population" />
                             </div>
                         </div>
 
@@ -114,7 +114,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/target-market.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Target Market" />
+                                <asp:TextBox ID="Txb_Target_Market" CssClass="txb-input-layout" runat="server" Placeholder="Target Market" />
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/daily-target.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Daily Target" />
+                                <asp:TextBox ID="Txb_Daily_Target" CssClass="txb-input-layout" runat="server" Placeholder="Daily Target" />
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/sales-per-day.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Sales Per Day" />
+                                <asp:TextBox ID="Txb_Sales_Per_Day" CssClass="txb-input-layout" runat="server" Placeholder="Sales Per Day" />
                             </div>
                         </div>
 
@@ -152,7 +152,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-sales.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Monthly Sales" />
+                                <asp:TextBox ID="Txb_Monthly_Sales" CssClass="txb-input-layout" runat="server" Placeholder="Monthly Sales" />
                             </div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/salary-per-day.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Salary Per Day" />
+                                <asp:TextBox ID="Txb_Salary_Per_Day" CssClass="txb-input-layout" runat="server" Placeholder="Salary Per Day" />
                             </div>
                         </div>
 
@@ -176,7 +176,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-salary.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Monthly Salary" />
+                                <asp:TextBox ID="Txb_Monthly_Salary" CssClass="txb-input-layout" runat="server" Placeholder="Monthly Salary" />
                             </div>
                         </div>
 
@@ -186,7 +186,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-expenses.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Monthly Expenses" />
+                                <asp:TextBox ID="Txb_Monthly_Expenses" CssClass="txb-input-layout" runat="server" Placeholder="Monthly Expenses" />
                             </div>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/total-expenses.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Total Expenses" />
+                                <asp:TextBox ID="Txb_Total_Expenses" CssClass="txb-input-layout" runat="server" Placeholder="Total Expenses" />
                             </div>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/net-profit.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Net Profit" />
+                                <asp:TextBox ID="Txb_Net_Profit" CssClass="txb-input-layout" runat="server" Placeholder="Net Profit" />
                             </div>
                         </div>
                     </div>
@@ -228,7 +228,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/return-of-investment.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Return of Investment (ROI)" />
+                                <asp:TextBox ID="Txb_Return_Investment" CssClass="txb-input-layout" runat="server" Placeholder="Return of Investment (ROI)" />
                             </div>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                                 <img class="input-icons-layout" src="../resources/images/icons/roi-prediction.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="ROI Return Prediction" />
+                                <asp:TextBox ID="Txb_Roi_Prediction" CssClass="txb-input-layout" runat="server" Placeholder="ROI Return Prediction" />
                             </div>
                         </div>
                     </div>
