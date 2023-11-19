@@ -108,6 +108,22 @@
                             </div>
                         </div>
 
+                        <%-- Calculate Button --%>
+                        <div class="input-contents calculate-button-content">
+                            <div class="calcu-content">
+                                <div>
+                                    <img class="calcu-icons-layout" src="../resources/images/icons/calculator.png" alt="Alternate Text" />
+                                </div>
+
+                                <div>
+                                    <asp:Button CssClass="calcu-layout" Text="Calculate" runat="server" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <%-- Target Market Daily Section Container --%>
+                    <div class="section-container">
                         <%-- Target Market --%>
                         <div class="input-contents">
                             <div>
@@ -134,7 +150,7 @@
                 <section class="section-contents">
 
                     <%-- Sales Per Day Monthly Sales Monthly Salary Content --%>
-                    <div class="section-container sales-monthly-content specific-margin-layout">
+                    <div class="section-container specific-margin-layout">
 
                         <%-- Sales Per Day --%>
                         <div class="input-contents">
@@ -158,7 +174,7 @@
                     </div>
 
                     <%-- Salary Per Day Monthly Salary Monthly Expenses --%>
-                    <div class="section-container monthly-salary-expenses-content">
+                    <div class="section-container">
 
                         <%-- Salary Per Day --%>
                         <div class="input-contents">
@@ -170,6 +186,21 @@
                             </div>
                         </div>
 
+                        <%-- Calculate Button --%>
+                        <div class="input-contents calculate-button-content">
+                            <div class="calcu-content">
+                                <div>
+                                    <img class="calcu-icons-layout" src="../resources/images/icons/calculator.png" alt="Alternate Text" />
+                                </div>
+
+                                <div>
+                                    <asp:Button CssClass="calcu-layout" Text="Calculate" runat="server" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-container">
                         <%-- Monthly Salary --%>
                         <div class="input-contents">
                             <div>

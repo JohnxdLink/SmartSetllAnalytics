@@ -90,7 +90,7 @@ main.main-content {
 section.section-contents {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 div.section-container {
@@ -104,28 +104,12 @@ div.section-container {
     border-radius: 10px;
 }
 
-div.capital-days-price-content {
-    height: 180px;
-}
-
-div.population-percent-target-daily-content {
-    height: 230px;
-}
-
-div.sales-monthly-content {
-    height: 120px;
-}
-
-div.monthly-salary-expenses-content {
-    height: 200px;
-}
-
 div.common-content {
     height: 50px;
 }
 
 div.specific-margin-layout {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 div.input-contents {
@@ -136,8 +120,40 @@ div.input-contents {
 }
 
 img.input-icons-layout {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+}
+
+div.calculate-button-content {
+    justify-content: flex-end;
+}
+
+div.calcu-content {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #006262;
+    box-shadow: 1px 1px 0px 0px #00ffff;
+    border-radius: 5px;
+    gap: 10px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+div.calcu-content:hover {
+    background-color: #00ffff;
+}
+
+.calcu-icons-layout {
+    width: 20px;
+    height: 20px;
+}
+
+.calcu-layout {
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .txb-input-layout {

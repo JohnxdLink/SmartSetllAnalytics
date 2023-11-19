@@ -77,6 +77,7 @@
     <Content Include="js\Script.js" />
     <Content Include="pages\SmartSell.aspx" />
     <Content Include="resources\images\icons\average-price.png" />
+    <Content Include="resources\images\icons\calculator.png" />
     <Content Include="resources\images\icons\capital.png" />
     <Content Include="resources\images\icons\daily-target.png" />
     <Content Include="resources\images\icons\days.png" />
