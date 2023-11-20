@@ -43,5 +43,15 @@ namespace SmartSetll_Analytics_V2.classes
         {
             return NetProfit = monthlySales - totalExpenses;
         }
+
+        public double Calculate_Roi(int netProfit, double capital)
+        {
+            return ReturnInvestMent = (netProfit / capital) * HUNDREDPERCENT;
+        }
+
+        public double Calculate_Roi_Prediction(double monthlySales, double netProfit)
+        {
+            return RoiPrediction = monthlySales / netProfit;
+        }
     }
 }

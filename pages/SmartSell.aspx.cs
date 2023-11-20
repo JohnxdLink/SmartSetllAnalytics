@@ -36,11 +36,14 @@ namespace SmartSetll_Analytics_V2.pages
         // ? Button Calculate Target MAarket, Daily Target, Sales Per Day, Monthly Sales
         protected void Btn_One_Calculate_Click(object sender, EventArgs e)
         {
-            setUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
+            int capital = setUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
             int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
             double averagePrice = setUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
 
             Compute_TargetMarket_To_MonthlySales(days, averagePrice);
+
+            Txb_Capital.Text = capital.ToString();
+            Txb_Num_Days.Text = days.ToString();
         }
 
         // ? Button Calculate Salary Per Day to MOnthly Salary
@@ -89,6 +92,16 @@ namespace SmartSetll_Analytics_V2.pages
             double netProfit = getCalculateValue.Calculate_NetProfit(monthlySales, totalExpenses);
 
             Txb_Net_Profit.Text = netProfit.ToString();
+
+            int capital = Convert.ToInt32(Txb_Capital.Text);
+
+            double returnInvestment = getCalculateValue.Calculate_Roi((int)netProfit, capital);
+
+            Txb_Return_Investment.Text = returnInvestment.ToString() + "%";
+
+            double roiPrediction = getCalculateValue.Calculate_Roi_Prediction(monthlySales, netProfit);
+
+            Txb_Roi_Prediction.Text = roiPrediction.ToString("F2");
         }
 
     }
