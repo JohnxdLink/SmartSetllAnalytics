@@ -22,14 +22,8 @@ namespace SmartSetll_Analytics_V2.pages
         // ! Txb_Salary_Per_Day || Txb_Monthly_Salary // Txb_Monthly_Expenses // Txb_Total_Expenses
         // ! Txb_Net_Profit || Txb_Return_Investment || Txb_Roi_Prediction
 
-        // ? Instantiating GetSeVAlues class to create an Object setUSerValue
-        GetSetValues setUserValue = new GetSetValues();
-
-        //? Instantiating CalculateValues class to create an Object getCalculateValue
-        CalculateValues getCalculateValue = new CalculateValues();
-
-        double globalMonthlySales = 0;
-        double globalTotalExpenses = 0;
+        // ? Instantiating GetSeVAlues class to create an Object getUSerValue
+        GetSetValues getUserValue = new GetSetValues();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,81 +34,34 @@ namespace SmartSetll_Analytics_V2.pages
         protected void Btn_One_Calculate_Click(object sender, EventArgs e)
         {
             // ! Setting the encapsulated attributes and convert the Inputted Text from Web page
-            int capital = setUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
-            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
-            double averagePrice = setUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
-            int population = setUserValue.Population = Convert.ToInt32(Txb_Population.Text);
-            double percentPopulation = setUserValue.PercentPopulation = Convert.ToDouble(Txb_Percent_Population.Text);
+            int capital = getUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
+            int days = getUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
+            double averagePrice = getUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
+            int population = getUserValue.Population = Convert.ToInt32(Txb_Population.Text);
+            double percentPopulation = getUserValue.PercentPopulation = Convert.ToDouble(Txb_Percent_Population.Text);
 
-            // ! Getting the Calculated Values and inside of the Parameters are the variables that encapsulated in SetUSerValue
-            double targetMarket = getCalculateValue.Calculate_TargetMarket(population, percentPopulation);
-            double dailyTarget = getCalculateValue.Calculate_DailyTarget(targetMarket, days);
-            double salesPerDay = getCalculateValue.Calculate_Sales_PerDay(dailyTarget, averagePrice);
-            double monthlySales = getCalculateValue.Calculate_Monthly_Sales(salesPerDay, days);
-
-            globalMonthlySales += monthlySales;
-
-            // ! Display
-            Display_Section_One(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales);
+            Display_Capital_Days_Price_Population_Percent(capital, days, averagePrice, population, percentPopulation);
         }
 
         // ? Button Calculate Salary Per Day to MOnthly Salary
         protected void Btn_Two_Calculate_Click(object sender, EventArgs e)
-        {
-            // ! Setting the encapsulated attributes and convert the Inputted Text from Web page
-            double salaryPerDay = setUserValue.SalaryPerDay = Convert.ToDouble(Txb_Salary_Per_Day.Text);
-            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
-            
-
-            double monthlySalary = getCalculateValue.Calculate_MonthlySalary(salaryPerDay, days);
-            Display_Section_Two(monthlySalary);
+        { 
         }
 
         // ? Button Calcuate Total Expenses, Net Profit, Return of Investment & ROi Prediction
         protected void Btn_Three_Calculate_Click(object sender, EventArgs e)
         {
-            double monthlyExpenses = setUserValue.MonthlyExpenses = Convert.ToDouble(Txb_Monthly_Expenses.Text);
 
-            // ! Setting the encapsulated attributes and convert the Inputted Text from Web page
-            double salaryPerDay = setUserValue.SalaryPerDay = Convert.ToDouble(Txb_Salary_Per_Day.Text);
-            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
-
-
-            double monthlySalary = getCalculateValue.Calculate_MonthlySalary(salaryPerDay, days);
-            double totalExpenses = getCalculateValue.Calculate_TotalExpenses(monthlySalary, monthlyExpenses);
-
-            globalTotalExpenses += totalExpenses;
-            double netProfit = getCalculateValue.Calculate_NetProfit(globalMonthlySales, globalTotalExpenses);
-
-            Display_Section_Three(globalMonthlySales, globalTotalExpenses, netProfit);
         }
 
-        // ! Creating Displays
-        protected void Display_Section_One(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, double dailyTarget, double salesPerDay, double monthlySales)
+        // ! Creating Displays for Capital Days Price Population and Percent and its parameters
+        protected void Display_Capital_Days_Price_Population_Percent(int capital, int days, double averagePrice, int population, double percentPopulation)
         {
             Txb_Capital.Text = capital.ToString();
             Txb_Num_Days.Text = days.ToString();
             Txb_Average_Price.Text = "₱ " + averagePrice.ToString();
             Txb_Population.Text = population.ToString();
-            Txb_Percent_Population.Text = percentPopulation.ToString() + "%";
-            Txb_Target_Market.Text = targetMarket.ToString();
-            Txb_Daily_Target.Text = dailyTarget.ToString();
-            Txb_Sales_Per_Day.Text = "₱ " + salesPerDay.ToString();
-            Txb_Monthly_Sales.Text = "₱ " + monthlySales.ToString();
+            Txb_Target_Market.Text = percentPopulation.ToString() + "%";
         }
-
-        protected void Display_Section_Two(double monthlySalary)
-        {
-            Txb_Monthly_Salary.Text = "₱ " + monthlySalary.ToString();
-        }
-
-        protected void Display_Section_Three(double monthlyExpenses, double totalExpenses, double netProfit)
-        {
-            Txb_Monthly_Expenses.Text = "₱ " + monthlyExpenses.ToString();
-            Txb_Total_Expenses.Text = "₱ " + totalExpenses.ToString();
-            Txb_Net_Profit.Text = "₱ " + netProfit.ToString();
-
-        }
-
     }
 }
