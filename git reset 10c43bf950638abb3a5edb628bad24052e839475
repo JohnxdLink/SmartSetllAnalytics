@@ -1,0 +1,95 @@
+[33mcommit 10c43bf950638abb3a5edb628bad24052e839475[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Mon Nov 20 14:23:36 2023 +0800
+
+    Msg: Adding Functionality and Net Profit Need Fix
+
+[33mcommit ffdc5843899bf5915d6fbac403eef24765773434[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Mon Nov 20 10:22:01 2023 +0800
+
+    Msg: Setting the getSetValues p1
+
+[33mcommit 8a136993b0a4bfc9a5d3049bf6061031af7b812e[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Sun Nov 19 19:08:28 2023 +0800
+
+    Msg: Adding Another Calculate Button
+
+[33mcommit a80378a95b929d059978ff4edcd803f5bd628a5f[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Sun Nov 19 18:54:40 2023 +0800
+
+    Msg: Modifying and Adding Calculate Button
+
+[33mcommit cf927d01090d471dc0a1fb7adb7159bdc6b899b6[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Sun Nov 19 18:05:17 2023 +0800
+
+    Msg : Adding Get Set Classes
+
+[33mcommit a3c13a837de9fdc06e2f884b32d96a913ad37a8f[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Sun Nov 19 16:33:21 2023 +0800
+
+    Msg: Adding ID in Textbox and Comments
+
+[33mcommit 90c29fd8a42434ad8fbb97281c19413dc5b79ee8[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Sat Nov 18 21:56:14 2023 +0800
+
+    Msg: Login Form in SmartSell Page Finished
+
+[33mcommit 9037c9bd36fa276f2d7be6c4b3085b00b5d7545e[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Thu Nov 16 18:26:51 2023 +0800
+
+    Msg: Icon Added Clear And Save Button
+
+[33mcommit 438aa9490f6a37a1b2552499b33a06dd52a66b25[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Thu Nov 16 13:17:23 2023 +0800
+
+    Msg: All Input Finished
+
+[33mcommit 2e64431a57c886fdfe5a25e498396d488fdf7625[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Thu Nov 16 08:57:10 2023 +0800
+
+    Msg: Header SmartSell Page Almost Done
+
+[33mcommit 774675854542f1266f96a2795c5250a3c58881f6[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Wed Nov 15 23:50:01 2023 +0800
+
+    Msg: Signin and Up Already Finished
+
+[33mcommit ba17498dd97529caf454e552b39f67dfd4bbd62d[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Wed Nov 15 19:14:43 2023 +0800
+
+    Msg: Signup Almost Done
+
+[33mcommit 46d24341d1f091bd2c2fe176500cb09e52bc7130[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Tue Nov 14 18:29:20 2023 +0800
+
+    Msg: Login Finished Layout
+
+[33mcommit 6f810ea184b59afce084b2fda7e16b4b537b7bae[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Tue Nov 14 16:40:34 2023 +0800
+
+    Msg: Revision in Home Page
+
+[33mcommit 84e9e22989f4a4ec26e1c89064dd186909850149[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Mon Nov 13 15:07:12 2023 +0800
+
+    Add project files.
+
+[33mcommit aabb015ace238757c509ee6f5a7a6ad1356b0170[m
+Author: JohnxdLink <JohnxdLink@gmail.com>
+Date:   Mon Nov 13 15:07:03 2023 +0800
+
+    Add .gitignore and .gitattributes.

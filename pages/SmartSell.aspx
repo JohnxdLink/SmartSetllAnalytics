@@ -12,6 +12,7 @@
 </head>
 <body>
     <form id="smartsellFormId" runat="server">
+
         <div class="smartsell-page">
             <header class="header-content">
                 <div class="logo-content">
@@ -213,7 +214,7 @@
                     </div>
 
                     <div class="section-container">
-                         <%-- Monthly Expenses --%>
+                        <%-- Monthly Expenses --%>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-expenses.png" alt="Alternate Text" />

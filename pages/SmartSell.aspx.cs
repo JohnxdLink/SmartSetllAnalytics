@@ -22,8 +22,11 @@ namespace SmartSetll_Analytics_V2.pages
         // ! Txb_Salary_Per_Day || Txb_Monthly_Salary // Txb_Monthly_Expenses // Txb_Total_Expenses
         // ! Txb_Net_Profit || Txb_Return_Investment || Txb_Roi_Prediction
 
-        // ? Instantiating GetSeVAlues class to create an Object getUSerValue
-        GetSetValues getUserValue = new GetSetValues();
+        // ? Instantiating GetSeVAlues class to create an Object setUSerValue
+        GetSetValues setUserValue = new GetSetValues();
+
+        //? Instantiating CalculateValues class to create an Object getCalculateValue
+        CalculateValues getCalculateValue = new CalculateValues();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,35 +36,60 @@ namespace SmartSetll_Analytics_V2.pages
         // ? Button Calculate Target MAarket, Daily Target, Sales Per Day, Monthly Sales
         protected void Btn_One_Calculate_Click(object sender, EventArgs e)
         {
-            // ! Setting the encapsulated attributes and convert the Inputted Text from Web page
-            int capital = getUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
-            int days = getUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
-            double averagePrice = getUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
-            int population = getUserValue.Population = Convert.ToInt32(Txb_Population.Text);
-            double percentPopulation = getUserValue.PercentPopulation = Convert.ToDouble(Txb_Percent_Population.Text);
+            setUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
+            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
+            double averagePrice = setUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
 
-            Display_Capital_Days_Price_Population_Percent(capital, days, averagePrice, population, percentPopulation);
+            Compute_TargetMarket_To_MonthlySales(days, averagePrice);
         }
 
         // ? Button Calculate Salary Per Day to MOnthly Salary
         protected void Btn_Two_Calculate_Click(object sender, EventArgs e)
-        { 
+        {
+            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
+            Compute_Monthly_Salary(days);
         }
 
         // ? Button Calcuate Total Expenses, Net Profit, Return of Investment & ROi Prediction
         protected void Btn_Three_Calculate_Click(object sender, EventArgs e)
         {
-
+            double monthlySalary = Convert.ToDouble(Txb_Monthly_Salary.Text);
+            double monthlySales = Convert.ToDouble(Txb_Monthly_Sales.Text);
+            
+            Compute_TotalExpenses_To_Roi(monthlySalary, monthlySales);  
         }
 
-        // ! Creating Displays for Capital Days Price Population and Percent and its parameters
-        protected void Display_Capital_Days_Price_Population_Percent(int capital, int days, double averagePrice, int population, double percentPopulation)
+        public void Compute_TargetMarket_To_MonthlySales(int days, double averagePrice)
         {
-            Txb_Capital.Text = capital.ToString();
-            Txb_Num_Days.Text = days.ToString();
-            Txb_Average_Price.Text = "₱ " + averagePrice.ToString();
-            Txb_Population.Text = population.ToString();
-            Txb_Target_Market.Text = percentPopulation.ToString() + "%";
+            int population = setUserValue.Population = Convert.ToInt32(Txb_Population.Text);
+            double percentPopulation = setUserValue.PercentPopulation = Convert.ToDouble(Txb_Percent_Population.Text);
+            double targetMarket = getCalculateValue.Calculate_TargetMarket(population, percentPopulation);
+            double dailyTarget = getCalculateValue.Calculate_DailyTarget(targetMarket, days);
+            double salesPerDay = getCalculateValue.Calculate_Sales_PerDay(dailyTarget, averagePrice);
+            double monthlySales = getCalculateValue.Calculate_Monthly_Sales(salesPerDay, days);
+ 
+            Txb_Monthly_Sales.Text = monthlySales.ToString();
         }
+
+        public void Compute_Monthly_Salary(int days)
+        {
+            double salaryPerDay = setUserValue.SalaryPerDay = Convert.ToDouble(Txb_Salary_Per_Day.Text);
+            double monthlySalary = getCalculateValue.Calculate_MonthlySalary(salaryPerDay, days);
+
+            Txb_Monthly_Salary.Text = monthlySalary.ToString();
+        }
+
+        public void Compute_TotalExpenses_To_Roi(double monthlySalary, double monthlySales)
+        {
+            double monthlyExpenses = setUserValue.MonthlyExpenses = Convert.ToDouble(Txb_Monthly_Expenses.Text);
+            double totalExpenses = getCalculateValue.Calculate_TotalExpenses(monthlySalary, monthlyExpenses);
+
+            Txb_Total_Expenses.Text = totalExpenses.ToString();
+
+            double netProfit = getCalculateValue.Calculate_NetProfit(monthlySales, totalExpenses);
+
+            Txb_Net_Profit.Text = netProfit.ToString();
+        }
+
     }
 }
