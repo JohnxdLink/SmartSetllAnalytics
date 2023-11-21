@@ -22,10 +22,10 @@ namespace SmartSetll_Analytics_V2.pages
         // ! Txb_Salary_Per_Day || Txb_Monthly_Salary // Txb_Monthly_Expenses // Txb_Total_Expenses
         // ! Txb_Net_Profit || Txb_Return_Investment || Txb_Roi_Prediction
 
-        // ? Instantiating GetSeVAlues class to create an Object setUSerValue
+        // N: Instantiating GetSeVAlues class to create an Object setUSerValue
         GetSetValues setUserValue = new GetSetValues();
 
-        // ? Instantiating CalculateValues class to create an Object getCalculateValue
+        // N: Instantiating CalculateValues class to create an Object getCalculateValue
         CalculateValues getCalculateValue = new CalculateValues();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace SmartSetll_Analytics_V2.pages
             Compute_TotalExpenses_To_Roi(monthlySalary, monthlySales);
         }
 
-        // ! A void method to Compute TargetMarket to MonthlySales
+        // ? A void method to Compute TargetMarket to MonthlySales
         public void Compute_TargetMarket_To_MonthlySales(int days, double averagePrice)
         {
             // N: Setting the setUserValue from Textboxes and set in Variable
@@ -94,7 +94,7 @@ namespace SmartSetll_Analytics_V2.pages
             Txb_Monthly_Sales.Text = monthlySales.ToString();
         }
 
-        // ! A void method to Compute Monthly Salary and its parameter days
+        // ? A void method to Compute Monthly Salary and its parameter days
         public void Compute_Monthly_Salary(int days)
         {
             // N: Setting the setUserValue from Textboxes and set in Variable
@@ -108,7 +108,7 @@ namespace SmartSetll_Analytics_V2.pages
             Txb_Monthly_Salary.Text = monthlySalary.ToString();
         }
 
-        // ! A void method to Compute Total Expenses, Return of Investment and ROI Prediction and its parameters monthlySalary and monthSales
+        // ? A void method to Compute Total Expenses, Return of Investment and ROI Prediction and its parameters monthlySalary and monthSales
         public void Compute_TotalExpenses_To_Roi(double monthlySalary, double monthlySales)
         {
 
