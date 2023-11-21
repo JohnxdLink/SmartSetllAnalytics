@@ -299,7 +299,7 @@
                             <asp:Button CssClass="clr-save-layout clear-layout" Text="Clear" runat="server" />
                         </div>
                         <div>
-                            <asp:Button CssClass="clr-save-layout save-layout" Text="Save" runat="server" />
+                            <asp:Button ID="Btn_Save" CssClass="clr-save-layout save-layout" Text="Save" runat="server" OnClick="Btn_Save_Click" />
                         </div>
                     </div>
                 </section>

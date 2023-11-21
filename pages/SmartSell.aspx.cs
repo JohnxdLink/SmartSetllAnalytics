@@ -71,6 +71,28 @@ namespace SmartSetll_Analytics_V2.pages
             Compute_TotalExpenses_To_Roi(monthlySalary, monthlySales);
         }
 
+        protected void Btn_Save_Click(object sender, EventArgs e)
+        {
+            int capital = Convert.ToInt32(Txb_Capital.Text);
+            int days = Convert.ToInt32(Txb_Num_Days.Text);
+            double averagePrice = Convert.ToDouble(Txb_Average_Price.Text);
+            int population = Convert.ToInt32(Txb_Population.Text);
+            double percentPopulation = Convert.ToDouble(Txb_Percent_Population.Text);
+            double targetMarket = Convert.ToDouble(Txb_Target_Market.Text);
+            int dailyTarget = Convert.ToInt32(Txb_Daily_Target.Text);
+            double salesPerDay = Convert.ToDouble(Txb_Sales_Per_Day.Text);
+            double monthlySales = Convert.ToDouble(Txb_Monthly_Sales.Text);
+            double salaryPerDay = Convert.ToDouble(Txb_Salary_Per_Day.Text);
+            double monthlySalary = Convert.ToDouble(Txb_Monthly_Salary.Text);
+            double monthlyExpenses = Convert.ToDouble(Txb_Monthly_Expenses.Text);
+            double totalExpenses = Convert.ToDouble(Txb_Total_Expenses.Text);
+            double netProfit = Convert.ToDouble(Txb_Net_Profit.Text);
+            double returnInvestMent = Convert.ToDouble(Txb_Return_Investment.Text);
+            double roiPrediction = Convert.ToDouble(Txb_Roi_Prediction.Text);
+
+            Final_Display_For_Text(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestMent, roiPrediction);
+        }
+
         // ? A void method to Compute TargetMarket to MonthlySales
         public void Compute_TargetMarket_To_MonthlySales(int days, double averagePrice)
         {
@@ -134,7 +156,7 @@ namespace SmartSetll_Analytics_V2.pages
             double returnInvestment = getCalculateValue.Calculate_Roi((int)netProfit, capital);
 
             // X: Display Textboxes to Webpage
-            Txb_Return_Investment.Text = returnInvestment.ToString() + "%";
+            Txb_Return_Investment.Text = returnInvestment.ToString();
 
             // N: Getting the getCalculateValue from its different Public Attributes and its parameters to perform certain task
             double roiPrediction = getCalculateValue.Calculate_Roi_Prediction(monthlySales, netProfit);
@@ -143,5 +165,24 @@ namespace SmartSetll_Analytics_V2.pages
             Txb_Roi_Prediction.Text = roiPrediction.ToString("F2");
         }
 
+        protected void Final_Display_For_Text(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestMent, double roiPrediction)
+        {
+            Txb_Capital.Text = "₱ " + capital.ToString();
+            Txb_Num_Days.Text = days.ToString();
+            Txb_Average_Price.Text = "₱ " + averagePrice.ToString();
+            Txb_Population.Text = population.ToString();
+            Txb_Percent_Population.Text = percentPopulation.ToString() + "%";
+            Txb_Target_Market.Text = targetMarket.ToString();
+            Txb_Daily_Target.Text = dailyTarget.ToString();
+            Txb_Sales_Per_Day.Text = "₱ " + salesPerDay.ToString();
+            Txb_Monthly_Sales.Text = "₱ " + monthlySales.ToString();
+            Txb_Salary_Per_Day.Text = "₱ " + salaryPerDay.ToString();
+            Txb_Monthly_Salary.Text = "₱ " + monthlySalary.ToString();
+            Txb_Monthly_Expenses.Text = "₱ " + monthlyExpenses.ToString();
+            Txb_Total_Expenses.Text = "₱ " + totalExpenses.ToString();
+            Txb_Net_Profit.Text = "₱ " + netProfit.ToString();
+            Txb_Return_Investment.Text = returnInvestMent.ToString() + "%";
+            Txb_Roi_Prediction.Text = roiPrediction.ToString() + "Year(s)";
+        }
     }
 }
