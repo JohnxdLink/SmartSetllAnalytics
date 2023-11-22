@@ -107,6 +107,7 @@
   <ItemGroup>
     <Compile Include="classes\CalculateValues.cs" />
     <Compile Include="classes\GetSetValues.cs" />
+    <Compile Include="classes\InsertGeneralSmartSellData.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

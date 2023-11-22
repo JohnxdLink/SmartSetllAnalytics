@@ -73,6 +73,8 @@ namespace SmartSetll_Analytics_V2.pages
 
         protected void Btn_Save_Click(object sender, EventArgs e)
         {
+            InsertGeneralSmartSellData Obj_Insert_Data = new InsertGeneralSmartSellData();
+           
             int capital = Convert.ToInt32(Txb_Capital.Text);
             int days = Convert.ToInt32(Txb_Num_Days.Text);
             double averagePrice = Convert.ToDouble(Txb_Average_Price.Text);
@@ -89,6 +91,9 @@ namespace SmartSetll_Analytics_V2.pages
             double netProfit = Convert.ToDouble(Txb_Net_Profit.Text);
             double returnInvestMent = Convert.ToDouble(Txb_Return_Investment.Text);
             double roiPrediction = Convert.ToDouble(Txb_Roi_Prediction.Text);
+
+
+            Obj_Insert_Data.Insert_To_Database(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestMent, roiPrediction);
 
             Final_Display_For_Text(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestMent, roiPrediction);
         }
