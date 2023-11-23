@@ -14,6 +14,7 @@
     <form id="smartsellFormId" runat="server">
 
         <div class="smartsell-page">
+            <asp:Label ID="test_ID" Text="Test" runat="server" />
             <header class="header-content">
                 <div class="logo-content">
                     <div>

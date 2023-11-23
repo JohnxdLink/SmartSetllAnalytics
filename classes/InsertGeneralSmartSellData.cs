@@ -13,33 +13,18 @@ namespace SmartSetll_Analytics_V2.classes
 
             try
             {
-                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
+                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=***********";
+                string connectDatabase = "SmartSell_Db";
                 using (SqlConnection obj_Connect_Db = new SqlConnection(sqlConnect))
                 {
                     obj_Connect_Db.Open();
+                    obj_Connect_Db.ChangeDatabase(connectDatabase);
 
-                    string insertQuery = "INSERT INTO [dbo].[General_SmartSell_Tbl] ([Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) VALUES (@capital, @days, @averagePrice, @population, @percentPopulation, @targetMarket, @dailyTarget, @salesPerDay, @monthlySales, @salaryPerDay, @monthlySalary, @monthlyExpenses, @totalExpenses, @netProfit, @returnInvestment, @roiPrediction);";
+                    //string insertQuery = "INSERT INTO [dbo].[General_SmartSell_Tbl] ([Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) VALUES (@Capital, @Days, @Average_Price, @Population, @Percent_Population, @Target_Market, @Daily_Target, @Sales_Per_Day, @Monthly_Sales, @Salary_Per_Day, @Monthly_Salary, @Monthly_Expenses, @Total_Expenses, @Net_Profit, @Return_Investment, @Roi_Prediction)";
+                    string insertQuery = "INSERT INTO [dbo].[General_SmartSell_Tbl] ([Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) VALUES " + capital.ToString() + " " + days.ToString() + " " + averagePrice.ToString() + " " + population.ToString() + " " + percentPopulation.ToString() + " " + targetMarket.ToString() + " " + dailyTarget.ToString() + " " + salesPerDay.ToString() + " " + monthlySales.ToString() + " " + salaryPerDay.ToString() + " " + monthlySalary.ToString() + " " + monthlyExpenses.ToString() + " " + totalExpenses.ToString() + " " + netProfit.ToString() + " " + returnInvestment.ToString() + " " + roiPrediction.ToString();
 
                     using(SqlCommand obj_Command_Db = new SqlCommand(insertQuery, obj_Connect_Db))
                     {
-
-                        obj_Command_Db.Parameters.AddWithValue("@capital", capital);
-                        obj_Command_Db.Parameters.AddWithValue("@days", days);
-                        obj_Command_Db.Parameters.AddWithValue("@averagePrice", averagePrice);
-                        obj_Command_Db.Parameters.AddWithValue("@population", population);
-                        obj_Command_Db.Parameters.AddWithValue("@percentPopulation", percentPopulation);
-                        obj_Command_Db.Parameters.AddWithValue("@targetMarket", targetMarket);
-                        obj_Command_Db.Parameters.AddWithValue("@dailyTarget", dailyTarget);
-                        obj_Command_Db.Parameters.AddWithValue("@salesPerDay", salesPerDay);
-                        obj_Command_Db.Parameters.AddWithValue("@monthlySales", monthlySales);
-                        obj_Command_Db.Parameters.AddWithValue("@salaryPerDay", salaryPerDay);
-                        obj_Command_Db.Parameters.AddWithValue("@monthlySalary", monthlySalary);
-                        obj_Command_Db.Parameters.AddWithValue("@monthlyExpenses", monthlyExpenses);
-                        obj_Command_Db.Parameters.AddWithValue("@totalExpenses", totalExpenses);
-                        obj_Command_Db.Parameters.AddWithValue("@netProfit", netProfit);
-                        obj_Command_Db.Parameters.AddWithValue("@returnInvestment", returnInvestment);
-                        obj_Command_Db.Parameters.AddWithValue("@roiPrediction", roiPrediction);
-                        
                         obj_Command_Db.ExecuteNonQuery();
                     }
 
@@ -47,6 +32,7 @@ namespace SmartSetll_Analytics_V2.classes
                 }
             } catch(Exception ex)
             {
+                Console.WriteLine(ex);
             }
         }
     }
