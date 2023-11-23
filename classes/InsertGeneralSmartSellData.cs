@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
+using System.Diagnostics;
+
 
 namespace SmartSetll_Analytics_V2.classes
 {
     public class InsertGeneralSmartSellData
     {
-
         public void Insert_To_Database(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestment, double roiPrediction)
         {
             try
             {
-                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
+                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2316";
                 string connectDatabase = "SmartSell_Db";
 
                 using (SqlConnection obj_Connect_Db = new SqlConnection(sqlConnect))
@@ -21,20 +19,10 @@ namespace SmartSetll_Analytics_V2.classes
                     obj_Connect_Db.Open();
                     obj_Connect_Db.ChangeDatabase(connectDatabase);
 
-                    string insertQuery = @"INSERT INTO [dbo].[General_SmartSell_Tbl] 
-                                    ([Capital], [Days], [Average_Price], [Population], [Percent_Population], 
-                                    [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], 
-                                    [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], 
-                                    [Net_Profit], [Return_Investment], [Roi_Prediction])
-                                    VALUES 
-                                    (@Capital, @Days, @Average_Price, @Population, @Percent_Population, 
-                                    @Target_Market, @Daily_Target, @Sales_Per_Day, @Monthly_Sales, 
-                                    @Salary_Per_Day, @Monthly_Salary, @Monthly_Expenses, @Total_Expenses, 
-                                    @Net_Profit, @Return_Investment, @Roi_Prediction)";
+                    string insertQuery = @"INSERT INTO [dbo].[General_SmartSell_Tbl] ([Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) VALUES (@Capital, @Days, @Average_Price, @Population, @Percent_Population, @Target_Market, @Daily_Target, @Sales_Per_Day, @Monthly_Sales, @Salary_Per_Day, @Monthly_Salary, @Monthly_Expenses, @Total_Expenses, @Net_Profit, @Return_Investment, @Roi_Prediction)";
 
                     using (SqlCommand obj_Command_Db = new SqlCommand(insertQuery, obj_Connect_Db))
                     {
-                        // Add parameters
                         obj_Command_Db.Parameters.AddWithValue("@Capital", capital);
                         obj_Command_Db.Parameters.AddWithValue("@Days", days);
                         obj_Command_Db.Parameters.AddWithValue("@Average_Price", averagePrice);
@@ -54,19 +42,22 @@ namespace SmartSetll_Analytics_V2.classes
 
                         obj_Command_Db.ExecuteNonQuery();
                     }
-
-                    obj_Connect_Db.Close();
                 }
             }
             catch (SqlException sqlEx)
             {
-
+                Error_Log("SQL Error Occured: " + sqlEx);
             }
 
             catch (Exception ex)
             {
-
+                Error_Log("General Error Occured: " + ex);
             }
+        }
+
+        private void Error_Log(String errorMessage)
+        {
+            Trace.WriteLine(errorMessage);
         }
     }
 
