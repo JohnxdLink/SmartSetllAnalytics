@@ -17,11 +17,6 @@ namespace SmartSetll_Analytics_V2.pages
 
     public partial class SmartSell : System.Web.UI.Page
     {
-        // ! Txb_Capital || Txb_Num_Days || Txb_Average_Price || Txb_Population || Txb_Percent_Population || Txb_Target_Market
-        // ! Txb_Daily_Target || Txb_Sales_Per_Day || Txb_Monthly_Sales
-        // ! Txb_Salary_Per_Day || Txb_Monthly_Salary // Txb_Monthly_Expenses // Txb_Total_Expenses
-        // ! Txb_Net_Profit || Txb_Return_Investment || Txb_Roi_Prediction
-
         // N: Instantiating GetSeVAlues class to create an Object setUSerValue
         GetSetValues setUserValue = new GetSetValues();
 
@@ -71,10 +66,14 @@ namespace SmartSetll_Analytics_V2.pages
             Compute_TotalExpenses_To_Roi(monthlySalary, monthlySales);
         }
 
+        // ? Button to save those data entry to Database
         protected void Btn_Save_Click(object sender, EventArgs e)
         {
+            // N: Instanstiating InsetGeneralSmartSellDAta
             InsertGeneralSmartSellData obj_InsertData = new InsertGeneralSmartSellData();
 
+
+            // N: Converting those Textboxes into certain Data Type
             int capital = Convert.ToInt32(Txb_Capital.Text);
             int days = Convert.ToInt32(Txb_Num_Days.Text);
             double averagePrice = Convert.ToDouble(Txb_Average_Price.Text);
@@ -92,8 +91,10 @@ namespace SmartSetll_Analytics_V2.pages
             double returnInvestment = Convert.ToDouble(Txb_Return_Investment.Text);
             double roiPrediction = Convert.ToDouble(Txb_Roi_Prediction.Text);
 
+            // N: Calling the Insert_To_Database and add those parameters
             obj_InsertData.Insert_To_Database(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestment, roiPrediction);
 
+            // X: Dispaly All Textboxes with its format
             Final_Display_For_Text(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestment, roiPrediction);
         }
 
@@ -170,6 +171,7 @@ namespace SmartSetll_Analytics_V2.pages
             Txb_Roi_Prediction.Text = roiPrediction.ToString("F2");
         }
 
+        // ? A Void to Display All Textboxes and convert to String
         protected void Final_Display_For_Text(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestMent, double roiPrediction)
         {
             Txb_Capital.Text = "₱ " + capital.ToString();
