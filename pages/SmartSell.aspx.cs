@@ -72,30 +72,11 @@ namespace SmartSetll_Analytics_V2.pages
             // N: Instanstiating InsetGeneralSmartSellDAta
             InsertGeneralSmartSellData obj_InsertData = new InsertGeneralSmartSellData();
 
-
-            // N: Converting those Textboxes into certain Data Type
-            int capital = Convert.ToInt32(Txb_Capital.Text);
-            int days = Convert.ToInt32(Txb_Num_Days.Text);
-            double averagePrice = Convert.ToDouble(Txb_Average_Price.Text);
-            int population = Convert.ToInt32(Txb_Population.Text);
-            double percentPopulation = Convert.ToDouble(Txb_Percent_Population.Text);
-            double targetMarket = Convert.ToDouble(Txb_Target_Market.Text);
-            int dailyTarget = Convert.ToInt32(Txb_Daily_Target.Text);
-            double salesPerDay = Convert.ToDouble(Txb_Sales_Per_Day.Text);
-            double monthlySales = Convert.ToDouble(Txb_Monthly_Sales.Text);
-            double salaryPerDay = Convert.ToDouble(Txb_Salary_Per_Day.Text);
-            double monthlySalary = Convert.ToDouble(Txb_Monthly_Salary.Text);
-            double monthlyExpenses = Convert.ToDouble(Txb_Monthly_Expenses.Text);
-            double totalExpenses = Convert.ToDouble(Txb_Total_Expenses.Text);
-            double netProfit = Convert.ToDouble(Txb_Net_Profit.Text);
-            double returnInvestment = Convert.ToDouble(Txb_Return_Investment.Text);
-            double roiPrediction = Convert.ToDouble(Txb_Roi_Prediction.Text);
-
             // N: Calling the Insert_To_Database and add those parameters
-            obj_InsertData.Insert_To_Database(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestment, roiPrediction);
+            obj_InsertData.Insert_To_Database(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
 
             // X: Dispaly All Textboxes with its format
-            Final_Display_For_Text(capital, days, averagePrice, population, percentPopulation, targetMarket, dailyTarget, salesPerDay, monthlySales, salaryPerDay, monthlySalary, monthlyExpenses, totalExpenses, netProfit, returnInvestment, roiPrediction);
+            Final_Display_For_Text(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
         }
 
 
