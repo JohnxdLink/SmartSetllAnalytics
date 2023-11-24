@@ -8,8 +8,7 @@
     <title>SmartSell | Home</title>
 
     <link href="css/Style.css" rel="stylesheet" />
-    <link href="resources/images/logos/SmartSell-Analytics-Logo.png" rel="icon" />
-    <%--<link rel="stylesheet" href=""/>--%>
+    <link href="resources/images/logos/SmartSell-Analytics-Logo.png" rel="icon" />    
 </head>
 <body>
     <form id="indexFormId" runat="server">

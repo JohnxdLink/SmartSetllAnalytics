@@ -14,7 +14,7 @@ namespace SmartSetll_Analytics_V2.classes
             try
             {
                 // N: SqlConnection String and Connect Database
-                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2316";
+                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
                 string connectDatabase = "SmartSell_Db";
 
                 // N: Using "USing" statement so that it has a function that could dispose and close the Connection
