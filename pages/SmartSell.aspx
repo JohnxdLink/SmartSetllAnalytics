@@ -296,7 +296,7 @@
                     <%-- Clear And Save Button --%>
                     <div class="clear-n-save-content">
                         <div>
-                            <asp:Button CssClass="clr-save-layout clear-layout" Text="Clear" runat="server" />
+                            <asp:Button ID="Btn_Clear" CssClass="clr-save-layout clear-layout" Text="Clear" runat="server" OnClick="Btn_Clear_Click" />
                         </div>
                         <div>
                             <asp:Button ID="Btn_Save" CssClass="clr-save-layout save-layout" Text="Save" runat="server" OnClick="Btn_Save_Click" />

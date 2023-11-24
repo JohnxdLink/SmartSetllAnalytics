@@ -77,8 +77,18 @@ namespace SmartSetll_Analytics_V2.pages
 
             // X: Dispaly All Textboxes with its format
             Final_Display_For_Text(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
+
+            // N: Setting the Save Button Enable to False so that it will be temporary disabled
+            Btn_Save.Enabled = false;
         }
 
+        // ? Button to Clear and Set the Btn_Save to true
+        protected void Btn_Clear_Click(object sender, EventArgs e)
+        {
+            // N: Clearing all the Text in Textboxes
+            Txb_Capital.Text = ""; Txb_Num_Days.Text = ""; Txb_Average_Price.Text = ""; Txb_Population.Text = ""; Txb_Percent_Population.Text = ""; Txb_Target_Market.Text = ""; Txb_Daily_Target.Text = ""; Txb_Sales_Per_Day.Text = ""; Txb_Monthly_Sales.Text = ""; Txb_Salary_Per_Day.Text = ""; Txb_Monthly_Salary.Text = ""; Txb_Monthly_Expenses.Text = ""; Txb_Total_Expenses.Text = ""; Txb_Net_Profit.Text = ""; Txb_Return_Investment.Text = ""; Txb_Roi_Prediction.Text = "";
+            Btn_Save.Enabled = true;
+        }
 
         // ? A void method to Compute TargetMarket to MonthlySales
         public void Compute_TargetMarket_To_MonthlySales(int days, double averagePrice)
@@ -92,7 +102,6 @@ namespace SmartSetll_Analytics_V2.pages
             double dailyTarget = getCalculateValue.Calculate_DailyTarget(targetMarket, days);
             double salesPerDay = getCalculateValue.Calculate_Sales_PerDay(dailyTarget, averagePrice);
             double monthlySales = getCalculateValue.Calculate_Monthly_Sales(salesPerDay, days);
-
 
             // X: Display Textboxes to Webpage
             Txb_Population.Text = population.ToString();
@@ -143,7 +152,7 @@ namespace SmartSetll_Analytics_V2.pages
             double returnInvestment = getCalculateValue.Calculate_Roi((int)netProfit, capital);
 
             // X: Display Textboxes to Webpage
-            Txb_Return_Investment.Text = returnInvestment.ToString();
+            Txb_Return_Investment.Text = returnInvestment.ToString("F2");
 
             // N: Getting the getCalculateValue from its different Public Attributes and its parameters to perform certain task
             double roiPrediction = getCalculateValue.Calculate_Roi_Prediction(monthlySales, netProfit);
@@ -156,7 +165,7 @@ namespace SmartSetll_Analytics_V2.pages
         protected void Final_Display_For_Text(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestMent, double roiPrediction)
         {
             Txb_Capital.Text = "₱ " + capital.ToString();
-            Txb_Num_Days.Text = days.ToString();
+            Txb_Num_Days.Text = days.ToString() + " Day(s)";
             Txb_Average_Price.Text = "₱ " + averagePrice.ToString();
             Txb_Population.Text = population.ToString();
             Txb_Percent_Population.Text = percentPopulation.ToString() + "%";

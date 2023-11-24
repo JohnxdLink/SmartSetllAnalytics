@@ -195,6 +195,15 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.WebControls.TextBox Txb_Roi_Prediction;
 
         /// <summary>
+        /// Btn_Clear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Clear;
+
+        /// <summary>
         /// Btn_Save control.
         /// </summary>
         /// <remarks>
