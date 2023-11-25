@@ -63,5 +63,12 @@ namespace SmartSetll_Analytics_V2.classes
             set { confirmPassword = value; }
         }
 
+        private string email = "";
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
     }
 }

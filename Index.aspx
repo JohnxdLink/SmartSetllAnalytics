@@ -152,7 +152,7 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/office.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Comapny Name" Type="text" />
+                                    <asp:TextBox ID="Txb_Company_Name" CssClass="signup-txb-layout" runat="server" Placeholder="Comapny Name" Type="text" />
                                 </div>
                             </div>
 
@@ -162,7 +162,7 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="First Name" Type="text" />
+                                    <asp:TextBox ID="Txb_FirstName" CssClass="signup-txb-layout" runat="server" Placeholder="First Name" Type="text" />
                                 </div>
                             </div>
 
@@ -172,7 +172,7 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Middle Name" Type="text" />
+                                    <asp:TextBox ID="Txb_MiddleName" CssClass="signup-txb-layout" runat="server" Placeholder="Middle Name" Type="text" />
                                 </div>
                             </div>
 
@@ -182,7 +182,7 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Last Name" Type="text" />
+                                    <asp:TextBox ID="Txb_LastName" CssClass="signup-txb-layout" runat="server" Placeholder="Last Name" Type="text" />
                                 </div>
                             </div>
 
@@ -192,7 +192,7 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/user.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Username" Type="text" />
+                                    <asp:TextBox ID="Txb_Username" CssClass="signup-txb-layout" runat="server" Placeholder="Username" Type="text" />
                                 </div>
                             </div>
 
@@ -202,7 +202,17 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Password" Type="password" />
+                                    <asp:TextBox ID="Txb_Password" CssClass="signup-txb-layout" runat="server" Placeholder="Password" Type="password" />
+                                </div>
+                            </div>
+
+                            <%-- Confirm Password --%>
+                            <div class="sign-up-form-layout">
+                                <div>
+                                    <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
+                                </div>
+                                <div>
+                                    <asp:TextBox ID="Txb_Confirm_Password" CssClass="signup-txb-layout" runat="server" Placeholder=" Confirm Password" Type="password" />
                                 </div>
                             </div>
 
@@ -212,7 +222,7 @@
                                     <img class="signup-icons-layout" src="resources/images/icons/email.png" alt="Alternate Text" />
                                 </div>
                                 <div>
-                                    <asp:TextBox CssClass="signup-txb-layout" runat="server" Placeholder="Email" Type="text" />
+                                    <asp:TextBox ID="Txb_Email" CssClass="signup-txb-layout" runat="server" Placeholder="Email" Type="text" />
                                 </div>
                             </div>
 
@@ -220,7 +230,7 @@
 
                             <%-- Signup Button --%>
                             <div class="signup-form-button-layout">
-                                <asp:Button CssClass="signup-button-layout" Text="Sign-up" runat="server" />
+                                <asp:Button ID="Btn_Sign_Up" CssClass="signup-button-layout" Text="Sign-up" runat="server" OnClick="Btn_Sign_Up_Click" />
                             </div>
 
                             <div class="terms-agreement-content">
