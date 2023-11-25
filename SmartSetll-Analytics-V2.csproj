@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\CalculateValues.cs" />
+    <Compile Include="classes\GetSetRegisteredAccount.cs" />
     <Compile Include="classes\GetSetValues.cs" />
     <Compile Include="classes\InsertGeneralSmartSellData.cs" />
     <Compile Include="Index.aspx.cs">
