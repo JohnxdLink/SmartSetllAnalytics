@@ -1,17 +1,12 @@
 ﻿using SmartSetll_Analytics_V2.classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SmartSetll_Analytics_V2.pages
 {
     /* 
      * Project: SmartSell Analytics
      * Developer: Castro JOhn Christian
-     * Message: Under Development in Backend
+     * Message: Almost Finished Working on this Backend 
      * Date Started: 11/19/2023
      */
 
@@ -164,22 +159,7 @@ namespace SmartSetll_Analytics_V2.pages
         // ? A Void to Display All Textboxes and convert to String
         protected void Final_Display_For_Text(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestMent, double roiPrediction)
         {
-            Txb_Capital.Text = "₱ " + capital.ToString();
-            Txb_Num_Days.Text = days.ToString() + " Day(s)";
-            Txb_Average_Price.Text = "₱ " + averagePrice.ToString();
-            Txb_Population.Text = population.ToString();
-            Txb_Percent_Population.Text = percentPopulation.ToString() + "%";
-            Txb_Target_Market.Text = targetMarket.ToString();
-            Txb_Daily_Target.Text = dailyTarget.ToString();
-            Txb_Sales_Per_Day.Text = "₱ " + salesPerDay.ToString();
-            Txb_Monthly_Sales.Text = "₱ " + monthlySales.ToString();
-            Txb_Salary_Per_Day.Text = "₱ " + salaryPerDay.ToString();
-            Txb_Monthly_Salary.Text = "₱ " + monthlySalary.ToString();
-            Txb_Monthly_Expenses.Text = "₱ " + monthlyExpenses.ToString();
-            Txb_Total_Expenses.Text = "₱ " + totalExpenses.ToString();
-            Txb_Net_Profit.Text = "₱ " + netProfit.ToString();
-            Txb_Return_Investment.Text = returnInvestMent.ToString() + "%";
-            Txb_Roi_Prediction.Text = roiPrediction.ToString() + " Year(s)";
+            Txb_Capital.Text = "₱ " + capital.ToString(); Txb_Num_Days.Text = days.ToString() + " Day(s)"; Txb_Average_Price.Text = "₱ " + averagePrice.ToString(); Txb_Population.Text = population.ToString(); Txb_Percent_Population.Text = percentPopulation.ToString() + "%"; Txb_Target_Market.Text = targetMarket.ToString(); Txb_Daily_Target.Text = dailyTarget.ToString(); Txb_Sales_Per_Day.Text = "₱ " + salesPerDay.ToString(); Txb_Monthly_Sales.Text = "₱ " + monthlySales.ToString(); Txb_Salary_Per_Day.Text = "₱ " + salaryPerDay.ToString(); Txb_Monthly_Salary.Text = "₱ " + monthlySalary.ToString(); Txb_Monthly_Expenses.Text = "₱ " + monthlyExpenses.ToString(); Txb_Total_Expenses.Text = "₱ " + totalExpenses.ToString(); Txb_Net_Profit.Text = "₱ " + netProfit.ToString(); Txb_Return_Investment.Text = returnInvestMent.ToString() + "%"; Txb_Roi_Prediction.Text = roiPrediction.ToString() + " Year(s)";
         }
     }
 }

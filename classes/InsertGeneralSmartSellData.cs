@@ -7,16 +7,15 @@ namespace SmartSetll_Analytics_V2.classes
 {
     public class InsertGeneralSmartSellData
     {
+        // N: SqlConnection String and Connect Database
+        string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
+        string connectDatabase = "SmartSell_Db";
 
         // ? A Void to peform Inserting Data to Database that has pararmeters
         public void Insert_To_Database(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestment, double roiPrediction)
         {
             try
             {
-                // N: SqlConnection String and Connect Database
-                string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
-                string connectDatabase = "SmartSell_Db";
-
                 // N: Using "USing" statement so that it has a function that could dispose and close the Connection
                 using (SqlConnection obj_Connect_Db = new SqlConnection(sqlConnect))
                 {
@@ -62,6 +61,44 @@ namespace SmartSetll_Analytics_V2.classes
             }
 
             // N: General Error in SQL Server
+            catch (Exception ex)
+            {
+                Error_Log("General Error Occured: " + ex);
+            }
+        }
+
+        public void Insert_Registered_Account(string companyName, string firstName, string middleName, string lastName, string username, string password, string confirmPassword, string email)
+        {
+            try
+            {
+                using(SqlConnection obj_Connect_Db = new SqlConnection(sqlConnect))
+                {
+                    // N: Instanstiating Connection Database to Open
+                    obj_Connect_Db.Open();
+                    obj_Connect_Db.ChangeDatabase(connectDatabase);
+
+                    string insertQuery = @"INSERT INTO [dbo].[Registered_Account] ([Company_Name], [First_Name], [Middle_Name], [Last_Name], [Username], [Password], [Confirm_Password], [Email]) VALUES (@Company_Name, @First_Name, @Middle_Name, @Last_Name, @Username, @Password, @Confirm_Password, @Email)";
+
+                    using(SqlCommand obj_Command_Db = new SqlCommand(insertQuery, obj_Connect_Db))
+                    {
+                        obj_Command_Db.Parameters.AddWithValue("@Company_Name", companyName);
+                        obj_Command_Db.Parameters.AddWithValue("@First_Name", firstName);
+                        obj_Command_Db.Parameters.AddWithValue("@Middle_Name", middleName);
+                        obj_Command_Db.Parameters.AddWithValue("@Last_Name", lastName);
+                        obj_Command_Db.Parameters.AddWithValue("@Username", username);
+                        obj_Command_Db.Parameters.AddWithValue("@Password", password);
+                        obj_Command_Db.Parameters.AddWithValue("@Confirm_Password", confirmPassword);
+                        obj_Command_Db.Parameters.AddWithValue("@Email", email);
+
+                        obj_Command_Db.ExecuteNonQuery();
+                    }
+
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                Error_Log("SQL Error Occured: " + sqlEx);
+            }
             catch (Exception ex)
             {
                 Error_Log("General Error Occured: " + ex);
