@@ -73,16 +73,23 @@
     <Content Include="css\Scrollbar.css" />
     <Content Include="css\SmartSell-Style.css" />
     <Content Include="css\Style.css" />
+    <Content Include="css\User-Style.css" />
     <Content Include="Index.aspx" />
     <Content Include="js\Script.js" />
     <Content Include="pages\SmartSell.aspx" />
+    <Content Include="pages\User.aspx" />
     <Content Include="resources\images\icons\average-price.png" />
+    <Content Include="resources\images\icons\best-customer-experience.png" />
     <Content Include="resources\images\icons\calculator.png" />
     <Content Include="resources\images\icons\capital.png" />
+    <Content Include="resources\images\icons\corporate.png" />
     <Content Include="resources\images\icons\daily-target.png" />
     <Content Include="resources\images\icons\days.png" />
     <Content Include="resources\images\icons\email.png" />
+    <Content Include="resources\images\icons\face-id.png" />
+    <Content Include="resources\images\icons\home.png" />
     <Content Include="resources\images\icons\lock.png" />
+    <Content Include="resources\images\icons\logout.png" />
     <Content Include="resources\images\icons\monthly-expenses.png" />
     <Content Include="resources\images\icons\monthly-salary.png" />
     <Content Include="resources\images\icons\monthly-sales.png" />
@@ -91,10 +98,12 @@
     <Content Include="resources\images\icons\percent-population.png" />
     <Content Include="resources\images\icons\population.png" />
     <Content Include="resources\images\icons\profile.png" />
+    <Content Include="resources\images\icons\questions.png" />
     <Content Include="resources\images\icons\return-of-investment.png" />
     <Content Include="resources\images\icons\roi-prediction.png" />
     <Content Include="resources\images\icons\salary-per-day.png" />
     <Content Include="resources\images\icons\sales-per-day.png" />
+    <Content Include="resources\images\icons\setting.png" />
     <Content Include="resources\images\icons\target-market.png" />
     <Content Include="resources\images\icons\total-expenses.png" />
     <Content Include="resources\images\icons\user.png" />
@@ -122,6 +131,13 @@
     </Compile>
     <Compile Include="pages\SmartSell.aspx.designer.cs">
       <DependentUpon>SmartSell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
