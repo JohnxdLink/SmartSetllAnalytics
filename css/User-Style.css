@@ -61,44 +61,76 @@ img.logo-layout {
     border-radius: 5px;
 }
 
+img.header-icon-layout {
+    width: 30px;
+    height: 30px;
+}
+
+.company-name-layout {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.company-id-layout {
+    font-weight: bold;
+    font-size: 12px;
+}
+
 section.main-section {
     width: 93vw;
     height: var(--viewport-height);
-    background-color: #002f61;
+}
+
+div.main-content {
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/images/backgrounds/transparent-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 div.home-content {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: #1AE6E6;
 }
 
+header.header-section {
+    margin: 20px 0px 0px 0px;
+    padding: 5px 15px 5px 15px;    
+    display: flex;
+    justify-content: space-between;
+    color: #141414;
+}
+
+div.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.right-section { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 div.capital-content {
-    width: 100%;
-    height: 100%;
     background-color: #26D9D9;
 }
 
 div.monthly-content {
-    width: 100%;
-    height: 100%;
     background-color: #33CCCC;
 }
 
 div.feedback-content {
-    width: 100%;
-    height: 100%;
     background-color: #40C0C0;
 }
 
 div.manual-content {
-    width: 100%;
-    height: 100%;
     background-color: #4DB3B3;
 }
 
 div.profile-content {
-    width: 100%;
-    height: 100%;
     background-color: #5AA6A6;
 }

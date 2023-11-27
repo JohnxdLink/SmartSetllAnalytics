@@ -57,27 +57,53 @@
             </section>
 
             <section class="main-section" runat="server">
-                <div id="homeContentID" class="home-content" runat="server" visible="false">
-                    <h1>Home</h1>
+
+                <div id="homeContentID" class="home-content main-content" runat="server" visible="false">
+                    <header class="header-section">
+                        <div class="left-section">
+                            <div>
+                                <img class="header-icon-layout" src="../resources/images/icons/home.png" alt="Alternate Text" />
+                            </div>
+
+                            <div>
+                                <h1>Home</h1>
+                            </div>
+                        </div>
+
+                        <div class="right-section">
+                            <div>
+                                <img class="header-icon-layout" src="../resources/images/icons/corporate.png" alt="Alternate Text" />
+                            </div>
+                            <div class="company-n-id-section">
+                                <div>
+                                    <asp:Label CssClass="company-name-layout" Text="Company Name" runat="server" />
+                                </div>
+                                <div>
+                                    <asp:Label CssClass="company-id-layout" Text="Company ID" runat="server" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </header>
                 </div>
-                <div id="capitalContentID" class="capital-content" runat="server" visible="false">
+                <div id="capitalContentID" class="capital-content main-content" runat="server" visible="false">
                     <h2>Capital</h2>
                 </div>
 
-                <div id="monthlyContentID" class="monthly-content" runat="server" visible="false">
+                <div id="monthlyContentID" class="monthly-content main-content" runat="server" visible="false">
                     <h2>Monthly</h2>
                 </div>
 
-                <div id="feedbackContentID" class="feedback-content" runat="server" visible="false">
+                <div id="feedbackContentID" class="feedback-content main-content" runat="server" visible="false">
                     <h2>Feedback</h2>
                 </div>
 
-                <div id="manualContentID" class="manual-content" runat="server" visible="false">
+                <div id="manualContentID" class="manual-content main-content" runat="server" visible="false">
                     <h2>Manual</h2>
                 </div>
 
-                <div id="profileContentID" class="profile-content" runat="server" visible="false">
-                    <h2>profile</h2>
+                <div id="profileContentID" class="profile-content main-content" runat="server" visible="false">
+                    <h2>Profile</h2>
                 </div>
             </section>
         </div>
