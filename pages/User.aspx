@@ -6,87 +6,83 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title> SmartSell | Dashboard</title>
+    <title>SmartSell | Dashboard</title>
 
     <link href="../css/User-Style.css" rel="stylesheet" />
     <link rel="icon" href="../resources/images/logos/SmartSell-Analytics-Logo.png" />
 </head>
 <body>
     <form id="userFormId" runat="server">
+
+        <%-- Whole Page --%>
         <div class="page">
-            <div calss="whole-page">
-                <header class="header-content">
+            <section class="nav-bar-section">
+                <div class="logo-content">
+                    <img class="logo-layout" src="../resources/images/logos/SmartSell-Analytics-Logo.png" alt="Alternate Text" />
+                </div>
 
-                    <section class="section-logo">
-                        <img class="logo-layout" src="../resources/images/logos/SmartSell-Analytics-Logo.png" alt="Alternate Text" />
-                    </section>
-
-                    <section class="section-user-profile">
-                        <div class="user-profile-layout">
-                            <div>
-                                <img class="icon-layout" src="../resources/images/icons/face-id.png" alt="Alternate Text" />
-                            </div>
-                            <div>
-                                <asp:Label Text="Company ID" runat="server" />
-                            </div>
-                        </div>
-
-                        <div class="user-profile-layout">
-                            <div>
-                                <img class="icon-layout" src="../resources/images/icons/corporate.png" alt="Alternate Text" />
-                            </div>
-                            <div>
-                                <asp:Label Text="Company Name" runat="server" />
-                            </div>
-                        </div>
-
-                        <div class="user-profile-layout">
-                            <div>
-                                <img class="icon-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
-                            </div>
-                            <div>
-                                <asp:Label Text="Username" runat="server" />
-                            </div>
-                        </div>
-                    </section>
-                </header>
-
-                <main class="main-content">
+                <div class="separated-nav-bar">
                     <section class="nav-section">
-                        <div class="nav-bar-layout">
-                            <div>
-                                <img class="nav-icon-layout" src="../resources/images/icons/home.png" alt="Alternate Text" />
-                            </div>
-
-                            <div>
-                                <img class="nav-icon-layout" src="../resources/images/icons/roi-prediction.png" alt="Alternate Text" />
-                            </div>
-
-                            <div>
-                                <img class="nav-icon-layout" src="../resources/images/icons/best-customer-experience.png" alt="Alternate Text" />
-                            </div>
-
-                            <div>
-                                <img class="nav-icon-layout" src="../resources/images/icons/questions.png" alt="Alternate Text" />
-                            </div>
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Home" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/home.png" runat="server" OnClick="Btn_Home_Click" />
                         </div>
 
-                        <div class="nav-bar-layout">
-                            <div>
-                                <img class="nav-icon-layout" src="../resources/images/icons/setting.png" alt="Alternate Text" />
-                            </div>
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Capital" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/capital.png" runat="server" OnClick="Btn_Capital_Click" />
+                        </div>
 
-                            <div>
-                                <img class="nav-icon-layout" src="../resources/images/icons/logout.png" alt="Alternate Text" />
-                            </div>
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Monthly" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/roi-prediction.png" runat="server" OnClick="Btn_Monthly_Click" />
+                        </div>
+
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Feedback" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/best-customer-experience.png" runat="server" OnClick="Btn_Feedback_Click" />
+                        </div>
+
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Manual" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/questions.png" runat="server" OnClick="Btn_Manual_Click" />
                         </div>
                     </section>
-                    <section class="main-section">
 
+                    <section class="nav-section">
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Profile" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/profile.png" runat="server" OnClick="Btn_Profile_Click" />
+                        </div>
+
+                        <div>
+                            <asp:ImageButton ID="Img_Btn_Logout" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/logout.png" runat="server" OnClick="Btn_Logout_Click" />
+                        </div>
                     </section>
-                </mai>
-            </div>
+                </div>
+            </section>
+
+            <section class="main-section" runat="server">
+                <div id="homeContentID" class="home-content" runat="server" visible="false">
+                    <h1>Home</h1>
+                </div>
+                <div id="capitalContentID" class="capital-content" runat="server" visible="false">
+                    <h2>Capital</h2>
+                </div>
+
+                <div id="monthlyContentID" class="monthly-content" runat="server" visible="false">
+                    <h2>Monthly</h2>
+                </div>
+
+                <div id="feedbackContentID" class="feedback-content" runat="server" visible="false">
+                    <h2>Feedback</h2>
+                </div>
+
+                <div id="manualContentID" class="manual-content" runat="server" visible="false">
+                    <h2>Manual</h2>
+                </div>
+
+                <div id="profileContentID" class="profile-content" runat="server" visible="false">
+                    <h2>profile</h2>
+                </div>
+            </section>
         </div>
     </form>
+
+    <script src="../js/UserScript.js"></script>
 </body>
 </html>

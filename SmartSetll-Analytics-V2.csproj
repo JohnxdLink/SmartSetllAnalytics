@@ -76,6 +76,7 @@
     <Content Include="css\User-Style.css" />
     <Content Include="Index.aspx" />
     <Content Include="js\Script.js" />
+    <Content Include="js\UserScript.js" />
     <Content Include="pages\SmartSell.aspx" />
     <Content Include="pages\User.aspx" />
     <Content Include="resources\images\icons\average-price.png" />
