@@ -81,10 +81,143 @@
                                 <div>
                                     <asp:Label CssClass="company-id-layout" Text="Company ID" runat="server" />
                                 </div>
-
                             </div>
                         </div>
                     </header>
+
+                    <main class="home-main-section">
+                        <section class="section-one">
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/capital-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Capital</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/days-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Days Open</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/average-price-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Average Price</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/population-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Population</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/percent-population-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Percent Population</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/daily-target-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Daily Target</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/target-market-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Monthly Target</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <section class="section-two">
+
+                        </section>
+
+                        <section class="section-three">
+                        </section>
+
+                        <section class="section-four">
+                        </section>
+                    </main>
                 </div>
                 <div id="capitalContentID" class="capital-content main-content" runat="server" visible="false">
                     <h2>Capital</h2>
