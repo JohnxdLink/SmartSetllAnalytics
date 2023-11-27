@@ -209,13 +209,166 @@
                         </section>
 
                         <section class="section-two">
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/sales-per-day-icon.png" alt="Alternate Text" />
+                                    </div>
 
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Sales Per Day</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/gross-income-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Monthly Sales</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/salary-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Salary Per Day</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/monthly-salary-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Monthly Salary</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/fixed-expenses-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Monthly Expenses</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
 
                         <section class="section-three">
+                            <div class="simplified-layout" style="margin-top: 20%;">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/total-expenses-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Total Expenses</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/gross-profit-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Net Profit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
 
                         <section class="section-four">
+                            <div class="simplified-layout" style="margin-top: 20%;">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/roi-percentage-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Return of Investment (ROI)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/return-of-investment-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">ROI Prediction Year</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simplified-layout">
+                                <asp:Button CssClass="smartsell-button-layout" Text="Go to SmartSell" runat="server" />
+                            </div>
                         </section>
                     </main>
                 </div>

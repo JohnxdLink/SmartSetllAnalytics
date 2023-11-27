@@ -98,6 +98,7 @@
     <Content Include="resources\images\colored-icons\salary-icon.png" />
     <Content Include="resources\images\colored-icons\sales-per-day-icon.png" />
     <Content Include="resources\images\colored-icons\target-market-icon.png" />
+    <Content Include="resources\images\colored-icons\total-expenses-icon.png" />
     <Content Include="resources\images\icons\average-price.png" />
     <Content Include="resources\images\icons\best-customer-experience.png" />
     <Content Include="resources\images\icons\calculator.png" />
