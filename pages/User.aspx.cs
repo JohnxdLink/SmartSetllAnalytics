@@ -10,7 +10,7 @@ namespace SmartSetll_Analytics_V2.pages
     public partial class User : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        { 
             if (!IsPostBack)
             {
                 // Check if the session variable exists
