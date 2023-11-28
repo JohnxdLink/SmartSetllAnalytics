@@ -242,7 +242,8 @@
         </div>
 
         <% /* N: Modal For Validation of Login Account using C# Server */ %>
-        <div id="loginModalContentID" class="modal-server-side-content w3-animate-opacity" runat="server">
+        <% /* N: Login Sucessfully Side Modal Content */ %>
+        <div id="loginModalContentID" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
             <div class="modal-server-side w3-animate-top">
                 <div>
                     <img class="login-notification-icon-layout" src="resources/images/icons/check.png" alt="Alternate Text" />
@@ -260,7 +261,8 @@
             </div>
         </div>
 
-        <div id="Div1" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
+        <% /* N: Login Failed Server Side Modal Content */ %>
+        <div id="failedModalContentID" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
             <div class="modal-server-side w3-animate-top">
                 <div>
                     <img class="login-notification-icon-layout" src="resources/images/icons/notice.png" alt="Alternate Text" />
@@ -282,7 +284,8 @@
             </div>
         </div>
 
-        <div id="Div2" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
+        <% /* N: SmartSell Server Side Modal Content */ %>
+        <div id="smartsellModalContentID" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
             <div class="modal-server-side w3-animate-top">
                 <div>
                     <img class="login-notification-icon-layout" src="resources/images/logos/SmartSell-Analytics-Logo.png" alt="Alternate Text" />
@@ -303,6 +306,8 @@
                 </div>
             </div>
         </div>
+
+        <% /* ! This Modal Need Functionality */ %>
     </form>
 
     <script src="js/Script.js"></script>

@@ -114,21 +114,21 @@ namespace SmartSetll_Analytics_V2
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginModalContentID;
 
         /// <summary>
-        /// Div1 control.
+        /// failedModalContentID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl failedModalContentID;
 
         /// <summary>
-        /// Div2 control.
+        /// smartsellModalContentID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl smartsellModalContentID;
     }
 }
