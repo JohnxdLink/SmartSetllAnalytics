@@ -8,19 +8,20 @@
     <title>SmartSell | Home</title>
 
     <link href="css/Style.css" rel="stylesheet" />
-    <link href="resources/images/logos/SmartSell-Analytics-Logo.png" rel="icon" />    
+    <link href="resources/images/logos/SmartSell-Analytics-Logo.png" rel="icon" />
 </head>
 <body>
     <form id="indexFormId" runat="server">
 
-        <%-- Whole Container --%>
+        <% /* N: Whole container */ %>
         <div class="page">
 
-            <%-- Home Content --%>
+            <% /* N: Home COntent */ %>
             <div class="home-page-content">
                 <header class="header-content">
 
-                    <%-- Naviation Bar --%>
+                    <% /* N: Navigation Bar */ %>
+
                     <section class="navbar-section">
                         <div>
                             <p class="navbar-layout">Home</p>
@@ -36,7 +37,7 @@
                         </div>
                     </section>
 
-                    <%-- Navigation Bard Right Section --%>
+                    <% /* N: Navigation Bard Right Section */ %>
                     <section class="navbar-section">
                         <div>
                             <p class="navbar-layout" onclick="showModalContent('signin-modal-id')">Sign-in</p>
@@ -50,7 +51,7 @@
                     </section>
                 </header>
 
-                <%-- Main Content --%>
+                <% /* N: Main Content */ %>
                 <main class="main-content">
                     <section class="main-left-content">
                         <div class="logo-content">
@@ -68,7 +69,7 @@
                             <p>The inception of SmartSell Analytics finds its roots in the ever-growing significance of data analytics and financial modeling within contemporary business practices. In an era characterized by rapid technological advancements and an exponential surge in accessible data, businesses must evolve to maintain their competitiveness.</p>
                         </div>
 
-                        <%-- Launch SmartSell Analytics --%>
+                        <% /* N: Launch SmartSell Analytics */ %>
                         <div class="launch-button-content">
                             <a class="launch-button-layout" href="pages/SmartSell.aspx">Launch</a>
                         </div>
@@ -80,12 +81,12 @@
                 </main>
             </div>
         </div>
-        <!-- End of Div Page Content -->
+        <% /* N: End of DIV Page Content */ %>
 
-        <%-- Modal Container --%>
+        <% /* N: Modal Container */ %>
         <div id="signin-modal-id" class="modal-content w3-animate-opacity">
 
-            <%-- Signin Modal Content --%>
+            <% /* N: Signin Modal Content */ %>
             <div class="signin-modal-container w3-animate-zoom">
                 <div class="close-content">
                     <p class="close-layout" onclick="closeModalContent('signin-modal-id')">x</p>
@@ -123,12 +124,12 @@
                 </div>
             </div>
         </div>
-        <%-- End of Div Signin Modal Content --%>
+        <% /* N: End of Div Signin Modal Content */ %>
 
-        <%-- Signup Modal Container --%>
+        <% /* N: Signup Modal Container */ %>
         <div id="signup-modal-id" class="modal-content w3-animate-opacity">
 
-            <%-- Signup Modal Content --%>
+            <% /* N: Signup Modal Content */ %>
             <div class="signup-modal-container w3-animate-zoom">
                 <div class="close-content">
                     <p class="close-layout" onclick="closeModalContent('signup-modal-id')">x</p>
@@ -143,10 +144,10 @@
                             <h1 class="login-layout">CREATE ACCOUNT</h1>
                         </div>
 
-                        <%-- Signup Form Container --%>
+                        <% /* N: Signup Form Container */ %>
                         <div class="signup-form-content">
 
-                            <%-- Company --%>
+                            <% /* N: Company */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/office.png" alt="Alternate Text" />
@@ -156,7 +157,7 @@
                                 </div>
                             </div>
 
-                            <%-- First Name --%>
+                            <% /* N: First Name */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
@@ -166,7 +167,7 @@
                                 </div>
                             </div>
 
-                            <%-- Middle Name --%>
+                            <% /* N: Middle Name */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
@@ -176,7 +177,7 @@
                                 </div>
                             </div>
 
-                            <%-- Middle Name --%>
+                            <% /* N: Last Name */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/profile.png" alt="Alternate Text" />
@@ -186,7 +187,7 @@
                                 </div>
                             </div>
 
-                            <%-- Username --%>
+                            <% /* N: Usename */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/user.png" alt="Alternate Text" />
@@ -196,7 +197,7 @@
                                 </div>
                             </div>
 
-                            <%-- Password --%>
+                            <% /* N: Password */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
@@ -206,7 +207,7 @@
                                 </div>
                             </div>
 
-                            <%-- Confirm Password --%>
+                            <% /* N: Confirm Password */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
@@ -216,7 +217,7 @@
                                 </div>
                             </div>
 
-                            <%-- Email --%>
+                            <% /* N: Email */%>
                             <div class="sign-up-form-layout">
                                 <div>
                                     <img class="signup-icons-layout" src="resources/images/icons/email.png" alt="Alternate Text" />
@@ -226,9 +227,7 @@
                                 </div>
                             </div>
 
-                            <%-- By Signing up; you agree to SmartSell Analytics Rules. Terms of Services and Privacy Policy. --%>
-
-                            <%-- Signup Button --%>
+                            <% /* N: Signup Button */%>
                             <div class="signup-form-button-layout">
                                 <asp:Button ID="Btn_Sign_Up" CssClass="signup-button-layout" Text="Sign-up" runat="server" OnClick="Btn_Sign_Up_Click" />
                             </div>

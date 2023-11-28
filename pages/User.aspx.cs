@@ -90,5 +90,14 @@ namespace SmartSetll_Analytics_V2.pages
             // N: Redirect to the login page (adjust the URL accordingly)
             Response.Redirect("~/Index.aspx");
         }
+
+        protected void Btn_Go_SmartSell_Click(object sender, EventArgs e)
+        {
+            // N: Clear session variables
+            Session.Clear();
+
+            // N: Redirect to the login page (adjust the URL accordingly)
+            Response.Redirect("~/pages/SmartSell.aspx");
+        }
     }
 }
