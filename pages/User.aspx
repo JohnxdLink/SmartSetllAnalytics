@@ -87,10 +87,10 @@
                             <% /* ! This is where you can manipulate the company name and id through its label ID */ %>
                             <div class="company-n-id-section">
                                 <div>
-                                    <asp:Label CssClass="company-name-layout" Text="Company Name" runat="server" />
+                                    <asp:Label ID="Lbl_Company_Name" CssClass="company-name-layout" Text="Company Name" runat="server" />
                                 </div>
                                 <div>
-                                    <asp:Label CssClass="company-id-layout" Text="Company ID" runat="server" />
+                                    <asp:Label ID="Lbl_Company_ID" CssClass="company-id-layout" Text="Company ID" runat="server" />
                                 </div>
                             </div>
                         </div>

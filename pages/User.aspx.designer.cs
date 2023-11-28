@@ -96,6 +96,24 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl homeContentID;
 
         /// <summary>
+        /// Lbl_Company_Name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_Company_Name;
+
+        /// <summary>
+        /// Lbl_Company_ID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lbl_Company_ID;
+
+        /// <summary>
         /// Btn_Go_SmartSell control.
         /// </summary>
         /// <remarks>

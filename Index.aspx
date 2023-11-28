@@ -21,7 +21,6 @@
                 <header class="header-content">
 
                     <% /* N: Navigation Bar */ %>
-
                     <section class="navbar-section">
                         <div>
                             <p class="navbar-layout">Home</p>
@@ -102,7 +101,9 @@
                             <img class="signup-icons-layout" src="resources/images/icons/user.png" alt="Alternate Text" />
                         </div>
                         <div>
-                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Username" Type="text" />
+
+                            <% /* N: Username Textboxes */ %>
+                            <asp:TextBox ID="Txb_Login_Username" CssClass="txb-layout" runat="server" Placeholder="Username" Type="text" />
                         </div>
                     </div>
                     <div class="password-content user-pass-content">
@@ -110,7 +111,9 @@
                             <img class="signup-icons-layout" src="resources/images/icons/lock.png" alt="Alternate Text" />
                         </div>
                         <div>
-                            <asp:TextBox CssClass="txb-layout" runat="server" Placeholder="Password" Type="password" />
+
+                            <% /* N: Password Textboxes */ %>
+                            <asp:TextBox ID="Txb_Login_Password" CssClass="txb-layout" runat="server" Placeholder="Password" Type="password" />
                         </div>
                     </div>
                 </div>
@@ -119,8 +122,9 @@
                     <asp:Button CssClass="forgot-pass-layout" Text="Forgot Password" runat="server" />
                 </div>
 
+                <% /* N: Signin Button */ %>
                 <div class="signin-content">
-                    <asp:Button CssClass="signin-button-layout" Text="Sign-in" runat="server" />
+                    <asp:Button ID="Btn_Signin" CssClass="signin-button-layout" Text="Sign-in" runat="server" OnClick="Btn_Signin_Click" />
                 </div>
             </div>
         </div>
@@ -255,7 +259,7 @@
                     </div>
 
                     <div style="display: flex; justify-content: right;">
-                        <asp:Button CssClass="notification-button login-success-notif" Text="Proceed" runat="server" />
+                        <asp:Button ID="Btn_Login_Success" CssClass="notification-button login-success-notif" Text="Proceed" runat="server" OnClick="Btn_Login_Success_Click" />
                     </div>
                 </div>
             </div>
@@ -278,7 +282,7 @@
                     </div>
 
                     <div style="display: flex; justify-content: right;">
-                        <asp:Button CssClass="notification-button login-failed-notif" Text="Continue" runat="server" />
+                        <asp:Button ID="Btn_login_Failed" CssClass="notification-button login-failed-notif" Text="Continue" runat="server" OnClick="Btn_login_Failed_Click" />
                     </div>
                 </div>
             </div>

@@ -26,6 +26,25 @@ namespace SmartSetll_Analytics_V2.pages
                     capitalContentID.Visible = !isContentVisible; monthlyContentID.Visible = !isContentVisible; feedbackContentID.Visible = !isContentVisible; manualContentID.Visible = !isContentVisible; profileContentID.Visible = !isContentVisible;
                 }
             }
+
+            if (!IsPostBack)
+            {
+                // Check if the user is logged in
+                if (Session["Company_ID"] == null || Session["Company_Name"] == null)
+                {
+                    // Redirect back to index.aspx if not logged in
+                    Response.Redirect("~/Index.aspx");
+                }
+                else
+                {
+                    // Update labels with company information
+                    int companyId = (int)Session["Company_ID"];
+                    string companyName = (string)Session["Company_Name"];
+
+                    Lbl_Company_ID.Text = "ID: " + companyId.ToString();
+                    Lbl_Company_Name.Text = "Company: " + companyName;
+                }
+            }
         }
 
         protected void Btn_Home_Click(object sender, EventArgs e)

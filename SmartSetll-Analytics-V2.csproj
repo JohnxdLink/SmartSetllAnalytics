@@ -142,6 +142,7 @@
     <Compile Include="classes\GetSetRegisteredAccount.cs" />
     <Compile Include="classes\GetSetValues.cs" />
     <Compile Include="classes\InsertGeneralSmartSellData.cs" />
+    <Compile Include="classes\RetrieveUserAccount.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

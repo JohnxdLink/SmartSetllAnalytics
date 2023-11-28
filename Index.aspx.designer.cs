@@ -24,6 +24,33 @@ namespace SmartSetll_Analytics_V2
         protected global::System.Web.UI.HtmlControls.HtmlForm indexFormId;
 
         /// <summary>
+        /// Txb_Login_Username control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txb_Login_Username;
+
+        /// <summary>
+        /// Txb_Login_Password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txb_Login_Password;
+
+        /// <summary>
+        /// Btn_Signin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Signin;
+
+        /// <summary>
         /// Txb_Company_Name control.
         /// </summary>
         /// <remarks>
@@ -114,6 +141,15 @@ namespace SmartSetll_Analytics_V2
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginModalContentID;
 
         /// <summary>
+        /// Btn_Login_Success control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Login_Success;
+
+        /// <summary>
         /// failedModalContentID control.
         /// </summary>
         /// <remarks>
@@ -121,6 +157,15 @@ namespace SmartSetll_Analytics_V2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl failedModalContentID;
+
+        /// <summary>
+        /// Btn_login_Failed control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_login_Failed;
 
         /// <summary>
         /// smartsellModalContentID control.
