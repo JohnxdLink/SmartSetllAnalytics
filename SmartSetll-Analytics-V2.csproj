@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css\Animation.css" />
     <Content Include="css\Modal.css" />
+    <Content Include="css\ModalServerSide.css" />
     <Content Include="css\Responsive.css" />
     <Content Include="css\Scrollbar.css" />
     <Content Include="css\SmartSell-Style.css" />
@@ -81,6 +82,7 @@
     <Content Include="pages\User.aspx" />
     <Content Include="resources\images\backgrounds\default-background.png" />
     <Content Include="resources\images\backgrounds\transparent-background.png" />
+    <Content Include="resources\images\icons\check.png" />
     <Content Include="resources\images\colored-icons\average-price-icon.png" />
     <Content Include="resources\images\colored-icons\capital-icon.png" />
     <Content Include="resources\images\colored-icons\daily-target-icon.png" />
@@ -132,6 +134,7 @@
     <Content Include="resources\images\illustrations\Shared-workspace-amico.png" />
     <Content Include="resources\images\illustrations\Sign up-amico.png" />
     <Content Include="resources\images\logos\SmartSell-Analytics-Logo.png" />
+    <Content Include="resources\images\icons\notice.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -240,6 +240,69 @@
                 </div>
             </div>
         </div>
+
+        <% /* N: Modal For Validation of Login Account using C# Server */ %>
+        <div id="loginModalContentID" class="modal-server-side-content w3-animate-opacity" runat="server">
+            <div class="modal-server-side w3-animate-top">
+                <div>
+                    <img class="login-notification-icon-layout" src="resources/images/icons/check.png" alt="Alternate Text" />
+                </div>
+
+                <div class="notification-login">
+                    <div>
+                        <asp:Label CssClass="label-notification-layout" Text="LOGIN SUCESSFULLY" runat="server" />
+                    </div>
+
+                    <div style="display: flex; justify-content: right;">
+                        <asp:Button CssClass="notification-button login-success-notif" Text="Proceed" runat="server" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Div1" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
+            <div class="modal-server-side w3-animate-top">
+                <div>
+                    <img class="login-notification-icon-layout" src="resources/images/icons/notice.png" alt="Alternate Text" />
+                </div>
+
+                <div class="notification-login" style="width: 100%;">
+                    <div>
+                        <asp:Label CssClass="label-notification-layout" Text="LOGIN FAILED" runat="server" />
+                    </div>
+
+                    <div>
+                        <p style="font-size: 14px;">Please Try Again</p>
+                    </div>
+
+                    <div style="display: flex; justify-content: right;">
+                        <asp:Button CssClass="notification-button login-failed-notif" Text="Continue" runat="server" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Div2" class="modal-server-side-content w3-animate-opacity" runat="server" visible="false">
+            <div class="modal-server-side w3-animate-top">
+                <div>
+                    <img class="login-notification-icon-layout" src="resources/images/logos/SmartSell-Analytics-Logo.png" alt="Alternate Text" />
+                </div>
+
+                <div class="notification-login" style="width: 100%;">
+                    <div>
+                        <asp:Label CssClass="label-notification-layout" Text="NO SMARTSELL EXIST" runat="server" />
+                    </div>
+
+                    <div>
+                        <p style="font-size: 14px;">You need to go at SmartSell page first</p>
+                    </div>
+
+                    <div style="display: flex; justify-content: right;">
+                        <asp:Button CssClass="notification-button smartsell-notif" Text="Launch" runat="server" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 
     <script src="js/Script.js"></script>

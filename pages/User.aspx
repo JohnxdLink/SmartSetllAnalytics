@@ -60,7 +60,7 @@
                 </div>
             </section>
 
-            <% /* N: MAin Section */ %>
+            <% /* N: Main Section */ %>
             <section class="main-section" runat="server">
 
                 <% /* N: Home Content */ %>
