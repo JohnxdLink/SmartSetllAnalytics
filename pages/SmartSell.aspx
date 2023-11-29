@@ -328,7 +328,7 @@
                                 <img class="login-icon-layout" src="../resources/images/icons/user.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Username" />
+                                <asp:TextBox ID="Txb_Login_Username" CssClass="txb-input-layout" runat="server" Placeholder="Username" />
                             </div>
                         </div>
 
@@ -337,13 +337,13 @@
                                 <img class="login-icon-layout" src="../resources/images/icons/lock.png" alt="Alternate Text" />
                             </div>
                             <div>
-                                <asp:TextBox CssClass="txb-input-layout" runat="server" Placeholder="Password" />
+                                <asp:TextBox ID="Txb_Login_Password" CssClass="txb-input-layout" runat="server" Placeholder="Password" TextMode="password" />
                             </div>
                         </div>
 
                         <div class="login-form-content">
                             <div class="login-button-layout">
-                                <asp:Button CssClass="signin-button-layout" Text="Login" runat="server" />
+                                <asp:Button ID="Btn_Login" CssClass="signin-button-layout" Text="Login" runat="server" OnClick="Btn_Login_Click" />
                             </div>
                         </div>
 

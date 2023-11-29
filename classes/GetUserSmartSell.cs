@@ -22,7 +22,7 @@ namespace SmartSetll_Analytics_V2.classes
                     obj_Connect_Db.Open();
                     obj_Connect_Db.ChangeDatabase(connectDatabase);
 
-                    string selectQuery = @" SELECT [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction] FROM [dbo].[User_SmartSell] WHERE Company_ID = @Company_ID";
+                    string selectQuery = @"SELECT [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction] FROM [dbo].[User_SmartSell] WHERE Company_ID = @Company_ID";
 
                     using (SqlCommand obj_Command_Db = new SqlCommand(selectQuery, obj_Connect_Db))
                     {
