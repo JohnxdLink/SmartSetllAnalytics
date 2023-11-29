@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartSetll_Analytics_V2.classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,8 @@ namespace SmartSetll_Analytics_V2.pages
 {
     public partial class User : System.Web.UI.Page
     {
+        GetUserSmartSell userSmartSell = new GetUserSmartSell();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             homeContentID.Visible = true;
@@ -43,6 +46,8 @@ namespace SmartSetll_Analytics_V2.pages
 
                     Lbl_Company_ID.Text = "ID: " + companyId.ToString();
                     Lbl_Company_Name.Text = "Company: " + companyName;
+
+                    userSmartSell.RetrieveUserSmartSellData(companyId, Lbl_Capital, Lbl_Num_Days, Lbl_Average_Price, Lbl_Population, Lbl_Percent_Population, Lbl_Target_Market, Lbl_Daily_Target, Lbl_Sales_Per_Day, Lbl_Monthly_Sales, Lbl_Salary_Per_Day, Lbl_Monthly_Salary, Lbl_Monthly_Expenses,Lbl_Total_Expenses,Lbl_Net_Profit, Lbl_Return_Investment, Lbl_Roi_Prediction);
                 }
             }
         }
@@ -88,7 +93,7 @@ namespace SmartSetll_Analytics_V2.pages
             // N: Set visibility and update the session variable
             manualContentID.Visible = true;
             homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; profileContentID.Visible = false;
-            
+
             Session["ContentVisibility"] = false;
         }
 

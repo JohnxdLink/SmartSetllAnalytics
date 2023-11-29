@@ -113,7 +113,7 @@
 
                                         <% /* ! Capital: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Capital" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Capital</p>
@@ -132,7 +132,7 @@
                                     <div>
                                         <% /* ! Days: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Num_Days" CssClass="label-layout" Text="00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Days Open</p>
@@ -152,7 +152,7 @@
 
                                         <% /* ! Average Price: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Average_Price" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Average Price</p>
@@ -172,7 +172,7 @@
 
                                         <% /* ! Population:: Manipulate the Text via ID  */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Population" CssClass="label-layout" Text="00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Population</p>
@@ -192,10 +192,30 @@
 
                                         <% /* ! Percent Population: Manipulate the Text via ID  */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Percent_Population" CssClass="label-layout" Text="00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Percent Population</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <% /* N: Target Market Section */ %>
+                            <div class="simplified-layout">
+                                <div class="simplified-icon-n-label">
+                                    <div>
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/daily-target-icon.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+
+                                        <% /* ! Target Market: Manipulate the Text via ID */ %>
+                                        <div>
+                                            <asp:Label ID="Lbl_Target_Market" CssClass="label-layout" Text="00" runat="server" />
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 14px;">Daily Target</p>
                                         </div>
                                     </div>
                                 </div>
@@ -205,37 +225,17 @@
                             <div class="simplified-layout">
                                 <div class="simplified-icon-n-label">
                                     <div>
-                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/daily-target-icon.png" alt="Alternate Text" />
+                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/target-market-icon.png" alt="Alternate Text" />
                                     </div>
 
                                     <div>
 
                                         <% /* ! Daily Target: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Daily_Target" CssClass="label-layout" Text="00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Daily Target</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <% /* N: Monthly Target Section */ %>
-                            <div class="simplified-layout">
-                                <div class="simplified-icon-n-label">
-                                    <div>
-                                        <img class="colored-icons-layout" src="../resources/images/colored-icons/target-market-icon.png" alt="Alternate Text" />
-                                    </div>
-
-                                    <div>
-
-                                        <% /* ! Monthly Target: Manipulate the Text via ID */ %>
-                                        <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
-                                        </div>
-                                        <div>
-                                            <p style="font-size: 14px;">Monthly Target</p>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@
                                     <div>
                                         <% /* ! Sales Per Day: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Sales_Per_Day" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Sales Per Day</p>
@@ -276,7 +276,7 @@
 
                                         <% /* ! Monthly Sales: Manipulate the Text via ID  */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Monthly_Sales" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Monthly Sales</p>
@@ -293,7 +293,7 @@
 
                                     <div>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Salary_Per_Day" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Salary Per Day</p>
@@ -313,7 +313,7 @@
 
                                         <% /* ! Monthly Salary: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Monthly_Salary" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Monthly Salary</p>
@@ -333,7 +333,7 @@
 
                                         <% /* ! Monthly Expenses: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Monthly_Expenses" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Monthly Expenses</p>
@@ -357,7 +357,7 @@
 
                                         <% /* ! Total Expenses: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Total_Expenses" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Total Expenses</p>
@@ -377,7 +377,7 @@
 
                                         <% /* ! Net Profit: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Net_Profit" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Net Profit</p>
@@ -402,7 +402,7 @@
 
                                         <% /* ! Return of Investment: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Return_Investment" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">Return of Investment (ROI)</p>
@@ -422,7 +422,7 @@
 
                                         <% /* ! ROI Prediction Year: Manipulate the Text via ID */ %>
                                         <div>
-                                            <asp:Label CssClass="label-layout" Text="0000.00" runat="server" />
+                                            <asp:Label ID="Lbl_Roi_Prediction" CssClass="label-layout" Text="0000.00" runat="server" />
                                         </div>
                                         <div>
                                             <p style="font-size: 14px;">ROI Prediction Year</p>
