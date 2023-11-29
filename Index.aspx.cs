@@ -27,27 +27,31 @@ namespace SmartSetll_Analytics_V2
 
             var loginResult = getRetrieveAccount.Retrieve_User_Account(username, password);
 
-            if (loginResult.Item1) //  Check if login is successful
+            if (loginResult.Item1) // N: Check if login is successful
             {
-                // Store the company ID and company name in session for later use
+                // N: Store the company ID and company name in session for later use
                 Session["Company_ID"] = loginResult.Item2;
                 Session["Company_Name"] = loginResult.Item3;
 
+                // N: This is where the Login Modal will be display
                 loginModalContentID.Visible = true;
             }
             else
             {
+                // N: This is where the Failed Login Modal will be display
                 failedModalContentID.Visible = true;
             }
         }
 
         protected void Btn_Login_Success_Click(object sender, EventArgs e)
         {
+            // N: Button Login will direct to User page
             Response.Redirect("~/pages/User.aspx");
         }
 
         protected void Btn_login_Failed_Click(object sender, EventArgs e)
         {
+            // N: Failed Login Modal Will not be display
             failedModalContentID.Visible = false;
         }
 

@@ -12,6 +12,7 @@ namespace SmartSetll_Analytics_V2.classes
         string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
         string connectDatabase = "SmartSell_Db";
 
+        // ! Need description about this Tuple Object
         public Tuple<bool, int, string> Retrieve_User_Account(string username, string password)
         {
             try
@@ -34,10 +35,10 @@ namespace SmartSetll_Analytics_V2.classes
                         {
                             // N: Retrieve Company_ID and Company_Name
                             string retrieveCompanyInfoQuery = @"SELECT Company_ID, Company_Name FROM [dbo].[Registered_Account] WHERE Username = @Username";
-                            using (SqlCommand retrieveCompanyInfoCommand = new SqlCommand(retrieveCompanyInfoQuery, obj_Connect_Db))
+                            using (SqlCommand obj_Retrieve_Command_Db = new SqlCommand(retrieveCompanyInfoQuery, obj_Connect_Db))
                             {
-                                retrieveCompanyInfoCommand.Parameters.AddWithValue("@Username", username);
-                                SqlDataReader reader = retrieveCompanyInfoCommand.ExecuteReader();
+                                obj_Retrieve_Command_Db.Parameters.AddWithValue("@Username", username);
+                                SqlDataReader reader = obj_Retrieve_Command_Db.ExecuteReader();
 
                                 if (reader.Read())
                                 {
