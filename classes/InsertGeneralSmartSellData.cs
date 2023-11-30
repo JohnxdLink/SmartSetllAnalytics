@@ -101,7 +101,7 @@ namespace SmartSetll_Analytics_V2.classes
             }
         }
 
-        public void Insert_Or_Update_User_Data(int companyID, int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestment, double roiPrediction)
+        public void Insert_Or_Update_User_Data(string username, string password, int companyID, int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestment, double roiPrediction)
         {
             try
             {
@@ -110,50 +110,125 @@ namespace SmartSetll_Analytics_V2.classes
                     obj_Connect_Db.Open();
                     obj_Connect_Db.ChangeDatabase(connectDatabase);
 
-                    string insertMergeQuery = @" MERGE INTO [dbo].[User_SmartSell] AS target USING (VALUES (@Company_ID, @Capital, @Days, @Average_Price, @Population, @Percent_Population, @Target_Market, @Daily_Target, @Sales_Per_Day, @Monthly_Sales, @Salary_Per_Day, @Monthly_Salary, @Monthly_Expenses, @Total_Expenses, @Net_Profit, @Return_Investment, @Roi_Prediction)) AS source ([Company_ID], [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) ON target.[Company_ID] = source.[Company_ID]
-                                                WHEN MATCHED THEN
-                                                UPDATE SET
-                                                [Capital] = source.[Capital],
-                                                [Days] = source.[Days],
-                                                [Average_Price] = source.[Average_Price],
-                                                [Population] = source.[Population],
-                                                [Percent_Population] = source.[Percent_Population],
-                                                [Target_Market] = source.[Target_Market],
-                                                [Daily_Target] = source.[Daily_Target],
-                                                [Sales_Per_Day] = source.[Sales_Per_Day],
-                                                [Monthly_Sales] = source.[Monthly_Sales],
-                                                [Salary_Per_Day] = source.[Salary_Per_Day],
-                                                [Monthly_Salary] = source.[Monthly_Salary],
-                                                [Monthly_Expenses] = source.[Monthly_Expenses],
-                                                [Total_Expenses] = source.[Total_Expenses],
-                                                [Net_Profit] = source.[Net_Profit],
-                                                [Return_Investment] = source.[Return_Investment],
-                                                [Roi_Prediction] = source.[Roi_Prediction]
-                                                WHEN NOT MATCHED THEN
-                                                INSERT ([Company_ID], [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction])
-                                                VALUES (source.[Company_ID], source.[Capital], source.[Days], source.[Average_Price], source.[Population], source.[Percent_Population], source.[Target_Market], source.[Daily_Target], source.[Sales_Per_Day], source.[Monthly_Sales], source.[Salary_Per_Day], source.[Monthly_Salary], source.[Monthly_Expenses], source.[Total_Expenses], source.[Net_Profit], source.[Return_Investment], source.[Roi_Prediction]);";
+                    string selectQuery = @"SELECT COUNT(*) FROM [dbo].[Registered_Account] WHERE Username = @Username AND Password = @Password";
 
-                    using (SqlCommand obj_Command_Db = new SqlCommand(insertMergeQuery, obj_Connect_Db))
+                    using (SqlCommand obj_Command_Db = new SqlCommand(selectQuery, obj_Connect_Db))
                     {
-                        obj_Command_Db.Parameters.AddWithValue("@Company_ID", companyID);
-                        obj_Command_Db.Parameters.AddWithValue("@Capital", capital);
-                        obj_Command_Db.Parameters.AddWithValue("@Days", days);
-                        obj_Command_Db.Parameters.AddWithValue("@Average_Price", averagePrice);
-                        obj_Command_Db.Parameters.AddWithValue("@Population", population);
-                        obj_Command_Db.Parameters.AddWithValue("@Percent_Population", percentPopulation);
-                        obj_Command_Db.Parameters.AddWithValue("@Target_Market", targetMarket);
-                        obj_Command_Db.Parameters.AddWithValue("@Daily_Target", dailyTarget);
-                        obj_Command_Db.Parameters.AddWithValue("@Sales_Per_Day", salesPerDay);
-                        obj_Command_Db.Parameters.AddWithValue("@Monthly_Sales", monthlySales);
-                        obj_Command_Db.Parameters.AddWithValue("@Salary_Per_Day", salaryPerDay);
-                        obj_Command_Db.Parameters.AddWithValue("@Monthly_Salary", monthlySalary);
-                        obj_Command_Db.Parameters.AddWithValue("@Monthly_Expenses", monthlyExpenses);
-                        obj_Command_Db.Parameters.AddWithValue("@Total_Expenses", totalExpenses);
-                        obj_Command_Db.Parameters.AddWithValue("@Net_Profit", netProfit);
-                        obj_Command_Db.Parameters.AddWithValue("@Return_Investment", returnInvestment);
-                        obj_Command_Db.Parameters.AddWithValue("@Roi_Prediction", roiPrediction);
+                        obj_Command_Db.Parameters.AddWithValue("@Username", username);
+                        obj_Command_Db.Parameters.AddWithValue("@Password", password);
 
-                        obj_Command_Db.ExecuteNonQuery();
+                        int count = (int)obj_Command_Db.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            //string insertQuery = @"INSERT INTO [dbo].[User_SmartSell] ([Company_ID], [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) VALUES (@Company_ID, @Capital, @Days, @Average_Price, @Population, @Percent_Population, @Target_Market, @Daily_Target, @Sales_Per_Day, @Monthly_Sales, @Salary_Per_Day, @Monthly_Salary, @Monthly_Expenses, @Total_Expenses, @Net_Profit, @Return_Investment, @Roi_Prediction)";
+                            string insertQuery = @"
+                                                MERGE INTO [dbo].[User_SmartSell] AS Target
+                                                USING (
+                                                    SELECT
+                                                        @Company_ID AS Company_ID,
+                                                        @Capital AS Capital,
+                                                        @Days AS Days,
+                                                        @Average_Price AS Average_Price,
+                                                        @Population AS Population,
+                                                        @Percent_Population AS Percent_Population,
+                                                        @Target_Market AS Target_Market,
+                                                        @Daily_Target AS Daily_Target,
+                                                        @Sales_Per_Day AS Sales_Per_Day,
+                                                        @Monthly_Sales AS Monthly_Sales,
+                                                        @Salary_Per_Day AS Salary_Per_Day,
+                                                        @Monthly_Salary AS Monthly_Salary,
+                                                        @Monthly_Expenses AS Monthly_Expenses,
+                                                        @Total_Expenses AS Total_Expenses,
+                                                        @Net_Profit AS Net_Profit,
+                                                        @Return_Investment AS Return_Investment,
+                                                        @Roi_Prediction AS Roi_Prediction
+                                                ) AS Source
+                                                ON Target.[Company_ID] = Source.Company_ID
+                                                WHEN MATCHED THEN
+                                                    UPDATE SET
+                                                        Target.[Capital] = Source.Capital,
+                                                        Target.[Days] = Source.Days,
+                                                        Target.[Average_Price] = Source.Average_Price,
+                                                        Target.[Population] = Source.Population,
+                                                        Target.[Percent_Population] = Source.Percent_Population,
+                                                        Target.[Target_Market] = Source.Target_Market,
+                                                        Target.[Daily_Target] = Source.Daily_Target,
+                                                        Target.[Sales_Per_Day] = Source.Sales_Per_Day,
+                                                        Target.[Monthly_Sales] = Source.Monthly_Sales,
+                                                        Target.[Salary_Per_Day] = Source.Salary_Per_Day,
+                                                        Target.[Monthly_Salary] = Source.Monthly_Salary,
+                                                        Target.[Monthly_Expenses] = Source.Monthly_Expenses,
+                                                        Target.[Total_Expenses] = Source.Total_Expenses,
+                                                        Target.[Net_Profit] = Source.Net_Profit,
+                                                        Target.[Return_Investment] = Source.Return_Investment,
+                                                        Target.[Roi_Prediction] = Source.Roi_Prediction
+                                                WHEN NOT MATCHED THEN
+                                                    INSERT (
+                                                        [Company_ID],
+                                                        [Capital],
+                                                        [Days],
+                                                        [Average_Price],
+                                                        [Population],
+                                                        [Percent_Population],
+                                                        [Target_Market],
+                                                        [Daily_Target],
+                                                        [Sales_Per_Day],
+                                                        [Monthly_Sales],
+                                                        [Salary_Per_Day],
+                                                        [Monthly_Salary],
+                                                        [Monthly_Expenses],
+                                                        [Total_Expenses],
+                                                        [Net_Profit],
+                                                        [Return_Investment],
+                                                        [Roi_Prediction]
+                                                    )
+                                                    VALUES (
+                                                        Source.Company_ID,
+                                                        Source.Capital,
+                                                        Source.Days,
+                                                        Source.Average_Price,
+                                                        Source.Population,
+                                                        Source.Percent_Population,
+                                                        Source.Target_Market,
+                                                        Source.Daily_Target,
+                                                        Source.Sales_Per_Day,
+                                                        Source.Monthly_Sales,
+                                                        Source.Salary_Per_Day,
+                                                        Source.Monthly_Salary,
+                                                        Source.Monthly_Expenses,
+                                                        Source.Total_Expenses,
+                                                        Source.Net_Profit,
+                                                        Source.Return_Investment,
+                                                        Source.Roi_Prediction
+                                                    );";
+
+
+                            using (SqlCommand obj_Insert_Db = new SqlCommand(insertQuery, obj_Connect_Db))
+                            {
+                                // N: Using this method for prevention of SQL Injection
+                                obj_Insert_Db.Parameters.AddWithValue("@Company_ID", companyID);
+                                obj_Insert_Db.Parameters.AddWithValue("@Capital", capital);
+                                obj_Insert_Db.Parameters.AddWithValue("@Days", days);
+                                obj_Insert_Db.Parameters.AddWithValue("@Average_Price", averagePrice);
+                                obj_Insert_Db.Parameters.AddWithValue("@Population", population);
+                                obj_Insert_Db.Parameters.AddWithValue("@Percent_Population", percentPopulation);
+                                obj_Insert_Db.Parameters.AddWithValue("@Target_Market", targetMarket);
+                                obj_Insert_Db.Parameters.AddWithValue("@Daily_Target", dailyTarget);
+                                obj_Insert_Db.Parameters.AddWithValue("@Sales_Per_Day", salesPerDay);
+                                obj_Insert_Db.Parameters.AddWithValue("@Monthly_Sales", monthlySales);
+                                obj_Insert_Db.Parameters.AddWithValue("@Salary_Per_Day", salaryPerDay);
+                                obj_Insert_Db.Parameters.AddWithValue("@Monthly_Salary", monthlySalary);
+                                obj_Insert_Db.Parameters.AddWithValue("@Monthly_Expenses", monthlyExpenses);
+                                obj_Insert_Db.Parameters.AddWithValue("@Total_Expenses", totalExpenses);
+                                obj_Insert_Db.Parameters.AddWithValue("@Net_Profit", netProfit);
+                                obj_Insert_Db.Parameters.AddWithValue("@Return_Investment", returnInvestment);
+                                obj_Insert_Db.Parameters.AddWithValue("@Roi_Prediction", roiPrediction);
+
+                                // N: Executing Query to Insert in Database
+                                obj_Insert_Db.ExecuteNonQuery();
+                            }
+                        }
                     }
                 }
             }
@@ -166,7 +241,6 @@ namespace SmartSetll_Analytics_V2.classes
                 Console.WriteLine(ex);
             }
         }
-
 
     }
 

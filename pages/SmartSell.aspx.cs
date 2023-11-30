@@ -100,10 +100,12 @@ namespace SmartSetll_Analytics_V2.pages
                 Session["Company_ID"] = loginResult.Item2;
                 Session["Company_Name"] = loginResult.Item3;
 
-                int companyId = Convert.ToInt32(Session["Company_ID"]);
-                obj_InsertData.Insert_Or_Update_User_Data(companyId, Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
-
-
+                if(Session["Company_ID"] != null)
+                {
+                    int companyID = Convert.ToInt32(Session["Company_ID"]);
+                    obj_InsertData.Insert_Or_Update_User_Data(username, password, companyID, Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
+                }
+ 
                 // N: Button Login will direct to User page
                 Response.Redirect("~/pages/User.aspx");
             }
