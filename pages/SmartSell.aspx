@@ -46,16 +46,17 @@
                 </div>
             </header>
 
-            <%-- Main Content --%>
+            <% /* N: Main Content */ %>
             <main class="main-content">
 
-                <%-- Section Content --%>
+
+                <% /* N: Section Content */ %>
                 <section class="section-contents">
 
-                    <%-- Capital Days Price Content --%>
+                    <% /* N: Capital Days Price Content */ %>
                     <div class="section-container capital-days-price-content specific-margin-layout">
 
-                        <%-- Capital --%>
+                        <% /* N: Capital */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/capital.png" alt="Alternate Text" />
@@ -65,7 +66,7 @@
                             </div>
                         </div>
 
-                        <%-- Number of Days --%>
+                        <% /* N: Number of Days */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/days.png" alt="Alternate Text" />
@@ -75,7 +76,7 @@
                             </div>
                         </div>
 
-                        <%-- Average Price --%>
+                        <% /* N: Average Price */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/average-price.png" alt="Alternate Text" />
@@ -86,10 +87,10 @@
                         </div>
                     </div>
 
-                    <%-- Target Market Daily Target Monthly Sales Content --%>
+                    <% /* N: Target Market Daily Target Monthly Sales Content */ %>
                     <div class="section-container population-percent-target-daily-content">
 
-                        <%-- Population --%>
+                        <% /* N: Population */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/population.png" alt="Alternate Text" />
@@ -99,7 +100,7 @@
                             </div>
                         </div>
 
-                        <%-- Percent Population --%>
+                        <% /* N: Percent Population */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/percent-population.png" alt="Alternate Text" />
@@ -109,7 +110,7 @@
                             </div>
                         </div>
 
-                        <%-- Calculate Button --%>
+                        <% /* N: Calculate Button */ %>
                         <div class="input-contents calculate-button-content">
                             <div class="calcu-content">
                                 <div>
@@ -123,9 +124,9 @@
                         </div>
                     </div>
 
-                    <%-- Target Market Daily Section Container --%>
+                    <% /* N: Target Market Daily Section Container */ %>
                     <div class="section-container">
-                        <%-- Target Market --%>
+                        <% /* N: Target Market */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/target-market.png" alt="Alternate Text" />
@@ -135,7 +136,7 @@
                             </div>
                         </div>
 
-                        <%-- Daily Target --%>
+                        <% /* N: Daily Target */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/daily-target.png" alt="Alternate Text" />
@@ -147,13 +148,13 @@
                     </div>
                 </section>
 
-                <%-- Section Content --%>
+                <% /* N: Section Content */ %>
                 <section class="section-contents">
 
-                    <%-- Sales Per Day Monthly Sales Monthly Salary Content --%>
+                    <% /* N: Sales Per Day Monthly Sales Monthly Salary Content */ %>
                     <div class="section-container specific-margin-layout">
 
-                        <%-- Sales Per Day --%>
+                        <% /* N: Sales Per Day */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/sales-per-day.png" alt="Alternate Text" />
@@ -163,7 +164,7 @@
                             </div>
                         </div>
 
-                        <%-- Monthly Sales --%>
+                        <% /* N: Monthly Sales */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-sales.png" alt="Alternate Text" />
@@ -174,10 +175,10 @@
                         </div>
                     </div>
 
-                    <%-- Salary Per Day Monthly Salary Monthly Expenses --%>
+                    <% /* N: Salary Per Day Monthly Salary Monthly Expenses */ %>
                     <div class="section-container">
 
-                        <%-- Salary Per Day --%>
+                        <% /* N: Salary Per Day */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/salary-per-day.png" alt="Alternate Text" />
@@ -187,7 +188,7 @@
                             </div>
                         </div>
 
-                        <%-- Calculate Button --%>
+                        <% /* N: Calculate Button */ %>
                         <div class="input-contents calculate-button-content">
                             <div class="calcu-content">
                                 <div>
@@ -202,7 +203,7 @@
                     </div>
 
                     <div class="section-container">
-                        <%-- Monthly Salary --%>
+                        <% /* N: Monthly Salary */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-salary.png" alt="Alternate Text" />
@@ -214,7 +215,7 @@
                     </div>
 
                     <div class="section-container">
-                        <%-- Monthly Expenses --%>
+                        <% /* N: Monthly Expenses */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/monthly-expenses.png" alt="Alternate Text" />
@@ -224,7 +225,7 @@
                             </div>
                         </div>
 
-                        <%-- Calculate Button --%>
+                        <% /* N: Calculate Button */ %>
                         <div class="input-contents calculate-button-content">
                             <div class="calcu-content">
                                 <div>
@@ -239,11 +240,11 @@
                     </div>
                 </section>
 
-                <%-- Section Content --%>
+                <% /* N:  Section Content */ %>
                 <section class="section-contents">
                     <div class="section-container common-content">
 
-                        <%-- Total Expenses --%>
+                        <% /* N: Total Expenses */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/total-expenses.png" alt="Alternate Text" />
@@ -256,7 +257,7 @@
 
                     <div class="section-container common-content specific-margin-layout">
 
-                        <%-- Net Profit --%>
+                        <% /* N: Net Profit */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/net-profit.png" alt="Alternate Text" />
@@ -269,7 +270,7 @@
 
                     <div class="section-container common-content">
 
-                        <%-- Return of Investment --%>
+                        <% /* N: Return of Investment */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/return-of-investment.png" alt="Alternate Text" />
@@ -282,7 +283,7 @@
 
                     <div class="section-container common-content">
 
-                        <%-- ROI Return Prediction --%>
+                        <% /* N: ROI Return Prediction */ %>
                         <div class="input-contents">
                             <div>
                                 <img class="input-icons-layout" src="../resources/images/icons/roi-prediction.png" alt="Alternate Text" />
@@ -293,18 +294,18 @@
                         </div>
                     </div>
 
-                    <%-- Clear And Save Button --%>
+                    <% /* N: Clear And Save Button */ %>
                     <div class="clear-n-save-content">
                         <div>
                             <asp:Button ID="Btn_Clear" CssClass="clr-save-layout clear-layout" Text="Clear" runat="server" OnClick="Btn_Clear_Click" />
                         </div>
                         <div>
-                            <asp:Button ID="Btn_Save" CssClass="clr-save-layout save-layout" Text="Save" runat="server" OnClick="Btn_Save_Click" />
+                            <asp:Button ID="Btn_Save" CssClass="clr-save-layout save-layout" Text="Lock" runat="server" OnClick="Btn_Save_Click" />
                         </div>
                     </div>
                 </section>
 
-                <%-- Side Form Content --%>
+                <% /* N: Side Form Content */ %>
                 <section class="section-contents">
                     <div id="help-form-id" class="section-container side-form-content w3-animate-right" style="display: none;">
                         <div>

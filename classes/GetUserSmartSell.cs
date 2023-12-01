@@ -13,6 +13,7 @@ namespace SmartSetll_Analytics_V2.classes
         string sqlConnect = "Data Source=ECCLESIASTES\\SQLEXPRESS;Initial Catalog=SmartSell_Db;User ID=ustyroid;Password=2315";
         string connectDatabase = "SmartSell_Db";
 
+        // ? Retrive User Smart Sell Data Method
         public void RetrieveUserSmartSellData(int companyID, Label capitalLabel, Label numDaysLabel, Label averagePriceLabel, Label populationLabel, Label percentPopulationLabel, Label targetMarketLabel, Label dailyTargetLabel, Label salesPerDayLabel, Label monthlySalesLabel, Label salaryPerDayLabel, Label monthlySalaryLabel, Label monthlyExpensesLabel, Label totalExpensesLabel, Label netProfitLabel, Label returnInvestmentLabel, Label roiPredictionLabel)
         {
             try
@@ -22,10 +23,12 @@ namespace SmartSetll_Analytics_V2.classes
                     obj_Connect_Db.Open();
                     obj_Connect_Db.ChangeDatabase(connectDatabase);
 
+                    // N: Selecting All Data
                     string selectQuery = @"SELECT [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction] FROM [dbo].[User_SmartSell] WHERE Company_ID = @Company_ID";
 
                     using (SqlCommand obj_Command_Db = new SqlCommand(selectQuery, obj_Connect_Db))
                     {
+                        // N: With The Use of Compnay ID; the data will retrieve from Database and then will display to User Home Page
                         obj_Command_Db.Parameters.AddWithValue("@Company_ID", companyID);
 
                         using (SqlDataReader obj_DataReader_Db = obj_Command_Db.ExecuteReader())

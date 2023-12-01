@@ -63,6 +63,7 @@ namespace SmartSetll_Analytics_V2.classes
             }
         }
 
+        // ? A Void to insert Registered Account
         public void Insert_Registered_Account(string companyName, string firstName, string middleName, string lastName, string username, string password, string confirmPassword, string email)
         {
             try
@@ -101,6 +102,8 @@ namespace SmartSetll_Analytics_V2.classes
             }
         }
 
+
+        // ? A Void to Insert Or Update SmartSell Data from SmartSell page
         public void Insert_Or_Update_User_Data(string username, string password, int companyID, int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestment, double roiPrediction)
         {
             try
@@ -110,10 +113,12 @@ namespace SmartSetll_Analytics_V2.classes
                     obj_Connect_Db.Open();
                     obj_Connect_Db.ChangeDatabase(connectDatabase);
 
+                    // N: Selecting useer and its password
                     string selectQuery = @"SELECT COUNT(*) FROM [dbo].[Registered_Account] WHERE Username = @Username AND Password = @Password";
 
                     using (SqlCommand obj_Command_Db = new SqlCommand(selectQuery, obj_Connect_Db))
                     {
+                        // N: This is where that if the account exist it will proceed to check if theres an existing data or need to be update
                         obj_Command_Db.Parameters.AddWithValue("@Username", username);
                         obj_Command_Db.Parameters.AddWithValue("@Password", password);
 
@@ -121,7 +126,6 @@ namespace SmartSetll_Analytics_V2.classes
 
                         if (count > 0)
                         {
-                            //string insertQuery = @"INSERT INTO [dbo].[User_SmartSell] ([Company_ID], [Capital], [Days], [Average_Price], [Population], [Percent_Population], [Target_Market], [Daily_Target], [Sales_Per_Day], [Monthly_Sales], [Salary_Per_Day], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction]) VALUES (@Company_ID, @Capital, @Days, @Average_Price, @Population, @Percent_Population, @Target_Market, @Daily_Target, @Sales_Per_Day, @Monthly_Sales, @Salary_Per_Day, @Monthly_Salary, @Monthly_Expenses, @Total_Expenses, @Net_Profit, @Return_Investment, @Roi_Prediction)";
                             string insertQuery = @"
                                                 MERGE INTO [dbo].[User_SmartSell] AS Target
                                                 USING (
