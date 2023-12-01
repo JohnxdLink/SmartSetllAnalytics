@@ -72,7 +72,6 @@ img.header-icon-layout {
 }
 
 .company-id-layout {
-    font-weight: bold;
     font-size: 12px;
 }
 
@@ -105,6 +104,22 @@ img.colored-icons-layout {
 section.main-section {
     width: 93vw;
     height: var(--viewport-height);
+    display: flex;
+    flex-direction: column;
+}
+
+div.division-header {
+    padding: 0px 20px 0px 20px;
+    height: 8vh;
+    color: #ffffff;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.division-main {
+    height: 92vh;
 }
 
 div.main-content {
@@ -122,8 +137,6 @@ div.home-content {
 }
 
 header.header-section {
-    margin: 20px 0px 0px 0px;
-    padding: 5px 15px 5px 15px;
     display: flex;
     justify-content: space-between;
     color: #141414;

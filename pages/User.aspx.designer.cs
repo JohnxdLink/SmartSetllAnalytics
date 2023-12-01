@@ -87,13 +87,13 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.WebControls.ImageButton Img_Btn_Logout;
 
         /// <summary>
-        /// homeContentID control.
+        /// Lbl_Navigation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl homeContentID;
+        protected global::System.Web.UI.WebControls.Label Lbl_Navigation;
 
         /// <summary>
         /// Lbl_Company_Name control.
@@ -112,6 +112,15 @@ namespace SmartSetll_Analytics_V2.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl_Company_ID;
+
+        /// <summary>
+        /// homeContentID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl homeContentID;
 
         /// <summary>
         /// Lbl_Capital control.

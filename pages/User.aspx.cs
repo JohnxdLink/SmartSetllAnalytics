@@ -30,30 +30,32 @@ namespace SmartSetll_Analytics_V2.pages
                 }
             }
 
-            if (!IsPostBack)
-            {
-                // Check if the user is logged in
-                if (Session["Company_ID"] == null || Session["Company_Name"] == null)
-                {
-                    // Redirect back to index.aspx if not logged in
-                    Response.Redirect("~/Index.aspx");
-                }
-                else
-                {
-                    // Update labels with company information
-                    int companyId = (int)Session["Company_ID"];
-                    string companyName = (string)Session["Company_Name"];
+            //if (!IsPostBack)
+            //{
+            //    // Check if the user is logged in
+            //    if (Session["Company_ID"] == null || Session["Company_Name"] == null)
+            //    {
+            //        // Redirect back to index.aspx if not logged in
+            //        Response.Redirect("~/Index.aspx");
+            //    }
+            //    else
+            //    {
+            //        // Update labels with company information
+            //        int companyId = (int)Session["Company_ID"];
+            //        string companyName = (string)Session["Company_Name"];
 
-                    Lbl_Company_ID.Text = "ID: " + companyId.ToString();
-                    Lbl_Company_Name.Text = "Company: " + companyName;
+            //        Lbl_Company_ID.Text = "ID: " + companyId.ToString();
+            //        Lbl_Company_Name.Text = "Company: " + companyName;
 
-                    userSmartSell.RetrieveUserSmartSellData(companyId, Lbl_Capital, Lbl_Num_Days, Lbl_Average_Price, Lbl_Population, Lbl_Percent_Population, Lbl_Target_Market, Lbl_Daily_Target, Lbl_Sales_Per_Day, Lbl_Monthly_Sales, Lbl_Salary_Per_Day, Lbl_Monthly_Salary, Lbl_Monthly_Expenses,Lbl_Total_Expenses,Lbl_Net_Profit, Lbl_Return_Investment, Lbl_Roi_Prediction);
-                }
-            }
+            //        userSmartSell.RetrieveUserSmartSellData(companyId, Lbl_Capital, Lbl_Num_Days, Lbl_Average_Price, Lbl_Population, Lbl_Percent_Population, Lbl_Target_Market, Lbl_Daily_Target, Lbl_Sales_Per_Day, Lbl_Monthly_Sales, Lbl_Salary_Per_Day, Lbl_Monthly_Salary, Lbl_Monthly_Expenses,Lbl_Total_Expenses,Lbl_Net_Profit, Lbl_Return_Investment, Lbl_Roi_Prediction);
+            //    }
+            //}
         }
 
         protected void Btn_Home_Click(object sender, EventArgs e)
         {
+            Lbl_Navigation.Text = "HOME | SMARTSELL";
+
             // N: Set visibility and update the session variable
             homeContentID.Visible = true;
             capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
@@ -63,6 +65,8 @@ namespace SmartSetll_Analytics_V2.pages
 
         protected void Btn_Capital_Click(object sender, EventArgs e)
         {
+            Lbl_Navigation.Text = "CAPITAL";
+
             // N: Set visibility and update the session variable
             capitalContentID.Visible = true;
             homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
@@ -72,6 +76,8 @@ namespace SmartSetll_Analytics_V2.pages
 
         protected void Btn_Monthly_Click(object sender, EventArgs e)
         {
+            Lbl_Navigation.Text = "MONTHLY";
+
             // N: Set visibility and update the session variable
             monthlyContentID.Visible = true;
             homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
@@ -81,6 +87,8 @@ namespace SmartSetll_Analytics_V2.pages
 
         protected void Btn_Feedback_Click(object sender, EventArgs e)
         {
+            Lbl_Navigation.Text = "FEEDBACK";
+
             // N: Set visibility and update the session variable
             feedbackContentID.Visible = true;
             homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
@@ -90,6 +98,8 @@ namespace SmartSetll_Analytics_V2.pages
 
         protected void Btn_Manual_Click(object sender, EventArgs e)
         {
+            Lbl_Navigation.Text = "MANUAL";
+
             // N: Set visibility and update the session variable
             manualContentID.Visible = true;
             homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; profileContentID.Visible = false;
@@ -99,6 +109,8 @@ namespace SmartSetll_Analytics_V2.pages
 
         protected void Btn_Profile_Click(object sender, EventArgs e)
         {
+            Lbl_Navigation.Text = "PROFILE";
+
             // N: Set visibility and update the session variable
             profileContentID.Visible = true;
             homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false;
