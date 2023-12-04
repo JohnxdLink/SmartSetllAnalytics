@@ -47,6 +47,18 @@ namespace SmartSetll_Analytics_V2.pages
             Session["ContentVisibility"] = false;
         }
 
+        protected void Btn_Capital_Add_Item_Click(Object sender, EventArgs e)
+        {
+            // N: Setting the Navigation Text in Header
+            Lbl_Navigation.Text = "CAPITAL";
+
+            // N: Set visibility and update the session variable
+            capitalContentID.Visible = true;
+            homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
+
+            Session["ContentVisibility"] = false;
+        }
+
 
         // ? Button Monthly
         protected void Btn_Monthly_Click(object sender, EventArgs e)

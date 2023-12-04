@@ -475,7 +475,7 @@
 
                                 <div class="capital-input-fields">
                                     <div>
-                                        <asp:Button CssClass="capital-button-layout" Text="Add Item" runat="server" />
+                                        <asp:Button ID="Btn_Capital_Add_Item" CssClass="capital-button-layout" Text="Add Item" runat="server" OnClick="Btn_Capital_Add_Item_Click" />
                                     </div>
                                 </div>
                             </section>
