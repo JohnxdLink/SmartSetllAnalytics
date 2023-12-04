@@ -441,6 +441,48 @@
 
                     <% /* N: Capital Content */ %>
                     <div id="capitalContentID" class="capital-content main-content" runat="server" visible="false">
+                        <main class="capital-main-section">
+                            <section class="capital-section-input">
+                                <div class="capital-input-fields">
+                                    <div>
+                                        <img class="small-icons-layouts" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <asp:TextBox CssClass="capital-input-field-layout" runat="server" Placeholder="Quantity" />
+                                    </div>
+                                </div>
+
+                                <div class="capital-input-fields">
+                                    <div>
+                                        <img class="small-icons-layouts" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <asp:TextBox CssClass="capital-input-field-layout" runat="server" Placeholder="Item Name" Width="300" />
+                                    </div>
+                                </div>
+
+                                <div class="capital-input-fields">
+                                    <div>
+                                        <img class="small-icons-layouts" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div>
+                                        <asp:TextBox CssClass="capital-input-field-layout" runat="server" Placeholder="Price" />
+                                    </div>
+                                </div>
+
+                                <div class="capital-input-fields">
+                                    <div>
+                                        <asp:Button CssClass="capital-button-layout" Text="Add Item" runat="server" />
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="capital-section-table">
+
+                            </section>
+                        </main>
                     </div>
 
                     <% /* N: Monthly Content */ %>

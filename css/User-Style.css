@@ -97,9 +97,41 @@ img.colored-icons-layout {
     cursor: pointer;
 }
 
-.smartsell-button-layout:hover {
-    background-color: #00ffff;
+    .smartsell-button-layout:hover {
+        background-color: #00ffff;
+    }
+
+img.small-icons-layouts {
+    width: 40px;
+    height: 40px;
 }
+
+.capital-input-field-layout {
+    padding: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: rgba(33, 168, 168, 0.64);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+.capital-button-layout {
+    padding: 5px;
+    font-size: 20px;
+    width: 150px;
+    color: #ffffff;
+    background-color: #262626;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 6px 6px 0px 1px rgba(0,0,0,0.74);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+    .capital-button-layout:hover {
+        background-color: #32cace;
+        box-shadow: -6px 6px 0px 1px rgba(0,0,0,0.74);
+    }
 
 section.main-section {
     width: 93vw;
@@ -210,6 +242,25 @@ div.right-section {
 
 div.capital-content {
     background-color: #26D9D9;
+}
+
+main.capital-main-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+section.capital-section-input {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.capital-input-fields {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 div.monthly-content {
