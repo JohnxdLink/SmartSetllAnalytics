@@ -80,6 +80,7 @@
                                 <asp:Label ID="Lbl_Company_Name" CssClass="company-name-layout" Text="Company Name" runat="server" />
                             </div>
                             <div>
+                                <asp:Label Text="ID: " CssClass="company-id-layout" runat="server" />
                                 <asp:Label ID="Lbl_Company_ID" CssClass="company-id-layout" Text="Company ID" runat="server" />
                             </div>
                         </div>

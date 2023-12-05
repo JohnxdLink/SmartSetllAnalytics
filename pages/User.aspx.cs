@@ -11,6 +11,7 @@ namespace SmartSetll_Analytics_V2.pages
     public partial class User : System.Web.UI.Page
     {
         GetUserSmartSell userSmartSell = new GetUserSmartSell();
+        GetSetCapital getSetCapital = new GetSetCapital();
 
         int getCompanyID = 0;
 
@@ -85,6 +86,9 @@ namespace SmartSetll_Analytics_V2.pages
             homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
 
             Session["ContentVisibility"] = false;
+
+            //N: Instanstiang Object GetSetCapital
+            getSetCapital.Insert_Capital(Convert.ToInt32(Lbl_Company_ID.Text), Convert.ToInt32(Txb_Item_Qty.Text), Txb_Item_Name.Text, Convert.ToDouble(Txb_Item_Price.Text));
         }
 
 
