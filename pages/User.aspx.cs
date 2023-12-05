@@ -12,10 +12,36 @@ namespace SmartSetll_Analytics_V2.pages
     {
         GetUserSmartSell userSmartSell = new GetUserSmartSell();
 
+        int getCompanyID = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             // X: Display Home as Default Page
             homeContentID.Visible = true;
+
+            if (!IsPostBack)
+            {
+                // N: Check if the user is logged in
+                if (Session["Company_ID"] == null || Session["Company_Name"] == null)
+                {
+                    // Redirect back to index.aspx if not logged in
+                    Response.Redirect("~/Index.aspx");
+                }
+                else
+                {
+                    // N: Update labels with company information
+                    int companyId = (int)Session["Company_ID"];
+                    string companyName = (string)Session["Company_Name"];
+
+                    getCompanyID = companyId;
+                    Lbl_Company_ID.Text = companyId.ToString();
+                    Lbl_Company_Name.Text = "Company: " + companyName;
+
+
+                    // N: Instanstiating userSmartSell Object to Retrieve User SmartSell Data
+                    userSmartSell.RetrieveUserSmartSellData(companyId, Lbl_Capital, Lbl_Num_Days, Lbl_Average_Price, Lbl_Population, Lbl_Percent_Population, Lbl_Target_Market, Lbl_Daily_Target, Lbl_Sales_Per_Day, Lbl_Monthly_Sales, Lbl_Salary_Per_Day, Lbl_Monthly_Salary, Lbl_Monthly_Expenses, Lbl_Total_Expenses, Lbl_Net_Profit, Lbl_Return_Investment, Lbl_Roi_Prediction);
+                }
+            }
 
         }
 
@@ -45,6 +71,8 @@ namespace SmartSetll_Analytics_V2.pages
             homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
 
             Session["ContentVisibility"] = false;
+
+
         }
 
         protected void Btn_Capital_Add_Item_Click(Object sender, EventArgs e)

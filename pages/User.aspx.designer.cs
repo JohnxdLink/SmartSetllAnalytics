@@ -285,6 +285,33 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl capitalContentID;
 
         /// <summary>
+        /// Txb_Item_Qty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txb_Item_Qty;
+
+        /// <summary>
+        /// Txb_Item_Name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txb_Item_Name;
+
+        /// <summary>
+        /// Txb_Item_Price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txb_Item_Price;
+
+        /// <summary>
         /// Btn_Capital_Add_Item control.
         /// </summary>
         /// <remarks>

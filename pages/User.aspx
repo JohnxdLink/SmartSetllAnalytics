@@ -449,7 +449,7 @@
                                     </div>
 
                                     <div>
-                                        <asp:TextBox CssClass="capital-input-field-layout" runat="server" Placeholder="Quantity" />
+                                        <asp:TextBox ID="Txb_Item_Qty" CssClass="capital-input-field-layout" runat="server" Placeholder="Quantity" />
                                     </div>
                                 </div>
 
@@ -459,7 +459,7 @@
                                     </div>
 
                                     <div>
-                                        <asp:TextBox CssClass="capital-input-field-layout" runat="server" Placeholder="Item Name" Width="300" />
+                                        <asp:TextBox ID="Txb_Item_Name" CssClass="capital-input-field-layout" runat="server" Placeholder="Item Name" Width="300" />
                                     </div>
                                 </div>
 
@@ -469,7 +469,7 @@
                                     </div>
 
                                     <div>
-                                        <asp:TextBox CssClass="capital-input-field-layout" runat="server" Placeholder="Price" />
+                                        <asp:TextBox ID="Txb_Item_Price" CssClass="capital-input-field-layout" runat="server" Placeholder="Price" />
                                     </div>
                                 </div>
 
@@ -480,7 +480,6 @@
                                 </div>
                             </section>
                             <section class="capital-section-table">
-
                             </section>
                         </main>
                     </div>

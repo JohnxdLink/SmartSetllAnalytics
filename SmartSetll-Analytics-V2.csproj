@@ -80,7 +80,7 @@
     <Content Include="js\UserScript.js" />
     <Content Include="pages\SmartSell.aspx" />
     <Content Include="pages\User.aspx" />
-    <Content Include="resources\errorlogs\Code Snipset.txt" />
+    <Content Include="resources\errorlogs\Code Snippet.txt" />
     <Content Include="resources\images\backgrounds\default-background.png" />
     <Content Include="resources\images\backgrounds\transparent-background.png" />
     <Content Include="resources\images\icons\check.png" />
@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\CalculateValues.cs" />
+    <Compile Include="classes\GetSetCapital.cs" />
     <Compile Include="classes\GetSetRegisteredAccount.cs" />
     <Compile Include="classes\GetSetValues.cs" />
     <Compile Include="classes\GetUserSmartSell.cs" />
