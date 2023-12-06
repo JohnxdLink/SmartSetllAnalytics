@@ -1,5 +1,7 @@
 ﻿/* Color Palettes:  #32cace || #007679 || #002f61 || #262626 || #0a0a14 || #ffffff*/
 
+@import url("GridViewStyle.css");
+
 :root {
     --viewport-width: 100vw;
     --viewport-height: 100vh;

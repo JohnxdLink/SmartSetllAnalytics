@@ -321,6 +321,15 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.WebControls.Button Btn_Capital_Add_Item;
 
         /// <summary>
+        /// Girdvw_Capital control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Girdvw_Capital;
+
+        /// <summary>
         /// monthlyContentID control.
         /// </summary>
         /// <remarks>

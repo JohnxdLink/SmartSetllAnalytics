@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\Animation.css" />
+    <Content Include="css\GridViewStyle.css" />
     <Content Include="css\Modal.css" />
     <Content Include="css\ModalServerSide.css" />
     <Content Include="css\Responsive.css" />

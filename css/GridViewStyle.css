@@ -1,0 +1,38 @@
+﻿.gridview-capital-layout {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.gridview-header {
+    background-color: #3498db; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #2980b9;
+}
+
+.gridview-row,
+.gridview-alternating-row {
+    text-align: center;
+}
+
+.gridview-row {
+    background-color: #ecf0f1; /* Row background color */
+}
+
+.gridview-alternating-row {
+    background-color: #f8f9fa; /* Alternating row background color */
+}
+
+.gridview-cell {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .gridview-cell:hover {
+        background-color: #e0e0e0; /* Hover effect color */
+    }
+
+/* Optional: Add more styles or adjust existing styles as needed */
