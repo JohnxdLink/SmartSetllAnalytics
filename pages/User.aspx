@@ -480,18 +480,21 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="capital-section-table">
-                                <asp:GridView ID="Girdvw_Capital" CssClass="gridview-capital-layout" runat="server" AutoGenerateColumns="false">
-                                    <HeaderStyle CssClass="gridview-header" />
-                                    <AlternatingRowStyle CssClass="gridview-alternating-row" />
 
-                                    <RowStyle CssClass="gridview-row" />
-                                    <Columns>
-                                        <asp:BoundField DataField="Item_Qty" HeaderText="Quantity" SortExpression="Quantity" ItemStyle-CssClass="gridview-cell" />
-                                        <asp:BoundField DataField="Item_Name" HeaderText="Equipment Name" SortExpression="EquipmentName" ItemStyle-CssClass="gridview-cell" />
-                                        <asp:BoundField DataField="Item_Price" HeaderText="Equipment Price" SortExpression="EquipmentPrice" ItemStyle-CssClass="gridview-cell" />
-                                    </Columns>
-                                </asp:GridView>
+                            <section class="capital-section-table">
+                                <div class="datagrid-content-layout">
+                                    <asp:GridView ID="Gridvw_Capital" CssClass="gridview-capital-layout" runat="server" AutoGenerateColumns="false">
+                                        <HeaderStyle CssClass="gridview-header" />
+                                        <AlternatingRowStyle CssClass="gridview-alternating-row" />
+
+                                        <RowStyle CssClass="gridview-row" />
+                                        <Columns>
+                                            <asp:BoundField DataField="Item_Qty" HeaderText="Quantity" SortExpression="Quantity" ItemStyle-CssClass="gridview-cell" />
+                                            <asp:BoundField DataField="Item_Name" HeaderText="Equipment Name" SortExpression="EquipmentName" ItemStyle-CssClass="gridview-cell" />
+                                            <asp:BoundField DataField="Item_Price" HeaderText="Equipment Price" SortExpression="EquipmentPrice" ItemStyle-CssClass="gridview-cell" />
+                                        </Columns>
+                                    </asp:GridView>
+                                </div>
                             </section>
                         </main>
                     </div>

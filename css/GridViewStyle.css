@@ -1,38 +1,52 @@
-﻿.gridview-capital-layout {
-    width: 100%;
+﻿div.datagrid-content-layout {
+    overflow-y: auto;
+    height: 50vh;
+    padding-left: 3%;
+}
+
+.gridview-capital-layout {
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    width: 70%;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    box-shadow: 5px 8px 1px 3px #282828;
 }
 
 .gridview-header {
-    background-color: #3498db; /* Header background color */
-    color: #fff; /* Header text color */
+    background-color: #00ffff; /* Header background color */
+    font-size: 20px;
+    color: #262626; /* Header text color */
     font-weight: bold;
     text-align: center;
     padding: 15px;
-    border-bottom: 2px solid #2980b9;
+    border-bottom: 2px solid #282828;
 }
 
 .gridview-row,
 .gridview-alternating-row {
-    text-align: center;
+    text-align: left;
 }
 
 .gridview-row {
-    background-color: #ecf0f1; /* Row background color */
+    color: #ffffff;
+    background-color: rgba(38, 38, 38, 0.70);
+    backdrop-filter: blur(9px) saturate(200%);
 }
 
 .gridview-alternating-row {
-    background-color: #f8f9fa; /* Alternating row background color */
+    color: #ffffff;
+    background-color: rgba(42, 144, 144, 0.38);
+    backdrop-filter: blur(9px) saturate(200%);
 }
 
 .gridview-cell {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #00ffff;
+    transition-duration: 0.3s;
 }
 
     .gridview-cell:hover {
-        background-color: #e0e0e0; /* Hover effect color */
+        color: #282828;
+        background-color: rgba(255, 255, 255);
     }
-
-/* Optional: Add more styles or adjust existing styles as needed */

@@ -35,8 +35,6 @@ namespace SmartSetll_Analytics_V2.classes
 
                         obj_Command_Db.ExecuteNonQuery();
                     }
-
-
                 }
             }
             catch (SqlException sqlEx)

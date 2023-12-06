@@ -39,7 +39,6 @@ namespace SmartSetll_Analytics_V2.pages
 
                     // N: Instanstiating userSmartSell Object to Retrieve User SmartSell Data
                     userSmartSell.RetrieveUserSmartSellData(companyId, Lbl_Capital, Lbl_Num_Days, Lbl_Average_Price, Lbl_Population, Lbl_Percent_Population, Lbl_Target_Market, Lbl_Daily_Target, Lbl_Sales_Per_Day, Lbl_Monthly_Sales, Lbl_Salary_Per_Day, Lbl_Monthly_Salary, Lbl_Monthly_Expenses, Lbl_Total_Expenses, Lbl_Net_Profit, Lbl_Return_Investment, Lbl_Roi_Prediction);
-
                     LoadAndBindData();
                 }
             }
@@ -168,9 +167,9 @@ namespace SmartSetll_Analytics_V2.pages
         {
             DataTable obj_DataCapital = getSetCapital.Get_Capital(Convert.ToInt32(Lbl_Company_ID.Text));
 
-            // Display the data in a GridView
-            Girdvw_Capital.DataSource = obj_DataCapital;
-            Girdvw_Capital.DataBind();
+            // N: Display the data in a GridView
+            Gridvw_Capital.DataSource = obj_DataCapital;
+            Gridvw_Capital.DataBind();
         }
 
     }
