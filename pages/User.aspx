@@ -501,6 +501,113 @@
 
                     <% /* N: Monthly Content */ %>
                     <div id="monthlyContentID" class="monthly-content main-content" runat="server" visible="false">
+                        <section class="monthly-section">
+                            <div class="datagrid-content-layout">
+                                <asp:GridView ID="GridView1" CssClass="gridview-capital-layout" runat="server" AutoGenerateColumns="false">
+                                    <HeaderStyle CssClass="gridview-header" />
+                                    <AlternatingRowStyle CssClass="gridview-alternating-row" />
+
+                                    <RowStyle CssClass="gridview-row" />
+                                    <Columns>
+                                        <asp:BoundField DataField="Month_SmartSell" HeaderText="Month" SortExpression="Month" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Monthly_Sales" HeaderText="Monthly Sales" SortExpression="MonthlySales" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Monthly_Salary" HeaderText="Monthly Salary" SortExpression="MonthlySalary" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Monthly_Expenses" HeaderText="Monthly Expenses" SortExpression="MonthlyExpenses" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Total_Expenses" HeaderText="Total Expenses" SortExpression="TotalExpenses" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Net_Profit" HeaderText="Net Profit" SortExpression="NetProfit" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Return_Investment" HeaderText="Return Investment" SortExpression="ReturnInvestment" ItemStyle-CssClass="gridview-cell" />
+                                        <asp:BoundField DataField="Roi_Prediction" HeaderText="ROI Prediction" SortExpression="RoiPrediction" ItemStyle-CssClass="gridview-cell" />
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </section>
+
+                        <section class="monthly-input">
+                            <main class="monthly-input-main">
+                                <div>
+                                    <h1>REAL TIME MONTHLY FIELDS</h1>
+                                </div>
+
+                                <div class="monthly-input-fields">
+                                    <div>
+                                        <img class="monthly-input-icon" src="../resources/images/icons/user.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div class="monthly-input-div">
+                                        <div>
+                                            <h4 style="color:#ffffff">Month</h4>
+                                        </div>
+                                        <div>
+                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="monthly-input-fields">
+                                    <div>
+                                        <img class="monthly-input-icon" src="../resources/images/icons/monthly-sales.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div class="monthly-input-div">
+                                        <div>
+                                            <h4 style="color:#ffffff">Monthly Sales</h4>
+                                        </div>
+                                        <div>
+                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="monthly-input-fields">
+                                    <div>
+                                        <img class="monthly-input-icon" src="../resources/images/icons/monthly-salary.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div class="monthly-input-div">
+                                        <div>
+                                            <h4 style="color:#ffffff">Monthly Salary</h4>
+                                        </div>
+                                        <div>
+                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="monthly-input-fields">
+                                    <div>
+                                        <img class="monthly-input-icon" src="../resources/images/icons/monthly-expenses.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div class="monthly-input-div">
+                                        <div>
+                                            <h4 style="color:#ffffff">Monthly Expenses</h4>
+                                        </div>
+                                        <div>
+                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="monthly-input-fields">
+                                    <div>
+                                        <img class="monthly-input-icon" src="../resources/images/icons/total-expenses.png" alt="Alternate Text" />
+                                    </div>
+
+                                    <div class="monthly-input-div">
+                                        <div>
+                                            <h4 style="color:#ffffff">Total Expenses</h4>
+                                        </div>
+                                        <div>
+                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <asp:Button CssClass="smartsell-button-layout" Text="Save" runat="server" Width="130" />
+                                </div>
+                            </main>
+                        </section>
                     </div>
 
                     <% /* N: Feedback Content */ %>

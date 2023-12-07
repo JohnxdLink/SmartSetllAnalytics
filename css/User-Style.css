@@ -86,6 +86,15 @@ img.colored-icons-layout {
     font-size: 26px;
 }
 
+.txb-monthly-input-layout {
+    font-size: 14px;
+    padding: 3px;
+    color: #00ffff;
+    background-color: rgba(28, 28, 28, 0.50);
+    border: none;
+    border-radius: 5px;
+}
+
 .smartsell-button-layout {
     margin-top: 5%;
     padding: 5px 15px;
@@ -195,6 +204,11 @@ div.simplified-layout {
     justify-content: center;
 }
 
+img.monthly-input-icon {
+    width: 35px;
+    height: 35px;
+}
+
 div.simplified-icon-n-label {
     padding: 5px;
     width: 90%;
@@ -266,7 +280,49 @@ div.capital-input-fields {
 }
 
 div.monthly-content {
+    display: flex;
     background-color: #33CCCC;
+}
+
+section.monthly-section {
+    width: 70vw;
+}
+
+section.monthly-input {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main.monthly-input-main {    
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(9px) saturate(200%);
+    border: 2px solid #ffffff;
+    box-shadow: 5px 8px 1px 3px #282828;
+    gap: 10px;
+}
+
+.monthly-input-fields {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(23, 23, 23, 0.70);
+    backdrop-filter: blur(9px) saturate(200%);
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+div.monthly-input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 div.feedback-content {

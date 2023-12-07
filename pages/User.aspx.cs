@@ -54,8 +54,8 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             homeContentID.Visible = true;
-            capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
 
+            capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = true;
         }
 
@@ -68,8 +68,8 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             capitalContentID.Visible = true;
-            homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
 
+            homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
 
 
@@ -82,13 +82,14 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             capitalContentID.Visible = true;
-            homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
-
-            Session["ContentVisibility"] = false;
 
             //N: Instanstiang Object GetSetCapital
             getSetCapital.Insert_Capital(Convert.ToInt32(Lbl_Company_ID.Text), Convert.ToInt32(Txb_Item_Qty.Text), Txb_Item_Name.Text, Convert.ToDouble(Txb_Item_Price.Text));
             LoadAndBindData();
+
+            homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
+            Session["ContentVisibility"] = false;
+
         }
 
         // ? Button Monthly
@@ -99,8 +100,8 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             monthlyContentID.Visible = true;
-            homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
 
+            homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
         }
 
@@ -112,8 +113,8 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             feedbackContentID.Visible = true;
-            homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
 
+            homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
         }
 
@@ -125,8 +126,8 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             manualContentID.Visible = true;
-            homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; profileContentID.Visible = false;
 
+            homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
         }
 
@@ -138,8 +139,8 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             profileContentID.Visible = true;
-            homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false;
 
+            homeContentID.Visible = false; capitalContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false;
             Session["ContentVisibility"] = false;
         }
 
