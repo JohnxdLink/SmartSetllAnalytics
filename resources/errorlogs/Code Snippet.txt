@@ -1,9 +1,4 @@
-﻿Formula:
-n = monthly sales - total expenses
-roi = (n / capital) * 100
-pre = monthly sales / n
-
-if (!IsPostBack)
+﻿if (!IsPostBack)
             {
                 // N: Check if the user is logged in
                 if (Session["Company_ID"] == null || Session["Company_Name"] == null)
