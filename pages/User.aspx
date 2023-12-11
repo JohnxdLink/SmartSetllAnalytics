@@ -519,6 +519,14 @@
                                         <asp:BoundField DataField="Roi_Prediction" HeaderText="ROI Prediction" SortExpression="RoiPrediction" ItemStyle-CssClass="gridview-cell" />
                                     </Columns>
                                 </asp:GridView>
+
+                                <asp:Label ID="sampleText" Text="text" runat="server" /><br />
+                                <asp:Label ID="sampleText2" Text="text" runat="server" /><br />
+                                <asp:Label ID="sampleText3" Text="text" runat="server" /><br />
+                                <asp:Label ID="sampleText4" Text="text" runat="server" /><br />
+                                <asp:Label ID="sampleText5" Text="text" runat="server" /><br />
+                                <asp:Label ID="sampleText6" Text="text" runat="server" /><br />
+                                <asp:Label ID="sampleText7" Text="text" runat="server" /><br />
                             </div>
                         </section>
 
@@ -538,7 +546,7 @@
                                             <h4 style="color:#ffffff">Month</h4>
                                         </div>
                                         <div>
-                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                            <asp:TextBox ID="Txb_Month" CssClass="txb-monthly-input-layout" runat="server" Width="200" />
                                         </div>
                                     </div>
                                 </div>
@@ -553,7 +561,7 @@
                                             <h4 style="color:#ffffff">Monthly Sales</h4>
                                         </div>
                                         <div>
-                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                            <asp:TextBox ID="Txb_Rl_MonthlySales" CssClass="txb-monthly-input-layout" runat="server" Width="200" />
                                         </div>
                                     </div>
                                 </div>
@@ -568,7 +576,7 @@
                                             <h4 style="color:#ffffff">Monthly Salary</h4>
                                         </div>
                                         <div>
-                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                            <asp:TextBox ID="Txb_Rl_MonthlySalary" CssClass="txb-monthly-input-layout" runat="server" Width="200" />
                                         </div>
                                     </div>
                                 </div>
@@ -583,28 +591,13 @@
                                             <h4 style="color:#ffffff">Monthly Expenses</h4>
                                         </div>
                                         <div>
-                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="monthly-input-fields">
-                                    <div>
-                                        <img class="monthly-input-icon" src="../resources/images/icons/total-expenses.png" alt="Alternate Text" />
-                                    </div>
-
-                                    <div class="monthly-input-div">
-                                        <div>
-                                            <h4 style="color:#ffffff">Total Expenses</h4>
-                                        </div>
-                                        <div>
-                                            <asp:TextBox CssClass="txb-monthly-input-layout" runat="server" Width="200" />
+                                            <asp:TextBox ID="Txb_Rl_MonthlyExpenses" CssClass="txb-monthly-input-layout" runat="server" Width="200" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <asp:Button CssClass="smartsell-button-layout" Text="Save" runat="server" Width="130" />
+                                    <asp:Button ID="Btn_Real_Monthly" CssClass="smartsell-button-layout" Text="Save" runat="server" Width="130" OnClick="Btn_Real_Monthly_Click" />
                                 </div>
                             </main>
                         </section>

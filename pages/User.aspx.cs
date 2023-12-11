@@ -13,6 +13,7 @@ namespace SmartSetll_Analytics_V2.pages
     {
         GetUserSmartSell userSmartSell = new GetUserSmartSell();
         GetSetCapital getSetCapital = new GetSetCapital();
+        CalculateValues realTimeMonthly = new CalculateValues();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -100,6 +101,31 @@ namespace SmartSetll_Analytics_V2.pages
 
             // N: Set visibility and update the session variable
             monthlyContentID.Visible = true;
+
+            homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
+            Session["ContentVisibility"] = false;
+        }
+
+        protected void Btn_Real_Monthly_Click(object sender, EventArgs e)
+        {
+            sampleText.Text = Lbl_Capital.Text;
+
+            // N: Set visibility and update the session variable
+            monthlyContentID.Visible = true;
+
+            sampleText.Text = Txb_Month.Text;
+            sampleText2.Text = Txb_Rl_MonthlySales.Text;
+            sampleText3.Text = Txb_Rl_MonthlyExpenses.Text;
+            sampleText4.Text = Txb_Rl_MonthlySalary.Text;
+
+            double rlNetPRofit = realTimeMonthly.Calculate_NetProfit(Convert.ToDouble(Txb_Rl_MonthlySales.Text), Convert.ToDouble(Txb_Rl_MonthlyExpenses.Text));
+            sampleText5.Text = rlNetPRofit.ToString();
+
+            double rlRoi = realTimeMonthly.Calculate_Roi((int)rlNetPRofit, Convert.ToDouble(Lbl_Capital.Text));
+            sampleText6.Text = rlRoi.ToString();
+
+            double rlPre = realTimeMonthly.Calculate_Roi_Prediction(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlNetPRofit);
+            sampleText7.Text = rlPre.ToString();
 
             homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
