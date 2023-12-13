@@ -72,9 +72,6 @@ namespace SmartSetll_Analytics_V2.pages
             // N: Calling the Insert_To_Database and add those parameters
             obj_InsertData.Insert_To_Database(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
 
-            // X: Dispaly All Textboxes with its format
-            Final_Display_For_Text(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
-
             // N: Setting the Save Button Enable to False so that it will be temporary disabled
             Btn_Save.Enabled = false;
         }
@@ -111,7 +108,7 @@ namespace SmartSetll_Analytics_V2.pages
             }
             else
             {
-                // Handle unsuccessful login
+                // N: Handle unsuccessful login
             }
         }
 

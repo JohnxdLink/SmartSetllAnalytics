@@ -31,14 +31,6 @@
                             </div>
 
                             <div>
-                                <a class="navbar-layout" href="#" onclick="showSideContent('help-form-id')">Help</a>
-                            </div>
-
-                            <div>
-                                <a class="navbar-layout" href="../Index.aspx">Rate</a>
-                            </div>
-
-                            <div>
                                 <a class="navbar-layout" href="#" onclick="showSideContent('login-form-id')">Login</a>
                             </div>
                         </nav>
