@@ -73,8 +73,6 @@ namespace SmartSetll_Analytics_V2.pages
 
             homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
-
-
         }
 
         protected void Btn_Capital_Add_Item_Click(Object sender, EventArgs e)
@@ -111,17 +109,25 @@ namespace SmartSetll_Analytics_V2.pages
             // N: Set visibility and update the session variable
             monthlyContentID.Visible = true;
 
-            double rlTotalExpenses = realTimeMonthly.Calculate_TotalExpenses(Convert.ToDouble(Txb_Rl_MonthlyExpenses.Text), Convert.ToDouble(Txb_Rl_MonthlySalary.Text));
-            double rlNetPRofit = realTimeMonthly.Calculate_NetProfit(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlTotalExpenses);
-            double rlRoi = realTimeMonthly.Calculate_Roi((int)rlNetPRofit, Convert.ToDouble(Lbl_Capital.Text));
-            double rlRoi_Prediction = realTimeMonthly.Calculate_Roi_Prediction(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlNetPRofit);
+            try
+            {
+                double rlTotalExpenses = realTimeMonthly.Calculate_TotalExpenses(Convert.ToDouble(Txb_Rl_MonthlyExpenses.Text), Convert.ToDouble(Txb_Rl_MonthlySalary.Text));
+                double rlNetPRofit = realTimeMonthly.Calculate_NetProfit(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlTotalExpenses);
+                double rlRoi = realTimeMonthly.Calculate_Roi((int)rlNetPRofit, Convert.ToDouble(Lbl_Capital.Text));
+                double rlRoi_Prediction = realTimeMonthly.Calculate_Roi_Prediction(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlNetPRofit);
 
-            // N: Round the rlRoi and rlRoi_Prediction values to two decimal places
-            rlRoi = Math.Round(rlRoi, 2);
-            rlRoi_Prediction = Math.Round(rlRoi_Prediction, 2);
+                // N: Round the rlRoi and rlRoi_Prediction values to two decimal places
+                rlRoi = Math.Round(rlRoi, 2);
+                rlRoi_Prediction = Math.Round(rlRoi_Prediction, 2);
 
-            getUserRealTimeData.Insert_RealTime_Month(Convert.ToInt32(Lbl_Company_ID.Text), Txb_Month.Text, Convert.ToDouble(Txb_Rl_MonthlySales.Text), Convert.ToDouble(Txb_Rl_MonthlySalary.Text), Convert.ToDouble(Txb_Rl_MonthlyExpenses.Text), rlTotalExpenses, rlNetPRofit, rlRoi, rlRoi_Prediction);
-            LoadRealMonthData();
+                getUserRealTimeData.Insert_RealTime_Month(Convert.ToInt32(Lbl_Company_ID.Text), Txb_Month.Text, Convert.ToDouble(Txb_Rl_MonthlySales.Text), Convert.ToDouble(Txb_Rl_MonthlySalary.Text), Convert.ToDouble(Txb_Rl_MonthlyExpenses.Text), rlTotalExpenses, rlNetPRofit, rlRoi, rlRoi_Prediction);
+                LoadRealMonthData();
+            }
+            catch (FormatException)
+            {
+                // N: Handle the format exception, i.e., when the user enters non-numeric values
+                DisplayErrorMessage("No Input Value");
+            }
 
             homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
@@ -204,5 +210,14 @@ namespace SmartSetll_Analytics_V2.pages
             Gridvw_RealMonth.DataBind();
         }
 
+        private void DisplayErrorMessage(string message)
+        {
+            // N: Use JavaScript to display the error message in an alert
+            string script = $@"
+        <script>
+            alert('{message}');
+        </script>";
+            ClientScript.RegisterStartupScript(this.GetType(), "displayError", script);
+        }
     }
 }
