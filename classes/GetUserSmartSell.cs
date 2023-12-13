@@ -58,8 +58,8 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                Console.WriteLine(sqlEx);
-                // Handle the exception as needed
+                // N: Log the exception using your custom exception class
+                ExceptionLogger.LogCustomException(sqlEx, "Custom Error Message");
             }
         }
 

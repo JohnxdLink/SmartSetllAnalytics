@@ -40,18 +40,8 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                // N: Specify the correct relative path from the application root
-                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
-                string errorLogExtension = ".txt";
-                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
-
-                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
-                {
-                    writer.WriteLine($"Timestamp: {DateTime.Now}");
-                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
-                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
-                    writer.WriteLine(new string('-', 50));
-                }
+                // N: Log the exception using your custom exception class
+                ExceptionLogger.LogCustomException(sqlEx, "Custom Error Message");
             }
         }
 
@@ -86,18 +76,8 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                // N: Specify the correct relative path from the application root
-                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
-                string errorLogExtension = ".txt";
-                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
-
-                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
-                {
-                    writer.WriteLine($"Timestamp: {DateTime.Now}");
-                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
-                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
-                    writer.WriteLine(new string('-', 50));
-                }
+                // N: Log the exception using your custom exception class
+                ExceptionLogger.LogCustomException(sqlEx, "Custom Error Message");
             }
 
             return obj_DataCapital;
@@ -133,18 +113,8 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                // Specify the correct relative path from the application root
-                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
-                string errorLogExtension = ".txt";
-                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
-
-                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
-                {
-                    writer.WriteLine($"Timestamp: {DateTime.Now}");
-                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
-                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
-                    writer.WriteLine(new string('-', 50));
-                }
+                // N: Log the exception using your custom exception class
+                ExceptionLogger.LogCustomException(sqlEx, "Custom Error Message");
             }
         }
 
@@ -178,36 +148,11 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                // Specify the correct relative path from the application root
-                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
-                string errorLogExtension = ".txt";
-                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
-
-                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
-                {
-                    writer.WriteLine($"Timestamp: {DateTime.Now}");
-                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
-                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
-                    writer.WriteLine(new string('-', 50));
-                }
+                // N: Log the exception using your custom exception class
+                ExceptionLogger.LogCustomException(sqlEx, "Custom Error Message");
             }
 
             return obj_DataRealMonth;
-        }
-
-        private string GetUniqueErrorLogPath(string baseErrorLogPath, string errorLogExtension)
-        {
-            string errorLogPath = $"{baseErrorLogPath}_{DateTime.Now:yyyyMMddHHmmssfff}{errorLogExtension}";
-            int attempt = 1;
-
-            // Ensure the file path is unique
-            while (File.Exists(errorLogPath))
-            {
-                errorLogPath = $"{baseErrorLogPath}_{DateTime.Now:yyyyMMddHHmmssfff}_{attempt}{errorLogExtension}";
-                attempt++;
-            }
-
-            return errorLogPath;
         }
     }
 }

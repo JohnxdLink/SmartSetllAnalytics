@@ -141,6 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\CalculateValues.cs" />
+    <Compile Include="classes\CustomSqlException.cs" />
+    <Compile Include="classes\ExceptionLogger.cs" />
     <Compile Include="classes\GetSetCapital.cs" />
     <Compile Include="classes\GetSetRegisteredAccount.cs" />
     <Compile Include="classes\GetSetValues.cs" />
