@@ -503,7 +503,7 @@
                     <div id="monthlyContentID" class="monthly-content main-content" runat="server" visible="false">
                         <section class="monthly-section">
                             <div class="datagrid-content-layout">
-                                <asp:GridView ID="GridView1" CssClass="gridview-capital-layout" runat="server" AutoGenerateColumns="false">
+                                <asp:GridView ID="Gridvw_RealMonth" CssClass="gridview-capital-layout" runat="server" AutoGenerateColumns="false">
                                     <HeaderStyle CssClass="gridview-header" />
                                     <AlternatingRowStyle CssClass="gridview-alternating-row" />
 

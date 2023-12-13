@@ -40,7 +40,8 @@ namespace SmartSetll_Analytics_V2.pages
 
                     // N: Instanstiating userSmartSell Object to Retrieve User SmartSell Data
                     userSmartSell.RetrieveUserSmartSellData(companyId, Lbl_Capital, Lbl_Num_Days, Lbl_Average_Price, Lbl_Population, Lbl_Percent_Population, Lbl_Target_Market, Lbl_Daily_Target, Lbl_Sales_Per_Day, Lbl_Monthly_Sales, Lbl_Salary_Per_Day, Lbl_Monthly_Salary, Lbl_Monthly_Expenses, Lbl_Total_Expenses, Lbl_Net_Profit, Lbl_Return_Investment, Lbl_Roi_Prediction);
-                    LoadAndBindData();
+                    LoadRealCapitalData();
+                    LoadRealMonthData();
                 }
             }
 
@@ -86,7 +87,7 @@ namespace SmartSetll_Analytics_V2.pages
 
             //N: Instanstiang Object GetSetCapital
             getUserRealTimeData.Insert_Capital(Convert.ToInt32(Lbl_Company_ID.Text), Convert.ToInt32(Txb_Item_Qty.Text), Txb_Item_Name.Text, Convert.ToDouble(Txb_Item_Price.Text));
-            LoadAndBindData();
+            LoadRealCapitalData();
 
             homeContentID.Visible = false; monthlyContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
@@ -100,7 +101,7 @@ namespace SmartSetll_Analytics_V2.pages
             Lbl_Navigation.Text = "MONTHLY";
 
             // N: Set visibility and update the session variable
-            monthlyContentID.Visible = true;            
+            monthlyContentID.Visible = true;
             homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
         }
@@ -114,8 +115,13 @@ namespace SmartSetll_Analytics_V2.pages
             double rlNetPRofit = realTimeMonthly.Calculate_NetProfit(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlTotalExpenses);
             double rlRoi = realTimeMonthly.Calculate_Roi((int)rlNetPRofit, Convert.ToDouble(Lbl_Capital.Text));
             double rlRoi_Prediction = realTimeMonthly.Calculate_Roi_Prediction(Convert.ToDouble(Txb_Rl_MonthlySales.Text), rlNetPRofit);
-            
+
+            // N: Round the rlRoi and rlRoi_Prediction values to two decimal places
+            rlRoi = Math.Round(rlRoi, 2);
+            rlRoi_Prediction = Math.Round(rlRoi_Prediction, 2);
+
             getUserRealTimeData.Insert_RealTime_Month(Convert.ToInt32(Lbl_Company_ID.Text), Txb_Month.Text, Convert.ToDouble(Txb_Rl_MonthlySales.Text), Convert.ToDouble(Txb_Rl_MonthlySalary.Text), Convert.ToDouble(Txb_Rl_MonthlyExpenses.Text), rlTotalExpenses, rlNetPRofit, rlRoi, rlRoi_Prediction);
+            LoadRealMonthData();
 
             homeContentID.Visible = false; capitalContentID.Visible = false; feedbackContentID.Visible = false; manualContentID.Visible = false; profileContentID.Visible = false;
             Session["ContentVisibility"] = false;
@@ -180,13 +186,22 @@ namespace SmartSetll_Analytics_V2.pages
             Response.Redirect("~/pages/SmartSell.aspx");
         }
 
-        private void LoadAndBindData()
+        private void LoadRealCapitalData()
         {
             DataTable obj_DataCapital = getUserRealTimeData.Get_Capital(Convert.ToInt32(Lbl_Company_ID.Text));
 
             // N: Display the data in a GridView
             Gridvw_Capital.DataSource = obj_DataCapital;
             Gridvw_Capital.DataBind();
+        }
+
+        private void LoadRealMonthData()
+        {
+            DataTable obj_DataRealMonth = getUserRealTimeData.Get_RealMonth(Convert.ToInt32(Lbl_Company_ID.Text));
+
+            // N: Display the data in a GridView
+            Gridvw_RealMonth.DataSource = obj_DataRealMonth;
+            Gridvw_RealMonth.DataBind();
         }
 
     }

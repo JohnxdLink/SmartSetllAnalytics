@@ -40,13 +40,25 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                Console.WriteLine(sqlEx);
+                // N: Specify the correct relative path from the application root
+                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
+                string errorLogExtension = ".txt";
+                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
+
+                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
+                {
+                    writer.WriteLine($"Timestamp: {DateTime.Now}");
+                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
+                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
+                    writer.WriteLine(new string('-', 50));
+                }
             }
         }
 
         public DataTable Get_Capital(int companyID)
         {
             DataTable obj_DataCapital = new DataTable();
+
             try
             {
                 using (SqlConnection obj_Connect_Db = new SqlConnection(sqlConnect))
@@ -74,7 +86,18 @@ namespace SmartSetll_Analytics_V2.classes
             }
             catch (SqlException sqlEx)
             {
-                Console.WriteLine(sqlEx);
+                // N: Specify the correct relative path from the application root
+                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
+                string errorLogExtension = ".txt";
+                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
+
+                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
+                {
+                    writer.WriteLine($"Timestamp: {DateTime.Now}");
+                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
+                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
+                    writer.WriteLine(new string('-', 50));
+                }
             }
 
             return obj_DataCapital;
@@ -111,7 +134,9 @@ namespace SmartSetll_Analytics_V2.classes
             catch (SqlException sqlEx)
             {
                 // Specify the correct relative path from the application root
-                string errorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs/errorlog.txt");
+                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
+                string errorLogExtension = ".txt";
+                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
 
                 using (StreamWriter writer = new StreamWriter(errorLogPath, true))
                 {
@@ -123,6 +148,66 @@ namespace SmartSetll_Analytics_V2.classes
             }
         }
 
+        public DataTable Get_RealMonth(int companyID)
+        {
+            DataTable obj_DataRealMonth = new DataTable();
 
+            try
+            {
+                using (SqlConnection obj_Connect_Db = new SqlConnection(sqlConnect))
+                {
+                    // N: Instanstiating Connection Database to Open
+                    obj_Connect_Db.Open();
+                    obj_Connect_Db.ChangeDatabase(connectDatabase);
+
+                    string readQuery = @"SELECT [Month_SmartSell], [Monthly_Sales], [Monthly_Salary], [Monthly_Expenses], [Total_Expenses], [Net_Profit], [Return_Investment], [Roi_Prediction] FROM [dbo].[User_RealTime_SmartSell] WHERE [Company_ID] = @Company_ID";
+
+                    using (SqlCommand obj_Command_Db = new SqlCommand(readQuery, obj_Connect_Db))
+                    {
+                        obj_Command_Db.Parameters.AddWithValue("@Company_ID", companyID);
+
+                        using (SqlDataReader obj_DataReader_Db = obj_Command_Db.ExecuteReader())
+                        {
+                            if (obj_DataReader_Db.Read())
+                            {
+                                obj_DataRealMonth.Load(obj_DataReader_Db);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                // Specify the correct relative path from the application root
+                string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
+                string errorLogExtension = ".txt";
+                string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
+
+                using (StreamWriter writer = new StreamWriter(errorLogPath, true))
+                {
+                    writer.WriteLine($"Timestamp: {DateTime.Now}");
+                    writer.WriteLine($"Error Message:\n{sqlEx.Message}");
+                    writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
+                    writer.WriteLine(new string('-', 50));
+                }
+            }
+
+            return obj_DataRealMonth;
+        }
+
+        private string GetUniqueErrorLogPath(string baseErrorLogPath, string errorLogExtension)
+        {
+            string errorLogPath = $"{baseErrorLogPath}_{DateTime.Now:yyyyMMddHHmmssfff}{errorLogExtension}";
+            int attempt = 1;
+
+            // Ensure the file path is unique
+            while (File.Exists(errorLogPath))
+            {
+                errorLogPath = $"{baseErrorLogPath}_{DateTime.Now:yyyyMMddHHmmssfff}_{attempt}{errorLogExtension}";
+                attempt++;
+            }
+
+            return errorLogPath;
+        }
     }
 }

@@ -339,13 +339,13 @@ namespace SmartSetll_Analytics_V2.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl monthlyContentID;
 
         /// <summary>
-        /// GridView1 control.
+        /// Gridvw_RealMonth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView Gridvw_RealMonth;
 
         /// <summary>
         /// Txb_Month control.
