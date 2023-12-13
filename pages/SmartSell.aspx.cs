@@ -31,49 +31,84 @@ namespace SmartSetll_Analytics_V2.pages
         // ? Button Calculate Target MAarket, Daily Target, Sales Per Day, Monthly Sales
         protected void Btn_One_Calculate_Click(object sender, EventArgs e)
         {
-            // N: Setting the setUserValue from Textboxes and set in Variable
-            int capital = setUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
-            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
-            double averagePrice = setUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
+            try
+            {
+                // N: Setting the setUserValue from Textboxes and set in Variable
+                int capital = setUserValue.Capital = Convert.ToInt32(Txb_Capital.Text);
+                int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
+                double averagePrice = setUserValue.AveragePrice = Convert.ToDouble(Txb_Average_Price.Text);
 
-            // N: In order to Compute TargetMarket to MonthlySales, it need parameters days and averagePrice
-            Compute_TargetMarket_To_MonthlySales(days, averagePrice);
+                // N: In order to Compute TargetMarket to MonthlySales, it needs parameters days and averagePrice
+                Compute_TargetMarket_To_MonthlySales(days, averagePrice);
 
-            // X: Display Textboxes to Webpage
-            Txb_Capital.Text = capital.ToString();
-            Txb_Num_Days.Text = days.ToString();
-            Txb_Average_Price.Text = averagePrice.ToString();
+                // X: Display Textboxes to Webpage
+                Txb_Capital.Text = capital.ToString();
+                Txb_Num_Days.Text = days.ToString();
+                Txb_Average_Price.Text = averagePrice.ToString();
+            }
+            catch (FormatException)
+            {
+                // N: Handle the format exception, i.e., when the user enters non-numeric values
+                DisplayErrorMessage("No Input Value");
+            }
         }
 
         // ? Button Calculate Salary Per Day to MOnthly Salary
         protected void Btn_Two_Calculate_Click(object sender, EventArgs e)
         {
-            // N: Setting the setUserValue from Textboxes and set in Variable
-            int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
+            try
+            {
+                // N: Setting the setUserValue from Textboxes and set in Variable
+                int days = setUserValue.Days = Convert.ToInt32(Txb_Num_Days.Text);
 
-            // N: In order to Compute Monthly Salary, it need parameter days
-            Compute_Monthly_Salary(days);
+                // N: In order to Compute Monthly Salary, it need parameter days
+                Compute_Monthly_Salary(days);
+            }
+            catch (FormatException)
+            {
+                // N: Handle the format exception, i.e., when the user enters non-numeric values
+                DisplayErrorMessage("No Input Value");
+            }
+
         }
 
         // ? Button Calcuate Total Expenses, Net Profit, Return of Investment & ROi Prediction
         protected void Btn_Three_Calculate_Click(object sender, EventArgs e)
         {
-            // N: Getting the Textboxes Value and store it in Variables
-            double monthlySalary = Convert.ToDouble(Txb_Monthly_Salary.Text);
-            double monthlySales = Convert.ToDouble(Txb_Monthly_Sales.Text);
+            try
+            {
+                // N: Getting the Textboxes Value and store it in Variables
+                double monthlySalary = Convert.ToDouble(Txb_Monthly_Salary.Text);
+                double monthlySales = Convert.ToDouble(Txb_Monthly_Sales.Text);
 
-            // N: In order to Compute Total Expenses to ROI Prediction, it need parameters MonthlySalary and MonthlySales
-            Compute_TotalExpenses_To_Roi(monthlySalary, monthlySales);
+                // N: In order to Compute Total Expenses to ROI Prediction, it need parameters MonthlySalary and MonthlySales
+                Compute_TotalExpenses_To_Roi(monthlySalary, monthlySales);
+            }
+            catch (FormatException)
+            {
+                // N: Handle the format exception, i.e., when the user enters non-numeric values
+                DisplayErrorMessage("No Input Value");
+            }
+
         }
 
         // ? Button to save those data entry to Database
         protected void Btn_Save_Click(object sender, EventArgs e)
         {
-            // N: Calling the Insert_To_Database and add those parameters
-            obj_InsertData.Insert_To_Database(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
+            try
+            {
+                // N: Calling the Insert_To_Database and add those parameters
+                obj_InsertData.Insert_To_Database(Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
 
-            // N: Setting the Save Button Enable to False so that it will be temporary disabled
-            Btn_Save.Enabled = false;
+                // N: Setting the Save Button Enable to False so that it will be temporary disabled
+                Btn_Save.Enabled = false;
+            }
+            catch (FormatException)
+            {
+                // N: Handle the format exception, i.e., when the user enters non-numeric values
+                DisplayErrorMessage("No Input Value");
+            }
+
         }
 
         // ? Button to Clear and Set the Btn_Save to true
@@ -97,18 +132,19 @@ namespace SmartSetll_Analytics_V2.pages
                 Session["Company_ID"] = loginResult.Item2;
                 Session["Company_Name"] = loginResult.Item3;
 
-                if(Session["Company_ID"] != null)
+                if (Session["Company_ID"] != null)
                 {
                     int companyID = Convert.ToInt32(Session["Company_ID"]);
                     obj_InsertData.Insert_Or_Update_User_Data(username, password, companyID, Convert.ToInt32(Txb_Capital.Text), Convert.ToInt32(Txb_Num_Days.Text), Convert.ToDouble(Txb_Average_Price.Text), Convert.ToInt32(Txb_Population.Text), Convert.ToDouble(Txb_Percent_Population.Text), Convert.ToDouble(Txb_Target_Market.Text), Convert.ToInt32(Txb_Daily_Target.Text), Convert.ToDouble(Txb_Sales_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Sales.Text), Convert.ToDouble(Txb_Salary_Per_Day.Text), Convert.ToDouble(Txb_Monthly_Salary.Text), Convert.ToDouble(Txb_Monthly_Expenses.Text), Convert.ToDouble(Txb_Total_Expenses.Text), Convert.ToDouble(Txb_Net_Profit.Text), Convert.ToDouble(Txb_Return_Investment.Text), Convert.ToDouble(Txb_Roi_Prediction.Text));
                 }
- 
+
                 // N: Button Login will direct to User page
                 Response.Redirect("~/pages/User.aspx");
             }
             else
             {
                 // N: Handle unsuccessful login
+                Response.Redirect("~/pages/SmartSell.aspx");
             }
         }
 
@@ -184,10 +220,16 @@ namespace SmartSetll_Analytics_V2.pages
             Txb_Roi_Prediction.Text = roiPrediction.ToString("F2");
         }
 
-        // ? A Void to Display All Textboxes and convert to String
-        protected void Final_Display_For_Text(int capital, int days, double averagePrice, int population, double percentPopulation, double targetMarket, int dailyTarget, double salesPerDay, double monthlySales, double salaryPerDay, double monthlySalary, double monthlyExpenses, double totalExpenses, double netProfit, double returnInvestMent, double roiPrediction)
+        private void DisplayErrorMessage(string message)
         {
-            Txb_Capital.Text = "₱ " + capital.ToString(); Txb_Num_Days.Text = days.ToString() + " Day(s)"; Txb_Average_Price.Text = "₱ " + averagePrice.ToString(); Txb_Population.Text = population.ToString(); Txb_Percent_Population.Text = percentPopulation.ToString() + "%"; Txb_Target_Market.Text = targetMarket.ToString(); Txb_Daily_Target.Text = dailyTarget.ToString(); Txb_Sales_Per_Day.Text = "₱ " + salesPerDay.ToString(); Txb_Monthly_Sales.Text = "₱ " + monthlySales.ToString(); Txb_Salary_Per_Day.Text = "₱ " + salaryPerDay.ToString(); Txb_Monthly_Salary.Text = "₱ " + monthlySalary.ToString(); Txb_Monthly_Expenses.Text = "₱ " + monthlyExpenses.ToString(); Txb_Total_Expenses.Text = "₱ " + totalExpenses.ToString(); Txb_Net_Profit.Text = "₱ " + netProfit.ToString(); Txb_Return_Investment.Text = returnInvestMent.ToString() + "%"; Txb_Roi_Prediction.Text = roiPrediction.ToString() + " Year(s)";
+            // N: Use JavaScript to display the error message in an alert
+            string script = $@"
+        <script>
+            alert('{message}');
+        </script>";
+            ClientScript.RegisterStartupScript(this.GetType(), "displayError", script);
         }
+
+
     }
 }
