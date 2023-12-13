@@ -39,18 +39,18 @@
                         </div>
 
                         <div>
-                            <asp:ImageButton ID="Img_Btn_Feedback" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/best-customer-experience.png" runat="server" OnClick="Btn_Feedback_Click" />
+                            <asp:ImageButton ID="Img_Btn_Feedback" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/best-customer-experience.png" runat="server" OnClick="Btn_Feedback_Click" Visible="false" />
                         </div>
 
                         <div>
-                            <asp:ImageButton ID="Img_Btn_Manual" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/questions.png" runat="server" OnClick="Btn_Manual_Click" />
+                            <asp:ImageButton ID="Img_Btn_Manual" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/questions.png" runat="server" OnClick="Btn_Manual_Click" Visible="false" />
                         </div>
                     </section>
 
                     <% /* N: Navigation Bar on Bottom */ %>
                     <section class="nav-section">
                         <div>
-                            <asp:ImageButton ID="Img_Btn_Profile" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/profile.png" runat="server" OnClick="Btn_Profile_Click" />
+                            <asp:ImageButton ID="Img_Btn_Profile" CssClass="nav-icon-layout" ImageUrl="~/resources/images/icons/profile.png" runat="server" OnClick="Btn_Profile_Click" Visible="false" />
                         </div>
 
                         <div>
