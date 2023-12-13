@@ -9,19 +9,16 @@ public static class ExceptionLogger
     public static void LogCustomException(SqlException sqlEx, string customMessage)
     {
         // Specify the correct relative path from the application root
-        string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs");
+        string baseErrorLogPath = HttpContext.Current.Server.MapPath("~/resources/errorlogs/SmartSell_ErrorLog");
         string errorLogExtension = ".txt";
         string errorLogPath = GetUniqueErrorLogPath(baseErrorLogPath, errorLogExtension);
-
-        // Create a new instance of your custom exception and log it
-        CustomSqlException customSqlException = new CustomSqlException(customMessage, sqlEx);
 
         using (StreamWriter writer = new StreamWriter(errorLogPath, true))
         {
             writer.WriteLine($"Timestamp: {DateTime.Now}");
             writer.WriteLine($"Custom Message: {customMessage}");
-            writer.WriteLine($"Error Message:\n{customSqlException.Message}\n");
-            writer.WriteLine($"StackTrace:\n{customSqlException.StackTrace}");
+            writer.WriteLine($"Error Message:\n{sqlEx.Message}\n");
+            writer.WriteLine($"StackTrace:\n{sqlEx.StackTrace}");
             writer.WriteLine(new string('-', 50));
         }
     }
